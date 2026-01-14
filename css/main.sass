@@ -1,0 +1,505 @@
+// files for special css 
+@use 'project'  
+@use 'menu' 
+
+/////////////////////////// COLORS 
+$midnight: #080101
+$offwhite: #FAF9F6
+
+$lavender: #9185b1
+$light-lavender: #9185b1b5
+
+$strawberry: #f9d1d9
+$matcha: #838f58
+
+$raspberry: #e30b5d
+$raspberry2: #e30b5eaf
+//////////////////////// FONTS
+// imported font from google fonts
+
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap')
+
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap')
+
+// fonts from assets folder
+@font-face
+  font-family: "", sans-serif
+  src: url("assets/Montserrat.ttf") format("truetype")
+
+@font-face
+  font-family: "Charter"
+  src: url("assets/charter_regular.woff2") format("woff2")
+
+// font variables
+$atk: "Atkinson Hyperlegible", sans-serif
+$cursive: "Parisienne", cursive
+
+///////////////////////////////////////// GENERAL DISPLAY
+*
+  margin: 0 auto
+
+  @media (max-width: 600px)
+    margin: 0
+
+html
+  scroll-behavior: smooth
+
+body
+  background: $midnight
+  color: $offwhite
+  overflow-x: hidden
+  @media (max-width: 600px)
+    display: block
+
+// open the page
+.logo  //logo-name
+  margin: 0 auto
+  padding-top: 1rem
+  padding-bottom: 1rem
+  width: 800px
+  height: auto
+  justify-self: left
+  float: left
+  position: inherit
+  margin-right: 30rem
+  @media (max-width: 600px)
+    max-width: 300px
+
+// about me section
+.about-wrapper
+  display: flex
+  padding: 0 auto
+  @media (max-width: 600px)
+    display: block
+    max-width: 100%
+
+.about-text
+  display: block
+  font-family: $atk
+  max-width: 580px
+  line-height: 1.7
+  font-size: 1.1rem
+  text-align: left
+  @media (max-width: 600px)
+    display: block
+    max-width: 90%
+    text-align: left
+    margin-left: 1rem
+
+.script-font // highlighted cursive font
+  font-family: $cursive
+  font-size: 1.5rem
+
+.hola //subtitle for about me text
+  font-weight: 500
+  font-size: 2.8rem
+  max-width: 500px
+  margin: 0 auto
+  @media (max-width: 600px)
+    display: block
+    max-width: 90%
+    font-size: 2rem
+
+.profile-pic // about me profile picture
+  object-fit: contain
+  width: auto
+  height: 600px
+  margin: 0 auto
+  @media (max-width: 600px)
+    width: 100%
+    height: auto
+
+/////////////////////////////
+// titles for each section within page
+.section-title
+  display: flex
+  margin-left: 6rem
+  margin-top: 3rem
+  padding-bottom: 1rem
+  font-family: $atk
+  font-weight: 650
+  font-size: 4.5rem
+  text-transform: uppercase
+  @media (max-width: 600px)
+    display: block
+    text-align: left
+    font-size: 2.5rem
+    margin-left: 1rem
+    margin-top: 2rem
+    padding-bottom: 0.2rem
+
+// work/projects section 
+.work-wrap
+  display: grid
+  margin-left: 5rem
+  margin-right: 5rem
+  grid-template-columns: 1fr 1fr
+  grid-template-rows: auto
+  gap: 1.5rem
+  @media (max-width: 600px)
+    display: block
+    margin: 0
+    padding: 0
+
+// show name of each project over image
+.project
+  overflow: visible
+  max-width: 1000px
+  height: auto
+  margin: 0 auto
+  position: relative
+  @media (max-width: 600px)
+
+.work-box // work preview picture box
+  position: relative
+  width: 500px
+  height: auto
+  margin: 1rem
+  overflow: hidden
+  border-radius: 0.8rem
+  justify-items: center
+  align-items: center
+  object-fit: contain
+  @media (max-width: 600px)
+    margin: 0.5rem
+
+.work-pic
+  width: 100%
+  height: auto
+  display: block
+  margin: 0 auto
+
+.work-img // work preview picture
+  object-fit: scale-down
+  overflow: hidden
+  position: inherit
+  index: 100
+  transition: 0.5s ease
+  @media (max-width: 600px)
+    width: 350px
+    height: auto
+
+.work-img::before
+  content: ""
+  position: absolute
+  inset: -1rem
+  z-index: 0
+
+.work-img:hover img
+  opacity: 0.1
+
+.work-img:hover .show-text
+  opacity: 1
+  @media (max-width: 600px)
+    opacity: 0
+
+.show-text
+  font-family: $atk
+  color: $offwhite
+  text-align: center
+  justify-content: center
+  align-content: center
+  font-weight: 700
+  font-size: 2rem
+  text-transform: uppercase
+  font-style: oblique
+  transition: .5s ease
+  opacity: 0
+  position: absolute
+  z-index: 200
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  -ms-transform: translate(-50%, -50%)
+  @media (max-width: 600px)
+
+.work-name // each work title
+  font-family: $atk
+  font-size: 2rem
+  font-weight: bold
+  text-align: center
+  text-transform: uppercase
+  @media (max-width: 600px)
+    font-size: 1.5rem
+    text-align: left
+    margin-left: 1rem
+
+.work-tag // small description under each work title
+  font-family: $atk
+  color: $offwhite
+  font-size: 1rem
+  font-style: italic
+  font-weight: 500
+  text-align: center
+  @media (max-width: 600px)
+    font-size: 0.9rem
+    text-align: left
+    margin-left: 1rem
+
+// starts resume section
+///////////////////////////////////////
+hr.solid //decor dividers
+  border-top: 0.3px solid $offwhite
+  margin-top: 1rem
+  margin-bottom: 1rem
+
+.resume-wrap
+  max-width: 900px
+  font-family: $atk
+  margin: 0 auto
+  ul
+    line-height: 2
+    letter-spacing: 0.02rem
+    list-style-position: inside
+  @media (max-width: 600px) ///checkear!!!
+    display: block
+    width: 90%
+    text-align: left
+    ul
+      line-height: 1.8
+      padding: 0
+
+.subtitle //subtitles for each resume section
+  text-align: left
+  font-family: $atk
+  font-size: 2.5rem
+  font-style: italic
+  padding-bottom: 0.5rem
+  font-optical-sizing: auto
+  margin-top: 1.5rem
+  @media (max-width: 600px)
+    font-size: 1.5rem
+    padding-bottom: 0
+
+// resume - experience section
+.experience //experiences grid display
+  display: grid
+  grid-template-columns: 1.3fr 2.5fr
+  grid-auto-rows: auto
+  @media (max-width: 600px)
+    display: block
+    margin: 0
+    text-align: left
+  .pos1
+    grid-column: 1
+    grid-row: 1
+  .job1
+    grid-column: 1
+    grid-row: 2
+  .date1
+    grid-column: 1
+    grid-row: 3
+  .exp1
+    grid-column: 2
+    grid-row-start: 1
+    grid-row-end: 4
+  .bar-exp2
+    grid-column: 1 / -1
+    grid-row: 4
+    width: 100%
+  .pos2
+    grid-column: 1
+    grid-row: 5
+  .job2
+    grid-column: 1
+    grid-row: 6
+  .date2
+    grid-column: 1
+    grid-row: 7
+  .exp2
+    grid-column: 2
+    grid-row: 5 / 8
+  .bar-exp3
+    grid-column: 1 / -1
+    grid-row: 8
+    width: 100%
+  .pos3
+    grid-column: 1
+    grid-row: 9
+  .job3
+    grid-column: 1
+    grid-row: 10
+  .date3
+    grid-column: 1
+    grid-row: 11
+  .exp3
+    grid-column: 2
+    grid-row: 9 / 12
+  .bar-exp4
+    grid-column: 1 / -1
+    grid-row: 12
+    width: 100%
+  .pos4
+    grid-column: 1
+    grid-row: 13
+  .job4
+    grid-column: 1
+    grid-row: 14
+  .date4
+    grid-column: 1
+    grid-row: 15
+  .exp4
+    grid-column: 2
+    grid-row: 13 / 16
+
+[class^="pos"], [class^="job"]
+    text-align: center
+    align-items: center
+    justify-items: center
+    font-size: 1.8rem
+    @media (max-width: 600px)
+      text-align: left
+      justify-items: left
+      font-size: 1.5rem
+      margin-bottom: 0.3rem
+
+[class^="pos"]
+    text-transform: uppercase
+[class^="job"]
+    font-style: oblique
+[class^="exp"]
+    text-align: left
+
+// dates with smaller size
+.date
+  font-size: smaller
+  text-align: center
+  @media (max-width: 600px)
+    line-height: 1.5
+    text-align: left
+    justify-items: left
+    margin-bottom: 0.3rem
+    font-size: 0.8rem
+
+// skills & studies section
+.college
+  display: inline-flex
+  margin-left: 0.5rem
+  .date1
+    text-align: right
+    font-size: 0.9rem
+    align-content: center
+    margin-left: 21rem
+  @media (max-width: 600px)
+    display: block
+    margin: 0
+    padding: 0
+    text-align: left
+    .date1
+      text-align: left
+      margin-top: 0.5rem
+      margin-left: 0
+      font-size: 0.75rem
+
+.courses
+  max-width: 600px
+  justify-self: left
+  align-self: left
+  line-height: 2
+  margin-left: 0.5rem
+  a
+    color: $offwhite
+    text-decoration: none
+    &:hover
+      color: $lavender
+  @media (max-width: 600px)
+    padding: 0
+    margin: 0
+    justify-items: left
+    width: 100%
+
+.skills
+  justify-self: left
+  line-height: 2
+  margin-left: 0.5rem
+  .highlight-skill
+    font-weight: bold
+    font-size: 1.1rem
+    text-decoration: underline
+    text-transform: uppercase
+  @media (max-width: 600px)
+    margin: 0
+    display: block
+    padding-bottom: 0
+
+.download-btn
+  margin: 0.5rem 1rem
+  padding: 1rem 0
+  background: none
+  a
+    font-family: $atk
+    font-size: 1.2rem
+    color: $offwhite
+    text-decoration: none
+    padding: 0.5rem 1rem
+    border-radius: 5rem
+    border: 0.15rem solid $offwhite
+    font-weight: 600
+    transition: background-color 0.3s ease, color 0.3s ease
+    text-transform: uppercase
+    &:hover
+      color: $midnight
+      background: $lavender
+      border: none
+  @media (max-width: 600px)
+    display: block
+    text-align: left
+    padding-bottom: 0
+    margin: 1rem 0
+
+// conatct info
+.contact-wrap
+  padding: 1rem
+  width: 100%
+  @media (max-width: 600px)
+    padding: 0
+
+.contact-text
+  width: 400px
+  font-family: $atk
+  font-size: 1.2rem
+  padding: 0 0 2rem 0
+  justify-content: space-between
+  justify-self: center
+  @media (max-width: 600px)
+    font-size: 1rem
+    margin-left: 1.5rem
+
+.contact-items // wrap for all social icons
+  display: flex
+  justify-content: space-between
+  justify-self: center
+  padding-left: 1rem
+  @media (max-width: 600px)
+    padding-bottom: 0.5rem
+
+.social-icon
+  width: 3rem
+  height: auto
+  margin-right: 2rem
+  object-fit: contain
+  color: $offwhite
+  &:hover
+    color: $lavender
+  @media (max-width: 600px)
+      width: 1.5rem
+
+// footer & bye-bye :)
+footer
+  padding: 1rem
+  font-family: $atk
+  font-size: 1rem
+  color: white
+  background: $midnight
+  backdrop-filter: blur(4px)
+  width: 100%
+  content: center
+  text-align: center
+  margin: 0 auto
+  line-height: 1.5
+  @media (max-width: 600px)
+    width: 100%
+    display: block
+    font-size: 0.9rem
+    p
+      width: 90%

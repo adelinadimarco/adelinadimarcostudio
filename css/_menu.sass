@@ -1,0 +1,162 @@
+///////////////// color variables
+$midnight: #080101
+$offwhite: #FAF9F6
+
+$lavender: #9185b1
+$light-lavender: #9185b1b5
+$purple: #2a023d
+
+// navigation menu
+header
+  width: 100%
+  display: flex
+  justify-content: flex-end
+  padding-right: 0
+  position: relative
+
+.polygon
+  position: fixed
+  display: flex
+  clip-path: polygon(46% 0%, 100% 0%, 100% 100%, 44% 100%)
+  background: $light-lavender
+  z-index: 9997
+  padding: 0.5rem 2rem 0.5rem 12rem       
+  width: 40%
+  min-height: 1.2rem
+  margin-top: 0.5rem
+  align-items: center
+  justify-content: flex-end
+  box-shadow: 0px 0px 40px 100px $lavender
+  backdrop-filter: blur(10px)
+  float: right
+
+  &::before
+    border-color: transparent
+    background: inherit
+    background-clip: border-box
+    content: ''
+
+
+.nav-list
+  z-index: 10000
+  display: flex
+  justify-content: flex-end
+  align-items: center
+  list-style: none
+  margin: 0.5rem 0.02rem 0.5rem 300rem
+  gap: 2rem
+  flex-wrap: nowrap
+  -webkit-touch-callout: none
+  -webkit-user-select: none
+  -khtml-user-select: none
+  user-select: none
+  a
+    font-family: "Atkinson Hyperlegible", sans-serif
+    font-size: 0.9rem
+    text-transform: uppercase
+    color: $offwhite
+    font-weight: 700
+    font-style: italic
+    text-decoration: none
+    white-space: nowrap
+    &:hover
+      color: $purple
+
+.nav-list.active 
+    display: flex
+    
+.social
+    width: 20px
+    height: auto
+    
+    
+.menu-toggle 
+  position: fixed
+  width: 25px
+  height: 25px
+  cursor: pointer
+  z-index: 9999
+  align-self: center
+  justify-self: center
+  object-fit: contain
+  top: 1rem
+  right: 1rem
+  display: none
+  @media (max-width: 767px)    
+    display: block
+    z-index: 10001
+.menu-toggle::before, .menu-toggle::after 
+        content: ''
+        position: absolute
+        background: $offwhite
+        transition: transform 0.2s ease
+.menu-toggle::before 
+        width: 100%
+        height: 3px
+        top: 50%
+        left: 0
+        transform: translateY(-50%)
+.menu-toggle::after 
+        width: 3px
+        height: 100%
+        top: 0
+        left: 50%
+        transform: translateX(-50%)
+.menu-toggle.open::before 
+        transform: translateY(-50%) rotate(-45deg)
+.menu-toggle.open::after 
+        transform: translateY(-50%) rotate(-45deg)
+        top: 50%
+        left: 50%
+
+// animation for mobile menu / slide in & out
+@keyframes slide-left-to-right 
+    from 
+      transform: translateX(100%) 
+    to 
+      transform: translateX(0)
+@keyframes slide-right-to-left 
+  from 
+    transform: translateX(0) 
+  to 
+    transform: translateX(100%)
+
+.menu-toggle.open ~ .nav-list
+  @media (max-width: 767px)
+    animation-name: slide-left-to-right
+    animation-duration: 5s
+    animation-timing-function: ease-out
+    height: 100vh
+    width: 1000px
+    display: flex
+
+@media (max-width: 767px)
+  header
+    display: flex
+
+
+  .polygon
+    height: 2rem
+    width: 2rem
+    margin: 0 auto
+    padding: 0
+
+
+  .menu-toggle.open
+    height: 100vh
+    width: 90%
+    .polygon
+      width: 100%
+      height: 100vh
+      clip-path: none
+
+  .nav-list
+    display: none
+    flex-direction: column
+    align-items: center
+    margin: 0
+    white-space: normal
+    height: 100vh
+    width: 150%
+    padding: 20rem
+    gap: 0

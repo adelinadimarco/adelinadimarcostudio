@@ -1,0 +1,23 @@
+{
+  "name": "web-portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+     "sass": "sass --watch css/styles.sass css/styles.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adelinadimarco/portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/adelinadimarco/portfolio/issues"
+  },
+  "homepage": "https://github.com/adelinadimarco/portfolio#readme"
+ 
+}
