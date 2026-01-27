@@ -1,7 +1,6 @@
 ///////////////// color variables
 $midnight: #080101
 $offwhite: #FAF9F6
-
 $lavender: #9185b1
 $light-lavender: #9185b1b5
 $purple: #2a023d
@@ -16,36 +15,23 @@ header
 
 .polygon
   position: fixed
-  display: flex
   clip-path: polygon(46% 0%, 100% 0%, 100% 100%, 44% 100%)
   background: $light-lavender
-  z-index: 9997
-  padding: 0.5rem 2rem 0.5rem 12rem       
-  width: 40%
-  min-height: 1.2rem
-  margin-top: 0.5rem
-  align-items: center
-  justify-content: flex-end
-  box-shadow: 0px 0px 40px 100px $lavender
-  backdrop-filter: blur(10px)
-  float: right
-
-  &::before
-    border-color: transparent
-    background: inherit
-    background-clip: border-box
-    content: ''
-
+  z-index: 9997      
+  top: 0.5rem
+  
+  display: inline-flex
+  padding: 0.6rem 1.8rem 0.6rem 25rem
 
 .nav-list
+  padding: 0.3rem 0 0.3rem 2rem
   z-index: 10000
   display: flex
-  justify-content: flex-end
+  justify-content: space-around
   align-items: center
   list-style: none
-  margin: 0.5rem 0.02rem 0.5rem 300rem
-  gap: 2rem
-  flex-wrap: nowrap
+  gap: 0.5rem
+  white-space: nowrap
   -webkit-touch-callout: none
   -webkit-user-select: none
   -khtml-user-select: none
@@ -58,17 +44,15 @@ header
     font-weight: 700
     font-style: italic
     text-decoration: none
-    white-space: nowrap
+    padding: 0.5rem
     &:hover
       color: $purple
 
-.nav-list.active 
-    display: flex
-    
 .social
-    width: 20px
-    height: auto
-    
+  width: 1.4em
+  height: 1.4em
+  display: inline-block
+  vertical-align: middle
     
 .menu-toggle 
   position: fixed
@@ -84,7 +68,7 @@ header
   display: none
   @media (max-width: 767px)    
     display: block
-    z-index: 10001
+    z-index: 9999
 .menu-toggle::before, .menu-toggle::after 
         content: ''
         position: absolute
@@ -121,42 +105,28 @@ header
   to 
     transform: translateX(100%)
 
-.menu-toggle.open ~ .nav-list
-  @media (max-width: 767px)
-    animation-name: slide-left-to-right
-    animation-duration: 5s
-    animation-timing-function: ease-out
-    height: 100vh
-    width: 1000px
-    display: flex
 
 @media (max-width: 767px)
   header
     display: flex
 
-
-  .polygon
-    height: 2rem
-    width: 2rem
-    margin: 0 auto
-    padding: 0
-
-
   .menu-toggle.open
     height: 100vh
     width: 90%
-    .polygon
-      width: 100%
-      height: 100vh
-      clip-path: none
+    display: flex
 
   .nav-list
-    display: none
-    flex-direction: column
-    align-items: center
+    display: block
+    align-items: rightr
     margin: 0
     white-space: normal
-    height: 100vh
-    width: 150%
-    padding: 20rem
+    padding: 0
     gap: 0
+  .nav-list.active 
+      animation-name: slide-left-to-right
+      animation-duration: 0.5s
+      animation-timing-function: ease-out
+  
+  .cross-opened.active
+    .nav-list
+      display: flex

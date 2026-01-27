@@ -1,0 +1,201 @@
+// color variables
+$midnight: #080101
+$offwhite: #FAF9F6
+$lavender: #9185b1
+$light-lavender: #9185b1b5
+$purple: #2a023d
+
+// font variables
+$atk: "Atkinson Hyperlegible", sans-serif
+
+/////////////////////
+.project-section
+  margin: 0 10rem
+  padding: 2rem
+  background: $midnight
+  color: $offwhite
+  font-family: $atk
+  width: 1200px
+  p
+    font-size: 1.2rem
+    line-height: 1.8rem
+  @media (max-width: 767px)
+    margin: 0
+    display: block
+    width: 100%
+    p
+      font-size: 1rem
+      line-height: 1.5rem
+      width: 90%
+
+
+.work-title
+  font-family: $atk
+  font-size: 4rem
+  text-align: center
+  text-transform: uppercase
+  @media (max-width: 767px)
+    font-size: 2rem
+
+.work-sec-title
+  font-family: $atk
+  text-align: left
+  margin-top: 2rem
+
+.work-part1
+  margin: 1rem 0
+  display: flex
+  flex-direction: row
+  align-items: center
+  img
+    margin: 1rem
+    width: 500px
+    height: auto 
+  .work-part1-text
+    display: block
+  @media (max-width: 767px)
+    display: block
+    max-width: 95%
+    img
+      width: auto
+      height: 20rem
+
+.work-part2
+  margin: 2rem 0
+  display: flex
+  flex-direction: column
+  h1
+    text-align: left
+    justify-self: left
+  p
+    max-width: 1100px
+  @media (max-width: 767px)
+    display: block
+    max-width: 95%
+
+.CE-logos2
+  display: flex
+  flex-direction: row
+  justify-items: center
+  margin: 1rem
+  gap: 1rem
+  img
+    width: 500px
+    height: auto
+  @media screen and (max-width: 767px) 
+    width: 95%
+    height: auto
+    justify-items: center
+    img
+      width: auto
+      height: 200px
+
+.work-part3
+  margin: 2rem 0
+  display: flex
+  flex-direction: row
+  .work-part3-img
+    width: 600px
+    height: auto
+    margin: 1rem
+  .work-part3-text
+    display: flex
+    flex-direction: column
+    text-align: left
+    margin-top: 2rem
+    h1
+      text-align: left
+  @media (max-width: 767px)
+    display: block
+    max-width: 90%
+    .work-part3-img
+      width: 95%
+      height: auto
+      margin: 0.3rem 0
+
+.work-part4
+  margin: 2rem 0
+  display: flex
+  flex-direction: column
+  text-align: left
+  img
+    width: 1200px
+    height: auto
+    margin: 0.5rem
+    align-self: center
+  @media (max-width: 767px)
+    margin: 1rem 0
+    width: 95%
+    img
+      justify-self: left
+      width: 90%
+      height: auto
+      margin: 0
+
+.work-part5
+  margin: 2rem 0
+  display: flex
+  flex-direction: column
+  align-content: flex-start 
+  justify-content: left
+  .CE-mail-img
+    width: 500px
+    height: auto
+    margin: 1rem
+  h1
+    text-align: left
+    justify-self: left
+  @media (max-width: 767px)
+    display: block
+    max-width: 95%
+    .CE-mail-img
+      width: 100%
+      height: auto
+
+.btn-viewBrand
+  cursor: pointer
+  margin: 1rem auto
+  align-self: center
+  justify-self: center
+  padding: 1rem 2rem
+  font-size: 1rem
+  border-radius: 2rem
+  border: none
+  background: $light-lavender
+  color: $purple
+  &:hover
+    background: $lavender
+    color: $offwhite
+  @media (max-width: 767px)
+    margin: 0
+    font-size: 0.9rem
+    padding: 0.5rem 1rem
+
+// go back to index button
+.btn-back
+  cursor: pointer
+  margin: 1.5rem auto
+  padding: 1rem 2rem
+  font-size: 1.2rem
+  background: none
+  border: none
+  a
+    text-decoration: none 
+    color: $lavender
+
+  a::before
+      content: ''
+      position: absolute
+      transform: scaleX(0)
+      height: 1px
+      bottom: -2px
+      left: 0
+      transform-origin: bottom left
+      transition: transform 0.3s ease-out
+  a:hover::before 
+        transform: scaleX(1)
+        color: $purple
+  @media (max-width: 767px)
+    margin: 1rem 0.2rem
+    padding: 0.5rem 1rem
+    font-size: 0.9rem

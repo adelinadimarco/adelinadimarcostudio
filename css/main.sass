@@ -1,5 +1,5 @@
 // files for special css 
-@use 'project'  
+@use 'projectPage'  
 @use 'menu' 
 
 /////////////////////////// COLORS 
@@ -9,11 +9,6 @@ $offwhite: #FAF9F6
 $lavender: #9185b1
 $light-lavender: #9185b1b5
 
-$strawberry: #f9d1d9
-$matcha: #838f58
-
-$raspberry: #e30b5d
-$raspberry2: #e30b5eaf
 //////////////////////// FONTS
 // imported font from google fonts
 
@@ -23,22 +18,19 @@ $raspberry2: #e30b5eaf
 
 // fonts from assets folder
 @font-face
-  font-family: "", sans-serif
-  src: url("assets/Montserrat.ttf") format("truetype")
-
-@font-face
-  font-family: "Charter"
-  src: url("assets/charter_regular.woff2") format("woff2")
+  font-family: "Prata", serif
+  src: url("assets/Prata-Regular.ttf") format("truetype")
 
 // font variables
 $atk: "Atkinson Hyperlegible", sans-serif
-$cursive: "Parisienne", cursive
+$parisienne: "Parisienne", cursive
+$prata: "Prata", serif
 
 ///////////////////////////////////////// GENERAL DISPLAY
 *
   margin: 0 auto
 
-  @media (max-width: 600px)
+  @media (max-width: 767px)
     margin: 0
 
 html
@@ -48,7 +40,7 @@ body
   background: $midnight
   color: $offwhite
   overflow-x: hidden
-  @media (max-width: 600px)
+  @media (max-width: 767px)
     display: block
 
 // open the page
@@ -62,14 +54,14 @@ body
   float: left
   position: inherit
   margin-right: 30rem
-  @media (max-width: 600px)
+  @media (max-width: 767px)
     max-width: 300px
 
 // about me section
 .about-wrapper
   display: flex
   padding: 0 auto
-  @media (max-width: 600px)
+  @media (max-width: 767px)
     display: block
     max-width: 100%
 
@@ -80,22 +72,23 @@ body
   line-height: 1.7
   font-size: 1.1rem
   text-align: left
-  @media (max-width: 600px)
+  @media (max-width: 767px)
     display: block
     max-width: 90%
     text-align: left
     margin-left: 1rem
 
 .script-font // highlighted cursive font
-  font-family: $cursive
+  font-family: $parisienne
   font-size: 1.5rem
 
 .hola //subtitle for about me text
+  font-family: $parisienne
   font-weight: 500
   font-size: 2.8rem
   max-width: 500px
   margin: 0 auto
-  @media (max-width: 600px)
+  @media (max-width: 767px)
     display: block
     max-width: 90%
     font-size: 2rem
@@ -105,7 +98,7 @@ body
   width: auto
   height: 600px
   margin: 0 auto
-  @media (max-width: 600px)
+  @media (max-width: 767px)
     width: 100%
     height: auto
 
@@ -116,17 +109,16 @@ body
   margin-left: 6rem
   margin-top: 3rem
   padding-bottom: 1rem
-  font-family: $atk
+  font-family: $prata
   font-weight: 650
   font-size: 4.5rem
   text-transform: uppercase
-  @media (max-width: 600px)
-    display: block
+  @media (max-width: 767px)
+    width: 95%
     text-align: left
-    font-size: 2.5rem
-    margin-left: 1rem
-    margin-top: 2rem
-    padding-bottom: 0.2rem
+    font-size: 2.2rem
+    margin: 0 1rem
+    padding: 1rem 0 0.2rem
 
 // work/projects section 
 .work-wrap
@@ -136,10 +128,12 @@ body
   grid-template-columns: 1fr 1fr
   grid-template-rows: auto
   gap: 1.5rem
-  @media (max-width: 600px)
+  @media (max-width: 767px)
     display: block
-    margin: 0
+    margin: 0 0.5rem
     padding: 0
+    justify-items: center
+    align-items: center
 
 // show name of each project over image
 .project
@@ -148,7 +142,8 @@ body
   height: auto
   margin: 0 auto
   position: relative
-  @media (max-width: 600px)
+  @media (max-width: 767px)
+     margin: 2rem
 
 .work-box // work preview picture box
   position: relative
@@ -160,8 +155,9 @@ body
   justify-items: center
   align-items: center
   object-fit: contain
-  @media (max-width: 600px)
+  @media (max-width: 767px)
     margin: 0.5rem
+    gap: 1rem
 
 .work-pic
   width: 100%
@@ -259,7 +255,7 @@ hr.solid //decor dividers
       line-height: 1.8
       padding: 0
 
-.subtitle //subtitles for each resume section
+.cv-subtitle //subtitles for each resume section
   text-align: left
   font-family: $atk
   font-size: 2.5rem
@@ -422,37 +418,46 @@ hr.solid //decor dividers
     display: block
     padding-bottom: 0
 
-.download-btn
-  margin: 0.5rem 1rem
-  padding: 1rem 0
+.resumeDownload-btn
+  cursor: pointer
+  margin: 1rem 0
+  padding: 1rem 2rem
   background: none
+  border-radius: 4rem
+  border: 0.1rem solid $offwhite
+  &:hover
+    transition: background-color 0.3s ease
+    background: $lavender
+    border: none
   a
+    background: none
     font-family: $atk
     font-size: 1.2rem
     color: $offwhite
     text-decoration: none
-    padding: 0.5rem 1rem
-    border-radius: 5rem
-    border: 0.15rem solid $offwhite
+    padding: 1rem
     font-weight: 600
-    transition: background-color 0.3s ease, color 0.3s ease
     text-transform: uppercase
     &:hover
+      transition: color 0.3s ease
       color: $midnight
-      background: $lavender
-      border: none
-  @media (max-width: 600px)
+  @media (max-width: 767px)
     display: block
-    text-align: left
-    padding-bottom: 0
-    margin: 1rem 0
+    padding: 0.5rem 1rem
+    a
+      font-size: 1rem
+      align-self: center
+      justify-self: center
 
 // conatct info
 .contact-wrap
   padding: 1rem
   width: 100%
-  @media (max-width: 600px)
+  @media (max-width: 767px)
     padding: 0
+    margin: 0
+    .section-title .contact
+      justify-content: center
 
 .contact-text
   width: 400px
@@ -497,9 +502,12 @@ footer
   text-align: center
   margin: 0 auto
   line-height: 1.5
+  .my-name
+    font-weight: bold
   @media (max-width: 600px)
     width: 100%
     display: block
     font-size: 0.9rem
+    height: 10rem
     p
       width: 90%
