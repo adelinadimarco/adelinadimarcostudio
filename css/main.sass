@@ -1,30 +1,44 @@
 // files for special css 
-@use 'projectPage'  
+@use 'projects'  
 @use 'menu' 
 
 /////////////////////////// COLORS 
 $midnight: #080101
 $offwhite: #FAF9F6
-
 $lavender: #9185b1
 $light-lavender: #9185b1b5
+$purple: #2a023d
 
 //////////////////////// FONTS
 // imported font from google fonts
 
 @import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap')
 
-@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Rock+Salt&display=swap');
+
 
 // fonts from assets folder
-@font-face
+@font-face // serif font
   font-family: "Prata", serif
   src: url("assets/Prata-Regular.ttf") format("truetype")
 
-// font variables
-$atk: "Atkinson Hyperlegible", sans-serif
+@font-face 
+  font-family: "Quicksand", sans-serif // main sans-serif font
+  src: url("assets/Quicksand-VariableFont_wght.ttf") format("truetype")
+
+
+@font-face 
+  font-family: "RockSalt", cursive
+  src: url("assets/RockSalt-Regular.ttf") format("truetype")
+
+
 $parisienne: "Parisienne", cursive
+
 $prata: "Prata", serif
+
+$madani: "Madani Arabic", sans-serif
+$quicksand: "Quicksand", sans-serif
+$rocksalt: "RockSalt", cursive
 
 ///////////////////////////////////////// GENERAL DISPLAY
 *
@@ -67,7 +81,7 @@ body
 
 .about-text
   display: block
-  font-family: $atk
+  font-family: $quicksand
   max-width: 580px
   line-height: 1.7
   font-size: 1.1rem
@@ -79,11 +93,11 @@ body
     margin-left: 1rem
 
 .script-font // highlighted cursive font
-  font-family: $parisienne
+  font-family: $rocksalt
   font-size: 1.5rem
 
 .hola //subtitle for about me text
-  font-family: $parisienne
+  font-family: $rocksalt
   font-weight: 500
   font-size: 2.8rem
   max-width: 500px
@@ -189,8 +203,8 @@ body
   @media (max-width: 600px)
     opacity: 0
 
-.show-text
-  font-family: $atk
+.show-text // hover text on each project image
+  font-family: $rocksalt
   color: $offwhite
   text-align: center
   justify-content: center
@@ -209,8 +223,8 @@ body
   -ms-transform: translate(-50%, -50%)
   @media (max-width: 600px)
 
-.work-name // each work title
-  font-family: $atk
+.work-name // each project title
+  font-family: $prata
   font-size: 2rem
   font-weight: bold
   text-align: center
@@ -220,8 +234,8 @@ body
     text-align: left
     margin-left: 1rem
 
-.work-tag // small description under each work title
-  font-family: $atk
+.work-tag // small description under each project title
+  font-family: $quicksand
   color: $offwhite
   font-size: 1rem
   font-style: italic
@@ -239,9 +253,8 @@ hr.solid //decor dividers
   margin-top: 1rem
   margin-bottom: 1rem
 
-.resume-wrap
+.resume-wrap // main resume section wrapper
   max-width: 900px
-  font-family: $atk
   margin: 0 auto
   ul
     line-height: 2
@@ -257,7 +270,7 @@ hr.solid //decor dividers
 
 .cv-subtitle //subtitles for each resume section
   text-align: left
-  font-family: $atk
+  font-family: $prata
   font-size: 2.5rem
   font-style: italic
   padding-bottom: 0.5rem
@@ -343,6 +356,7 @@ hr.solid //decor dividers
     align-items: center
     justify-items: center
     font-size: 1.8rem
+    font-family: $prata
     @media (max-width: 600px)
       text-align: left
       justify-items: left
@@ -360,6 +374,7 @@ hr.solid //decor dividers
 .date
   font-size: smaller
   text-align: center
+  font-family: $quicksand
   @media (max-width: 600px)
     line-height: 1.5
     text-align: left
@@ -375,7 +390,7 @@ hr.solid //decor dividers
     text-align: right
     font-size: 0.9rem
     align-content: center
-    margin-left: 21rem
+    margin-left: 19rem
   @media (max-width: 600px)
     display: block
     margin: 0
@@ -431,13 +446,12 @@ hr.solid //decor dividers
     border: none
   a
     background: none
-    font-family: $atk
+    font-family: $prata
     font-size: 1.2rem
     color: $offwhite
     text-decoration: none
     padding: 1rem
     font-weight: 600
-    text-transform: uppercase
     &:hover
       transition: color 0.3s ease
       color: $midnight
@@ -461,7 +475,7 @@ hr.solid //decor dividers
 
 .contact-text
   width: 400px
-  font-family: $atk
+  font-family: $quicksand
   font-size: 1.2rem
   padding: 0 0 2rem 0
   justify-content: space-between
@@ -492,17 +506,21 @@ hr.solid //decor dividers
 // footer & bye-bye :)
 footer
   padding: 1rem
-  font-family: $atk
+  font-family: $quicksand
   font-size: 1rem
   color: white
   background: $midnight
-  backdrop-filter: blur(4px)
   width: 100%
   content: center
   text-align: center
   margin: 0 auto
   line-height: 1.5
-  .my-name
+  .rights-footer
+    display: block
+    margin: 0 auto
+    text-align: center
+    justify-content: center
+  .myName-footer
     font-weight: bold
   @media (max-width: 600px)
     width: 100%
