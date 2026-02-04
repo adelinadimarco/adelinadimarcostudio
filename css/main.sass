@@ -10,35 +10,22 @@ $light-lavender: #9185b1b5
 $purple: #2a023d
 
 //////////////////////// FONTS
-// imported font from google fonts
 
-@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap')
+@font-face // main sans-serif font
+  font-family: "Urbanist", sans-serif 
+  src: url("assets/Urbanist-VariableFont_wght.ttf") format("truetype")
 
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Rock+Salt&display=swap');
-
-
-// fonts from assets folder
 @font-face // serif font
   font-family: "Prata", serif
   src: url("assets/Prata-Regular.ttf") format("truetype")
 
-@font-face 
-  font-family: "Quicksand", sans-serif // main sans-serif font
-  src: url("assets/Quicksand-VariableFont_wght.ttf") format("truetype")
+@font-face // cursive font
+  font-family: "Oooh Baby", cursive
+  src: url("assets/OoohBaby-Regular.ttf") format("truetype")
 
-
-@font-face 
-  font-family: "RockSalt", cursive
-  src: url("assets/RockSalt-Regular.ttf") format("truetype")
-
-
-$parisienne: "Parisienne", cursive
-
+$urbanist: "Urbanist", sans-serif
 $prata: "Prata", serif
-
-$madani: "Madani Arabic", sans-serif
-$quicksand: "Quicksand", sans-serif
-$rocksalt: "RockSalt", cursive
+$ooohbaby: "Oooh Baby", cursive
 
 ///////////////////////////////////////// GENERAL DISPLAY
 *
@@ -81,7 +68,7 @@ body
 
 .about-text
   display: block
-  font-family: $quicksand
+  font-family: $urbanist
   max-width: 580px
   line-height: 1.7
   font-size: 1.1rem
@@ -93,11 +80,11 @@ body
     margin-left: 1rem
 
 .script-font // highlighted cursive font
-  font-family: $rocksalt
+  font-family: $ooohbaby
   font-size: 1.5rem
 
 .hola //subtitle for about me text
-  font-family: $rocksalt
+  font-family: $ooohbaby
   font-weight: 500
   font-size: 2.8rem
   max-width: 500px
@@ -123,10 +110,9 @@ body
   margin-left: 6rem
   margin-top: 3rem
   padding-bottom: 1rem
-  font-family: $prata
+  font-family: $ooohbaby
   font-weight: 650
   font-size: 4.5rem
-  text-transform: uppercase
   @media (max-width: 767px)
     width: 95%
     text-align: left
@@ -204,7 +190,7 @@ body
     opacity: 0
 
 .show-text // hover text on each project image
-  font-family: $rocksalt
+  font-family: $ooohbaby
   color: $offwhite
   text-align: center
   justify-content: center
@@ -224,7 +210,7 @@ body
   @media (max-width: 600px)
 
 .work-name // each project title
-  font-family: $prata
+  font-family: $urbanist
   font-size: 2rem
   font-weight: bold
   text-align: center
@@ -235,7 +221,7 @@ body
     margin-left: 1rem
 
 .work-tag // small description under each project title
-  font-family: $quicksand
+  font-family: $urbanist
   color: $offwhite
   font-size: 1rem
   font-style: italic
@@ -356,7 +342,7 @@ hr.solid //decor dividers
     align-items: center
     justify-items: center
     font-size: 1.8rem
-    font-family: $prata
+    font-family: $urbanist
     @media (max-width: 600px)
       text-align: left
       justify-items: left
@@ -365,16 +351,20 @@ hr.solid //decor dividers
 
 [class^="pos"]
     text-transform: uppercase
+    font-weight: 800
 [class^="job"]
-    font-style: oblique
+    font-style: italic
+    font
 [class^="exp"]
     text-align: left
+    font-family: $urbanist
+
 
 // dates with smaller size
 .date
   font-size: smaller
   text-align: center
-  font-family: $quicksand
+  font-family: $urbanist
   @media (max-width: 600px)
     line-height: 1.5
     text-align: left
@@ -386,6 +376,7 @@ hr.solid //decor dividers
 .college
   display: inline-flex
   margin-left: 0.5rem
+  font-family: $urbanist
   .date1
     text-align: right
     font-size: 0.9rem
@@ -403,6 +394,7 @@ hr.solid //decor dividers
       font-size: 0.75rem
 
 .courses
+  font-family: $urbanist
   max-width: 600px
   justify-self: left
   align-self: left
@@ -421,13 +413,13 @@ hr.solid //decor dividers
 
 .skills
   justify-self: left
+  font-family: $urbanist
   line-height: 2
   margin-left: 0.5rem
   .highlight-skill
     font-weight: bold
     font-size: 1.1rem
     text-decoration: underline
-    text-transform: uppercase
   @media (max-width: 600px)
     margin: 0
     display: block
@@ -446,7 +438,7 @@ hr.solid //decor dividers
     border: none
   a
     background: none
-    font-family: $prata
+    font-family: $urbanist
     font-size: 1.2rem
     color: $offwhite
     text-decoration: none
@@ -475,7 +467,7 @@ hr.solid //decor dividers
 
 .contact-text
   width: 400px
-  font-family: $quicksand
+  font-family: $urbanist
   font-size: 1.2rem
   padding: 0 0 2rem 0
   justify-content: space-between
@@ -506,7 +498,7 @@ hr.solid //decor dividers
 // footer & bye-bye :)
 footer
   padding: 1rem
-  font-family: $quicksand
+  font-family: $urbanist
   font-size: 1rem
   color: white
   background: $midnight

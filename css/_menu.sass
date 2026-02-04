@@ -5,9 +5,23 @@ $lavender: #9185b1
 $light-lavender: #9185b1b5
 $purple: #2a023d
 
-////////////////////////// FONTS
-$quicksand: "Quicksand", sans-serif
+//////////////////////// FONTS
+
+@font-face // main sans-serif font
+  font-family: "Urbanist", sans-serif 
+  src: url("assets/Urbanist-VariableFont_wght.ttf") format("truetype")
+
+@font-face // serif font
+  font-family: "Prata", serif
+  src: url("assets/Prata-Regular.ttf") format("truetype")
+
+@font-face // cursive font
+  font-family: "Oooh Baby", cursive
+  src: url("assets/OoohBaby-Regular.ttf") format("truetype")
+
+$urbanist: "Urbanist", sans-serif
 $prata: "Prata", serif
+$ooohbaby: "Oooh Baby", cursive
 
 // navigation menu
 header
@@ -41,12 +55,11 @@ header
   -khtml-user-select: none
   user-select: none
   a
-    font-family: "Atkinson Hyperlegible", sans-serif
+    font-family: $urbanist
     font-size: 0.9rem
     text-transform: uppercase
     color: $offwhite
     font-weight: 700
-    font-style: italic
     text-decoration: none
     padding: 0.5rem
     &:hover

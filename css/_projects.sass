@@ -5,9 +5,23 @@ $lavender: #9185b1
 $light-lavender: #9185b1b5
 $purple: #2a023d
 
-////////////////////////// FONTS
-$quicksand: "Quicksand", sans-serif
+//////////////////////// FONTS
+
+@font-face // main sans-serif font
+  font-family: "Urbanist", sans-serif 
+  src: url("assets/Urbanist-VariableFont_wght.ttf") format("truetype")
+
+@font-face // serif font
+  font-family: "Prata", serif
+  src: url("assets/Prata-Regular.ttf") format("truetype")
+
+@font-face // cursive font
+  font-family: "Oooh Baby", cursive
+  src: url("assets/OoohBaby-Regular.ttf") format("truetype")
+
+$urbanist: "Urbanist", sans-serif
 $prata: "Prata", serif
+$ooohbaby: "Oooh Baby", cursive
 
 /////////////////////
 .project-section
@@ -15,7 +29,6 @@ $prata: "Prata", serif
   padding: 2rem
   background: $midnight
   color: $offwhite
-  font-family: $quicksand
   width: 1200px
   p
     font-size: 1.2rem
@@ -34,12 +47,12 @@ $prata: "Prata", serif
   font-family: $prata
   font-size: 4rem
   text-align: center
-  text-transform: uppercase
+  font-weight: 800
   @media (max-width: 767px)
     font-size: 2rem
 
 .work-sec-title
-  font-family: $quicksand
+  font-family: $ooohbaby
   text-align: left
   margin-top: 2rem
 
@@ -155,7 +168,7 @@ $prata: "Prata", serif
 
 .btn-viewBrand
   cursor: pointer
-  margin: 1rem auto
+  margin: 1.5rem auto
   align-self: center
   justify-self: center
   padding: 1rem 2rem
@@ -163,10 +176,10 @@ $prata: "Prata", serif
   border-radius: 2rem
   border: none
   background: $light-lavender
-  color: $purple
+  color: $offwhite
   &:hover
     background: $lavender
-    color: $offwhite
+    color: $purple
   @media (max-width: 767px)
     margin: 0
     font-size: 0.9rem
@@ -175,15 +188,15 @@ $prata: "Prata", serif
 // go back to index button
 .btn-back
   cursor: pointer
-  margin: 1.5rem auto
-  padding: 1rem 2rem
+  margin: 1rem
   font-size: 1.2rem
   background: none
   border: none
   a
     text-decoration: none 
-    color: $lavender
-
+    color: $offwhite
+    &:hover
+      color: $lavender
   a::before
       content: ''
       position: absolute
@@ -202,5 +215,9 @@ $prata: "Prata", serif
     font-size: 0.9rem
 
 .disclaimer
-  font-size: 0.8rem
-  font-family: $quicksand
+
+  margin: 1rem 
+  font-family: $urbanist
+  p
+    font-size: 0.7rem
+    line-height: 1.5rem

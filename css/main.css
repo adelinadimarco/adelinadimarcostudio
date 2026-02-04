@@ -1,11 +1,20 @@
-@import url("https://fonts.googleapis.com/css2?family=Parisienne&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Rock+Salt&display=swap");
+@font-face {
+  font-family: "Urbanist", sans-serif;
+  src: url("assets/Urbanist-VariableFont_wght.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Prata", serif;
+  src: url("assets/Prata-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Oooh Baby", cursive;
+  src: url("assets/OoohBaby-Regular.ttf") format("truetype");
+}
 .project-section {
   margin: 0 10rem;
   padding: 2rem;
   background: #080101;
   color: #FAF9F6;
-  font-family: "Quicksand", sans-serif;
   width: 1200px;
 }
 .project-section p {
@@ -29,7 +38,7 @@
   font-family: "Prata", serif;
   font-size: 4rem;
   text-align: center;
-  text-transform: uppercase;
+  font-weight: 800;
 }
 @media (max-width: 767px) {
   .work-title {
@@ -38,7 +47,7 @@
 }
 
 .work-sec-title {
-  font-family: "Quicksand", sans-serif;
+  font-family: "Oooh Baby", cursive;
   text-align: left;
   margin-top: 2rem;
 }
@@ -195,7 +204,7 @@
 
 .btn-viewBrand {
   cursor: pointer;
-  margin: 1rem auto;
+  margin: 1.5rem auto;
   align-self: center;
   justify-self: center;
   padding: 1rem 2rem;
@@ -203,11 +212,11 @@
   border-radius: 2rem;
   border: none;
   background: rgba(145, 133, 177, 0.7098039216);
-  color: #2a023d;
+  color: #FAF9F6;
 }
 .btn-viewBrand:hover {
   background: #9185b1;
-  color: #FAF9F6;
+  color: #2a023d;
 }
 @media (max-width: 767px) {
   .btn-viewBrand {
@@ -219,14 +228,16 @@
 
 .btn-back {
   cursor: pointer;
-  margin: 1.5rem auto;
-  padding: 1rem 2rem;
+  margin: 1rem;
   font-size: 1.2rem;
   background: none;
   border: none;
 }
 .btn-back a {
   text-decoration: none;
+  color: #FAF9F6;
+}
+.btn-back a:hover {
   color: #9185b1;
 }
 .btn-back a::before {
@@ -252,10 +263,26 @@
 }
 
 .disclaimer {
-  font-size: 0.8rem;
-  font-family: "Quicksand", sans-serif;
+  margin: 1rem;
+  font-family: "Urbanist", sans-serif;
+}
+.disclaimer p {
+  font-size: 0.7rem;
+  line-height: 1.5rem;
 }
 
+@font-face {
+  font-family: "Urbanist", sans-serif;
+  src: url("assets/Urbanist-VariableFont_wght.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Prata", serif;
+  src: url("assets/Prata-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Oooh Baby", cursive;
+  src: url("assets/OoohBaby-Regular.ttf") format("truetype");
+}
 header {
   width: 100%;
   display: flex;
@@ -289,12 +316,11 @@ header {
        user-select: none;
 }
 .nav-list a {
-  font-family: "Atkinson Hyperlegible", sans-serif;
+  font-family: "Urbanist", sans-serif;
   font-size: 0.9rem;
   text-transform: uppercase;
   color: #FAF9F6;
   font-weight: 700;
-  font-style: italic;
   text-decoration: none;
   padding: 0.5rem;
 }
@@ -406,16 +432,16 @@ header {
   }
 }
 @font-face {
+  font-family: "Urbanist", sans-serif;
+  src: url("assets/Urbanist-VariableFont_wght.ttf") format("truetype");
+}
+@font-face {
   font-family: "Prata", serif;
   src: url("assets/Prata-Regular.ttf") format("truetype");
 }
 @font-face {
-  font-family: "Quicksand", sans-serif;
-  src: url("assets/Quicksand-VariableFont_wght.ttf") format("truetype");
-}
-@font-face {
-  font-family: "RockSalt", cursive;
-  src: url("assets/RockSalt-Regular.ttf") format("truetype");
+  font-family: "Oooh Baby", cursive;
+  src: url("assets/OoohBaby-Regular.ttf") format("truetype");
 }
 * {
   margin: 0 auto;
@@ -471,7 +497,7 @@ body {
 
 .about-text {
   display: block;
-  font-family: "Quicksand", sans-serif;
+  font-family: "Urbanist", sans-serif;
   max-width: 580px;
   line-height: 1.7;
   font-size: 1.1rem;
@@ -487,12 +513,12 @@ body {
 }
 
 .script-font {
-  font-family: "RockSalt", cursive;
+  font-family: "Oooh Baby", cursive;
   font-size: 1.5rem;
 }
 
 .hola {
-  font-family: "RockSalt", cursive;
+  font-family: "Oooh Baby", cursive;
   font-weight: 500;
   font-size: 2.8rem;
   max-width: 500px;
@@ -525,10 +551,9 @@ body {
   margin-left: 6rem;
   margin-top: 3rem;
   padding-bottom: 1rem;
-  font-family: "Prata", serif;
+  font-family: "Oooh Baby", cursive;
   font-weight: 650;
   font-size: 4.5rem;
-  text-transform: uppercase;
 }
 @media (max-width: 767px) {
   .section-title {
@@ -633,7 +658,7 @@ body {
 }
 
 .show-text {
-  font-family: "RockSalt", cursive;
+  font-family: "Oooh Baby", cursive;
   color: #FAF9F6;
   text-align: center;
   justify-content: center;
@@ -652,7 +677,7 @@ body {
   -ms-transform: translate(-50%, -50%);
 }
 .work-name {
-  font-family: "Prata", serif;
+  font-family: "Urbanist", sans-serif;
   font-size: 2rem;
   font-weight: bold;
   text-align: center;
@@ -667,7 +692,7 @@ body {
 }
 
 .work-tag {
-  font-family: "Quicksand", sans-serif;
+  font-family: "Urbanist", sans-serif;
   color: #FAF9F6;
   font-size: 1rem;
   font-style: italic;
@@ -823,7 +848,7 @@ hr.solid {
   align-items: center;
   justify-items: center;
   font-size: 1.8rem;
-  font-family: "Prata", serif;
+  font-family: "Urbanist", sans-serif;
 }
 @media (max-width: 600px) {
   [class^=pos], [class^=job] {
@@ -836,20 +861,21 @@ hr.solid {
 
 [class^=pos] {
   text-transform: uppercase;
+  font-weight: 800;
 }
 
 [class^=job] {
-  font-style: oblique;
+  font-style: italic;
 }
-
 [class^=exp] {
   text-align: left;
+  font-family: "Urbanist", sans-serif;
 }
 
 .date {
   font-size: smaller;
   text-align: center;
-  font-family: "Quicksand", sans-serif;
+  font-family: "Urbanist", sans-serif;
 }
 @media (max-width: 600px) {
   .date {
@@ -864,6 +890,7 @@ hr.solid {
 .college {
   display: inline-flex;
   margin-left: 0.5rem;
+  font-family: "Urbanist", sans-serif;
 }
 .college .date1 {
   text-align: right;
@@ -887,6 +914,7 @@ hr.solid {
 }
 
 .courses {
+  font-family: "Urbanist", sans-serif;
   max-width: 600px;
   justify-self: left;
   align-self: left;
@@ -911,6 +939,7 @@ hr.solid {
 
 .skills {
   justify-self: left;
+  font-family: "Urbanist", sans-serif;
   line-height: 2;
   margin-left: 0.5rem;
 }
@@ -918,7 +947,6 @@ hr.solid {
   font-weight: bold;
   font-size: 1.1rem;
   text-decoration: underline;
-  text-transform: uppercase;
 }
 @media (max-width: 600px) {
   .skills {
@@ -943,7 +971,7 @@ hr.solid {
 }
 .resumeDownload-btn a {
   background: none;
-  font-family: "Prata", serif;
+  font-family: "Urbanist", sans-serif;
   font-size: 1.2rem;
   color: #FAF9F6;
   text-decoration: none;
@@ -982,7 +1010,7 @@ hr.solid {
 
 .contact-text {
   width: 400px;
-  font-family: "Quicksand", sans-serif;
+  font-family: "Urbanist", sans-serif;
   font-size: 1.2rem;
   padding: 0 0 2rem 0;
   justify-content: space-between;
@@ -1026,7 +1054,7 @@ hr.solid {
 
 footer {
   padding: 1rem;
-  font-family: "Quicksand", sans-serif;
+  font-family: "Urbanist", sans-serif;
   font-size: 1rem;
   color: white;
   background: #080101;
