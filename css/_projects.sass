@@ -8,8 +8,9 @@ $purple: #2a023d
 //////////////////////// FONTS
 
 @font-face // main sans-serif font
-  font-family: "Urbanist", sans-serif 
-  src: url("assets/Urbanist-VariableFont_wght.ttf") format("truetype")
+  font-family: "Urbanist"
+  src: url("assets/Urbanist-VariableFont_wght.ttf") format("truetype-variations")
+  font-weight: 100 900
 
 @font-face // serif font
   font-family: "Prata", serif
@@ -24,27 +25,14 @@ $prata: "Prata", serif
 $ooohbaby: "Oooh Baby", cursive
 
 /////////////////////
-.project-section
-  margin: 0 10rem
-  padding: 2rem
-  background: $midnight
-  color: $offwhite
+.work-wrap 
+  margin: 1rem 4rem
+  display: block
   width: 1200px
-  p
-    font-size: 1.2rem
-    line-height: 1.8rem
-  @media (max-width: 767px)
-    margin: 0
-    display: block
-    width: 100%
-    p
-      font-size: 1rem
-      line-height: 1.5rem
-      width: 90%
 
-
+// texts
 .work-title
-  font-family: $prata
+  font-family: $ooohbaby
   font-size: 4rem
   text-align: center
   font-weight: 800
@@ -52,37 +40,55 @@ $ooohbaby: "Oooh Baby", cursive
     font-size: 2rem
 
 .work-sec-title
-  font-family: $ooohbaby
+  font-family: $urbanist
   text-align: left
-  margin-top: 2rem
+  font-size: 3rem
 
-.work-part1
-  margin: 1rem 0
+.work-text
+  font-family: $urbanist
+  font-size: 1.3rem
+  line-height: 2rem
+
+// corleone-ercolini project styles
+.CE-presentation
+  margin: 0 auto
+  width: 100%
+  height: auto
+  background-image: url("../images/CE-logosAll.png")
+  background-repeat: no-repeat
+  background-position: center
+  background-size: cover
+  color: $lavender
+
+.CE-about
+  margin: 0.5rem 0
   display: flex
   flex-direction: row
   align-items: center
-  img
-    margin: 1rem
-    width: 500px
-    height: auto 
-  .work-part1-text
-    display: block
+  justify-content: flex-start
+  gap: 1.5rem
   @media (max-width: 767px)
-    display: block
+    flex-direction: column
+    align-items: stretch
+    gap: 1rem
     max-width: 95%
-    img
-      width: auto
-      height: 20rem
 
-.work-part2
+.CE-logo
   margin: 2rem 0
   display: flex
   flex-direction: column
-  h1
-    text-align: left
-    justify-self: left
-  p
-    max-width: 1100px
+  width: 100%
+  align-items: center
+  justify-items: center
+
+.CE-logos-text
+  display: flex
+  flex-direction: row
+  text-align: left
+  margin-top: 1rem
+  gap: 1rem
+  align-items: center
+  justify-items: center
   @media (max-width: 767px)
     display: block
     max-width: 95%
@@ -94,7 +100,7 @@ $ooohbaby: "Oooh Baby", cursive
   margin: 1rem
   gap: 1rem
   img
-    width: 500px
+    width: 350px
     height: auto
   @media screen and (max-width: 767px) 
     width: 95%
@@ -104,30 +110,29 @@ $ooohbaby: "Oooh Baby", cursive
       width: auto
       height: 200px
 
-.work-part3
-  margin: 2rem 0
+.CE-colors
   display: flex
   flex-direction: row
-  .work-part3-img
+  .work-colors-img
     width: 600px
     height: auto
     margin: 1rem
-  .work-part3-text
-    display: flex
-    flex-direction: column
-    text-align: left
-    margin-top: 2rem
-    h1
-      text-align: left
+
+.CE-colors-text
+  display: flex
+  flex-direction: column
+  text-align: left
+  margin-top: 2rem
   @media (max-width: 767px)
     display: block
     max-width: 90%
-    .work-part3-img
-      width: 95%
-      height: auto
-      margin: 0.3rem 0
 
-.work-part4
+.work-colors-img
+  width: 95%
+  height: auto
+  margin: 0.3rem 0
+
+.CE-typo
   margin: 2rem 0
   display: flex
   flex-direction: column
@@ -146,19 +151,24 @@ $ooohbaby: "Oooh Baby", cursive
       height: auto
       margin: 0
 
-.work-part5
+.CE-typo-text
+  display: flex
+  flex-direction: column
+
+.CE-mail
   margin: 2rem 0
   display: flex
   flex-direction: column
-  align-content: flex-start 
-  justify-content: left
+  align-content: center
+  justify-content: center
+  h4
+    font-family: $urbanist
+    font-size: 2rem
+    margin-right: 1rem
   .CE-mail-img
     width: 500px
     height: auto
     margin: 1rem
-  h1
-    text-align: left
-    justify-self: left
   @media (max-width: 767px)
     display: block
     max-width: 95%
@@ -184,6 +194,26 @@ $ooohbaby: "Oooh Baby", cursive
     margin: 0
     font-size: 0.9rem
     padding: 0.5rem 1rem
+
+// project disclaimer text
+.work-disclaimer
+  margin: 1rem 
+  font-family: $urbanist
+  p
+    font-size: 0.7rem
+    line-height: 1.5rem
+
+// buttons to move between works
+.change-btns
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  align-items: center
+  margin: 2rem auto
+  width: 90%
+  @media (max-width: 767px)
+    display: block
+    margin: 1rem auto
 
 // go back to index button
 .btn-back
@@ -214,10 +244,3 @@ $ooohbaby: "Oooh Baby", cursive
     padding: 0.5rem 1rem
     font-size: 0.9rem
 
-.disclaimer
-
-  margin: 1rem 
-  font-family: $urbanist
-  p
-    font-size: 0.7rem
-    line-height: 1.5rem

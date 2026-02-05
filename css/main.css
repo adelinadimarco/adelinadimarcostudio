@@ -1,6 +1,7 @@
 @font-face {
-  font-family: "Urbanist", sans-serif;
-  src: url("assets/Urbanist-VariableFont_wght.ttf") format("truetype");
+  font-family: "Urbanist";
+  src: url("assets/Urbanist-VariableFont_wght.ttf") format("truetype-variations");
+  font-weight: 100 900;
 }
 @font-face {
   font-family: "Prata", serif;
@@ -10,32 +11,14 @@
   font-family: "Oooh Baby", cursive;
   src: url("assets/OoohBaby-Regular.ttf") format("truetype");
 }
-.project-section {
-  margin: 0 10rem;
-  padding: 2rem;
-  background: #080101;
-  color: #FAF9F6;
+.work-wrap {
+  margin: 1rem 4rem;
+  display: block;
   width: 1200px;
-}
-.project-section p {
-  font-size: 1.2rem;
-  line-height: 1.8rem;
-}
-@media (max-width: 767px) {
-  .project-section {
-    margin: 0;
-    display: block;
-    width: 100%;
-  }
-  .project-section p {
-    font-size: 1rem;
-    line-height: 1.5rem;
-    width: 90%;
-  }
 }
 
 .work-title {
-  font-family: "Prata", serif;
+  font-family: "Oooh Baby", cursive;
   font-size: 4rem;
   text-align: center;
   font-weight: 800;
@@ -47,50 +30,65 @@
 }
 
 .work-sec-title {
-  font-family: "Oooh Baby", cursive;
+  font-family: "Urbanist", sans-serif;
   text-align: left;
-  margin-top: 2rem;
+  font-size: 3rem;
 }
 
-.work-part1 {
-  margin: 1rem 0;
+.work-text {
+  font-family: "Urbanist", sans-serif;
+  font-size: 1.3rem;
+  line-height: 2rem;
+}
+
+.CE-presentation {
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+  background-image: url("../images/CE-logosAll.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: #9185b1;
+}
+
+.CE-about {
+  margin: 0.5rem 0;
   display: flex;
   flex-direction: row;
   align-items: center;
-}
-.work-part1 img {
-  margin: 1rem;
-  width: 500px;
-  height: auto;
-}
-.work-part1 .work-part1-text {
-  display: block;
+  justify-content: flex-start;
+  gap: 1.5rem;
 }
 @media (max-width: 767px) {
-  .work-part1 {
-    display: block;
+  .CE-about {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
     max-width: 95%;
-  }
-  .work-part1 img {
-    width: auto;
-    height: 20rem;
   }
 }
 
-.work-part2 {
+.CE-logo {
   margin: 2rem 0;
   display: flex;
   flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-items: center;
 }
-.work-part2 h1 {
+
+.CE-logos-text {
+  display: flex;
+  flex-direction: row;
   text-align: left;
-  justify-self: left;
-}
-.work-part2 p {
-  max-width: 1100px;
+  margin-top: 1rem;
+  gap: 1rem;
+  align-items: center;
+  justify-items: center;
 }
 @media (max-width: 767px) {
-  .work-part2 {
+  .CE-logos-text {
     display: block;
     max-width: 95%;
   }
@@ -104,7 +102,7 @@
   gap: 1rem;
 }
 .CE-logos2 img {
-  width: 500px;
+  width: 350px;
   height: auto;
 }
 @media screen and (max-width: 767px) {
@@ -119,55 +117,53 @@
   }
 }
 
-.work-part3 {
-  margin: 2rem 0;
+.CE-colors {
   display: flex;
   flex-direction: row;
 }
-.work-part3 .work-part3-img {
+.CE-colors .work-colors-img {
   width: 600px;
   height: auto;
   margin: 1rem;
 }
-.work-part3 .work-part3-text {
+
+.CE-colors-text {
   display: flex;
   flex-direction: column;
   text-align: left;
   margin-top: 2rem;
 }
-.work-part3 .work-part3-text h1 {
-  text-align: left;
-}
 @media (max-width: 767px) {
-  .work-part3 {
+  .CE-colors-text {
     display: block;
     max-width: 90%;
   }
-  .work-part3 .work-part3-img {
-    width: 95%;
-    height: auto;
-    margin: 0.3rem 0;
-  }
 }
 
-.work-part4 {
+.work-colors-img {
+  width: 95%;
+  height: auto;
+  margin: 0.3rem 0;
+}
+
+.CE-typo {
   margin: 2rem 0;
   display: flex;
   flex-direction: column;
   text-align: left;
 }
-.work-part4 img {
+.CE-typo img {
   width: 1200px;
   height: auto;
   margin: 0.5rem;
   align-self: center;
 }
 @media (max-width: 767px) {
-  .work-part4 {
+  .CE-typo {
     margin: 1rem 0;
     width: 95%;
   }
-  .work-part4 img {
+  .CE-typo img {
     justify-self: left;
     width: 90%;
     height: auto;
@@ -175,28 +171,34 @@
   }
 }
 
-.work-part5 {
+.CE-typo-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.CE-mail {
   margin: 2rem 0;
   display: flex;
   flex-direction: column;
-  align-content: flex-start;
-  justify-content: left;
+  align-content: center;
+  justify-content: center;
 }
-.work-part5 .CE-mail-img {
+.CE-mail h4 {
+  font-family: "Urbanist", sans-serif;
+  font-size: 2rem;
+  margin-right: 1rem;
+}
+.CE-mail .CE-mail-img {
   width: 500px;
   height: auto;
   margin: 1rem;
 }
-.work-part5 h1 {
-  text-align: left;
-  justify-self: left;
-}
 @media (max-width: 767px) {
-  .work-part5 {
+  .CE-mail {
     display: block;
     max-width: 95%;
   }
-  .work-part5 .CE-mail-img {
+  .CE-mail .CE-mail-img {
     width: 100%;
     height: auto;
   }
@@ -223,6 +225,30 @@
     margin: 0;
     font-size: 0.9rem;
     padding: 0.5rem 1rem;
+  }
+}
+
+.work-disclaimer {
+  margin: 1rem;
+  font-family: "Urbanist", sans-serif;
+}
+.work-disclaimer p {
+  font-size: 0.7rem;
+  line-height: 1.5rem;
+}
+
+.change-btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem auto;
+  width: 90%;
+}
+@media (max-width: 767px) {
+  .change-btns {
+    display: block;
+    margin: 1rem auto;
   }
 }
 
@@ -262,18 +288,10 @@
   }
 }
 
-.disclaimer {
-  margin: 1rem;
-  font-family: "Urbanist", sans-serif;
-}
-.disclaimer p {
-  font-size: 0.7rem;
-  line-height: 1.5rem;
-}
-
 @font-face {
-  font-family: "Urbanist", sans-serif;
-  src: url("assets/Urbanist-VariableFont_wght.ttf") format("truetype");
+  font-family: "Urbanist";
+  src: url("assets/Urbanist-VariableFont_wght.ttf") format("truetype-variations");
+  font-weight: 100 900;
 }
 @font-face {
   font-family: "Prata", serif;
@@ -285,27 +303,44 @@
 }
 header {
   width: 100%;
+  margin: 0 auto;
+}
+
+.menu-header {
+  background: #080101;
+  color: #FAF9F6;
   display: flex;
-  justify-content: flex-end;
-  padding-right: 0;
+}
+
+.logo {
+  height: 3rem;
+  width: auto;
+  margin: 0.5rem 1rem;
+  justify-content: left;
+  align-content: center;
+}
+
+.nav-menu {
+  justify-content: right;
   position: relative;
+  height: 2rem;
+  top: 0.5rem;
 }
 
 .polygon {
-  position: fixed;
+  position: absolute;
   clip-path: polygon(46% 0%, 100% 0%, 100% 100%, 44% 100%);
   background: rgba(145, 133, 177, 0.7098039216);
-  z-index: 9997;
-  top: 0.5rem;
-  display: inline-flex;
+  z-index: 9998;
+  width: 25rem;
   padding: 0.6rem 1.8rem 0.6rem 25rem;
 }
 
-.nav-list {
-  padding: 0.3rem 0 0.3rem 2rem;
-  z-index: 10000;
+.menu-items {
+  position: absolute;
+  padding: 1rem 0;
+  z-index: 9999;
   display: flex;
-  justify-content: space-around;
   align-items: center;
   list-style: none;
   gap: 0.5rem;
@@ -315,23 +350,21 @@ header {
   -moz-user-select: none;
        user-select: none;
 }
-.nav-list a {
-  font-family: "Urbanist", sans-serif;
-  font-size: 0.9rem;
+.menu-items a {
+  font-family: "Oooh Baby", cursive;
   text-transform: uppercase;
   color: #FAF9F6;
-  font-weight: 700;
+  font-weight: 900;
   text-decoration: none;
   padding: 0.5rem;
 }
-.nav-list a:hover {
+.menu-items a:hover {
   color: #2a023d;
 }
 
 .social {
-  width: 1.4em;
-  height: 1.4em;
-  display: inline-block;
+  width: 1.4rem;
+  height: 1.4rem;
   vertical-align: middle;
 }
 
@@ -432,8 +465,9 @@ header {
   }
 }
 @font-face {
-  font-family: "Urbanist", sans-serif;
-  src: url("assets/Urbanist-VariableFont_wght.ttf") format("truetype");
+  font-family: "Urbanist";
+  src: url("assets/Urbanist-VariableFont_wght.ttf") format("truetype-variations");
+  font-weight: 100 900;
 }
 @font-face {
   font-family: "Prata", serif;
@@ -457,30 +491,19 @@ html {
 }
 
 body {
+  margin: 0 auto;
+  padding: 0;
+}
+
+.main-page {
+  margin: 0 auto;
   background: #080101;
   color: #FAF9F6;
   overflow-x: hidden;
 }
 @media (max-width: 767px) {
-  body {
+  .main-page {
     display: block;
-  }
-}
-
-.logo {
-  margin: 0 auto;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  width: 800px;
-  height: auto;
-  justify-self: left;
-  float: left;
-  position: inherit;
-  margin-right: 30rem;
-}
-@media (max-width: 767px) {
-  .logo {
-    max-width: 300px;
   }
 }
 
@@ -498,7 +521,7 @@ body {
 .about-text {
   display: block;
   font-family: "Urbanist", sans-serif;
-  max-width: 580px;
+  max-width: 550px;
   line-height: 1.7;
   font-size: 1.1rem;
   text-align: left;
@@ -627,7 +650,7 @@ body {
      object-fit: scale-down;
   overflow: hidden;
   position: inherit;
-  index: 100;
+  z-index: 100;
   transition: 0.5s ease;
 }
 @media (max-width: 600px) {
@@ -867,6 +890,7 @@ hr.solid {
 [class^=job] {
   font-style: italic;
 }
+
 [class^=exp] {
   text-align: left;
   font-family: "Urbanist", sans-serif;

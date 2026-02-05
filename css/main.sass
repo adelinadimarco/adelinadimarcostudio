@@ -12,8 +12,9 @@ $purple: #2a023d
 //////////////////////// FONTS
 
 @font-face // main sans-serif font
-  font-family: "Urbanist", sans-serif 
-  src: url("assets/Urbanist-VariableFont_wght.ttf") format("truetype")
+  font-family: "Urbanist"
+  src: url("assets/Urbanist-VariableFont_wght.ttf") format("truetype-variations")
+  font-weight: 100 900
 
 @font-face // serif font
   font-family: "Prata", serif
@@ -38,25 +39,16 @@ html
   scroll-behavior: smooth
 
 body
+  margin: 0 auto
+  padding: 0
+
+.main-page
+  margin: 0 auto
   background: $midnight
   color: $offwhite
   overflow-x: hidden
   @media (max-width: 767px)
     display: block
-
-// open the page
-.logo  //logo-name
-  margin: 0 auto
-  padding-top: 1rem
-  padding-bottom: 1rem
-  width: 800px
-  height: auto
-  justify-self: left
-  float: left
-  position: inherit
-  margin-right: 30rem
-  @media (max-width: 767px)
-    max-width: 300px
 
 // about me section
 .about-wrapper
@@ -69,7 +61,7 @@ body
 .about-text
   display: block
   font-family: $urbanist
-  max-width: 580px
+  max-width: 550px
   line-height: 1.7
   font-size: 1.1rem
   text-align: left
@@ -169,7 +161,7 @@ body
   object-fit: scale-down
   overflow: hidden
   position: inherit
-  index: 100
+  z-index: 100
   transition: 0.5s ease
   @media (max-width: 600px)
     width: 350px
@@ -354,7 +346,6 @@ hr.solid //decor dividers
     font-weight: 800
 [class^="job"]
     font-style: italic
-    font
 [class^="exp"]
     text-align: left
     font-family: $urbanist

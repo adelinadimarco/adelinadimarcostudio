@@ -8,8 +8,9 @@ $purple: #2a023d
 //////////////////////// FONTS
 
 @font-face // main sans-serif font
-  font-family: "Urbanist", sans-serif 
-  src: url("assets/Urbanist-VariableFont_wght.ttf") format("truetype")
+  font-family: "Urbanist"
+  src: url("assets/Urbanist-VariableFont_wght.ttf") format("truetype-variations")
+  font-weight: 100 900
 
 @font-face // serif font
   font-family: "Prata", serif
@@ -23,29 +24,43 @@ $urbanist: "Urbanist", sans-serif
 $prata: "Prata", serif
 $ooohbaby: "Oooh Baby", cursive
 
-// navigation menu
 header
   width: 100%
+  margin: 0 auto
+
+.menu-header
+  background: $midnight
+  color: $offwhite
   display: flex
-  justify-content: flex-end
-  padding-right: 0
-  position: relative
+
+
+// navigation menu
+.logo
+  height: 3rem
+  width: auto
+  margin: 0.5rem 1rem
+  justify-content: left
+  align-content: center
+
+.nav-menu
+    justify-content: right
+    position: relative
+    height: 2rem
+    top: 0.5rem
 
 .polygon
-  position: fixed
+  position: absolute
   clip-path: polygon(46% 0%, 100% 0%, 100% 100%, 44% 100%)
   background: $light-lavender
-  z-index: 9997      
-  top: 0.5rem
-  
-  display: inline-flex
+  z-index: 9998   
+  width: 25rem
   padding: 0.6rem 1.8rem 0.6rem 25rem
 
-.nav-list
-  padding: 0.3rem 0 0.3rem 2rem
-  z-index: 10000
+.menu-items
+  position: absolute
+  padding: 1rem 0
+  z-index: 9999
   display: flex
-  justify-content: space-around
   align-items: center
   list-style: none
   gap: 0.5rem
@@ -55,20 +70,18 @@ header
   -khtml-user-select: none
   user-select: none
   a
-    font-family: $urbanist
-    font-size: 0.9rem
+    font-family: $ooohbaby
     text-transform: uppercase
     color: $offwhite
-    font-weight: 700
+    font-weight: 900
     text-decoration: none
     padding: 0.5rem
     &:hover
       color: $purple
 
 .social
-  width: 1.4em
-  height: 1.4em
-  display: inline-block
+  width: 1.4rem
+  height: 1.4rem
   vertical-align: middle
     
 .menu-toggle 
