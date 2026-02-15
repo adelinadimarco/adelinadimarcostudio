@@ -4,29 +4,27 @@
 
 /////////////////////////// COLORS 
 $midnight: #080101
-$offwhite: #FAF9F6
+$offwhite: #fcfafc
+$chalk: #FBF7F5
+
+$ink: #00010c
 $lavender: #9185b1
 $light-lavender: #9185b1b5
 $purple: #2a023d
+$rasp: #E30B5D
 
 //////////////////////// FONTS
-
 @font-face // main sans-serif font
   font-family: "Urbanist"
   src: url("assets/Urbanist-VariableFont_wght.ttf") format("truetype-variations")
   font-weight: 100 900
 
 @font-face // serif font
-  font-family: "Prata", serif
-  src: url("assets/Prata-Regular.ttf") format("truetype")
-
-@font-face // cursive font
-  font-family: "Oooh Baby", cursive
-  src: url("assets/OoohBaby-Regular.ttf") format("truetype")
+  font-family: "Alice", serif
+  src: url("assets/Alice-Regular.ttf") format("truetype")
 
 $urbanist: "Urbanist", sans-serif
-$prata: "Prata", serif
-$ooohbaby: "Oooh Baby", cursive
+$alice: "Alice", serif
 
 ///////////////////////////////////////// GENERAL DISPLAY
 *
@@ -45,111 +43,94 @@ body
 .main-page
   margin: 0 auto
   background: $midnight
-  color: $offwhite
+  color: $chalk
   overflow-x: hidden
-  @media (max-width: 767px)
-    display: block
+  max-width: 100%
 
 // about me section
 .about-wrapper
   display: flex
+  margin: 5rem
   padding: 0 auto
-  @media (max-width: 767px)
-    display: block
-    max-width: 100%
 
 .about-text
   display: block
   font-family: $urbanist
   max-width: 550px
-  line-height: 1.7
+  line-height: 1.8
   font-size: 1.1rem
   text-align: left
-  @media (max-width: 767px)
-    display: block
-    max-width: 90%
-    text-align: left
-    margin-left: 1rem
-
-.script-font // highlighted cursive font
-  font-family: $ooohbaby
-  font-size: 1.5rem
 
 .hola //subtitle for about me text
-  font-family: $ooohbaby
-  font-weight: 500
-  font-size: 2.8rem
+  font-family: $urbanist
+  font-weight: 700
+  font-size: 5rem
   max-width: 500px
   margin: 0 auto
-  @media (max-width: 767px)
-    display: block
-    max-width: 90%
-    font-size: 2rem
 
 .profile-pic // about me profile picture
   object-fit: contain
   width: auto
-  height: 600px
-  margin: 0 auto
-  @media (max-width: 767px)
+  height: 500px
+  margin: 1rem
+
+// MOBILE DISPLAY FOR ABOUT ME
+@media (max-width: 768px) 
+  .about-wrapper
+    display: flex
+    flex-direction: column
+    align-items: center
+    margin: 0 auto
+    padding-bottom: 2rem
+  .hola
+    font-size: 3rem
+    padding-bottom: 1rem
+    text-align: center
+  .about-text
+    font-size: 1rem
+    line-height: 1.6
+  .profile-pic
     width: 100%
     height: auto
+    margin: 0 auto
 
-/////////////////////////////
-// titles for each section within page
-.section-title
-  display: flex
-  margin-left: 6rem
-  margin-top: 3rem
-  padding-bottom: 1rem
-  font-family: $ooohbaby
-  font-weight: 650
-  font-size: 4.5rem
-  @media (max-width: 767px)
-    width: 95%
-    text-align: left
-    font-size: 2.2rem
-    margin: 0 1rem
-    padding: 1rem 0 0.2rem
-
-// work/projects section 
-.work-wrap
+///////////////////////////////////////
+// WORK SECTION 
+.work-wrap // on grid display
   display: grid
-  margin-left: 5rem
-  margin-right: 5rem
-  grid-template-columns: 1fr 1fr
+  max-width: 100%
+  margin: 2rem 3rem
+  grid-template-columns: 2fr 2fr 2fr
   grid-template-rows: auto
-  gap: 1.5rem
-  @media (max-width: 767px)
-    display: block
-    margin: 0 0.5rem
-    padding: 0
-    justify-items: center
-    align-items: center
-
-// show name of each project over image
-.project
-  overflow: visible
-  max-width: 1000px
-  height: auto
-  margin: 0 auto
-  position: relative
-  @media (max-width: 767px)
-     margin: 2rem
-
-.work-box // work preview picture box
-  position: relative
-  width: 500px
-  height: auto
-  margin: 1rem
-  overflow: hidden
-  border-radius: 0.8rem
+  gap: 1rem
   justify-items: center
   align-items: center
-  object-fit: contain
-  @media (max-width: 767px)
-    margin: 0.5rem
-    gap: 1rem
+
+.work-card
+  display: block
+  position: relative
+  justify-content: center
+  align-content: center
+
+.work-box // work preview box
+  position: relative
+  justify-content: center
+  align-content: center
+  width: 100%
+  height: auto
+  transition: 0.5s ease
+
+.work-box::before
+  content: ""
+  position: absolute
+  inset: -1rem
+  z-index: 0
+
+.work-box:hover img
+  opacity: 0.1
+
+.work-box:hover .show-text
+  opacity: 1
 
 .work-pic
   width: 100%
@@ -157,41 +138,10 @@ body
   display: block
   margin: 0 auto
 
-.work-img // work preview picture
-  object-fit: scale-down
-  overflow: hidden
-  position: inherit
-  z-index: 100
-  transition: 0.5s ease
-  @media (max-width: 600px)
-    width: 350px
-    height: auto
-
-.work-img::before
-  content: ""
-  position: absolute
-  inset: -1rem
-  z-index: 0
-
-.work-img:hover img
-  opacity: 0.1
-
-.work-img:hover .show-text
-  opacity: 1
-  @media (max-width: 600px)
-    opacity: 0
-
 .show-text // hover text on each project image
-  font-family: $ooohbaby
-  color: $offwhite
-  text-align: center
   justify-content: center
   align-content: center
-  font-weight: 700
-  font-size: 2rem
-  text-transform: uppercase
-  font-style: oblique
-  transition: .5s ease
+  transition: 0.5s ease
   opacity: 0
   position: absolute
   z-index: 200
@@ -199,74 +149,102 @@ body
   left: 50%
   transform: translate(-50%, -50%)
   -ms-transform: translate(-50%, -50%)
-  @media (max-width: 600px)
+  .work-name
+    font-family: $urbanist
+    font-size: 2rem
+    font-weight: bold
+    text-align: center
+    text-transform: uppercase
+  .work-tag
+    font-family: $urbanist
+    font-size: 1.1rem
+    text-align: center
+  a 
+    text-decoration: none
+    color: $offwhite
 
-.work-name // each project title
-  font-family: $urbanist
-  font-size: 2rem
-  font-weight: bold
-  text-align: center
-  text-transform: uppercase
-  @media (max-width: 600px)
-    font-size: 1.5rem
-    text-align: left
-    margin-left: 1rem
-
-.work-tag // small description under each project title
-  font-family: $urbanist
-  color: $offwhite
-  font-size: 1rem
-  font-style: italic
-  font-weight: 500
-  text-align: center
-  @media (max-width: 600px)
-    font-size: 0.9rem
-    text-align: left
-    margin-left: 1rem
-
-// starts resume section
-///////////////////////////////////////
-hr.solid //decor dividers
-  border-top: 0.3px solid $offwhite
+.view-more-btn
   margin-top: 1rem
-  margin-bottom: 1rem
+  padding: 0.5rem 1.2rem
+  font-size: 0.9rem
+  font-weight: 600
+  border-radius: 2rem
+  background: $light-lavender
+  color: $offwhite
+  font-family: $urbanist
+  border: none
+  cursor: pointer
+  &:hover
+    background: $lavender
+    color: $purple
+
+.mobile-view-more-btn
+  display: none
+
+// MOBILE DISPLAY FOR MAIN INDEX / WORK PROJECTS
+@media (max-width: 768px) 
+  .work-wrap
+    grid-template-columns: 1fr
+    grid-auto-rows: auto
+    margin: 1rem 0.5rem
+    gap: 0.6em
+  .mobile-view-more-btn
+    display: flex
+    margin: 1rem 0
+    font-size: 2rem
+    font-weight: 700
+    color: $chalk
+    font-family: $urbanist
+    border: none
+    cursor: pointer
+    justify-content: center 
+    align-content: center
+    a 
+      text-decoration: none
+      color: $chalk
+    &:hover
+      text-decoration: underline
+  .view-more-btn
+    display: none
+
+////////////////////////////////////////////////////
+  // STARTS RESUME SECTION
+
+hr.solid //decor dividers
+  border-top: 0.3px solid #3d3d3d
+  margin: 1rem 0
 
 .resume-wrap // main resume section wrapper
-  max-width: 900px
-  margin: 0 auto
-  ul
-    line-height: 2
-    letter-spacing: 0.02rem
-    list-style-position: inside
-  @media (max-width: 600px) ///checkear!!!
-    display: block
-    width: 90%
-    text-align: left
-    ul
-      line-height: 1.8
-      padding: 0
+  max-width: 100%
+  padding: 2rem 0
+  background: $offwhite
+  color: $midnight
 
-.cv-subtitle //subtitles for each resume section
-  text-align: left
-  font-family: $prata
-  font-size: 2.5rem
-  font-style: italic
-  padding-bottom: 0.5rem
-  font-optical-sizing: auto
-  margin-top: 1.5rem
-  @media (max-width: 600px)
-    font-size: 1.5rem
-    padding-bottom: 0
+.resume-layout
+  width: 65%
 
 // resume - experience section
-.experience //experiences grid display
+.experience-grid //experiences grid display
   display: grid
-  grid-template-columns: 1.3fr 2.5fr
+  grid-template-columns: 1.3fr 2.3fr
   grid-auto-rows: auto
-  @media (max-width: 600px)
-    display: block
-    margin: 0
-    text-align: left
+  .experience-title
+      font-family: $alice
+      font-size: 1.7rem
+      font-weight: 800
+      text-align: left
+  .experience-job
+      font-family: $urbanist
+      font-size: 1.5rem
+      font-weight: 700
+      text-align: left
+  .experience-list
+    font-family: $urbanist
+    font-size: 1.1rem
+    line-height: 1.6
+    letter-spacing: 0.02rem
+    list-style-position: inside
+  // grid positions
   .pos1
     grid-column: 1
     grid-row: 1
@@ -329,100 +307,75 @@ hr.solid //decor dividers
     grid-column: 2
     grid-row: 13 / 16
 
-[class^="pos"], [class^="job"]
-    text-align: center
-    align-items: center
-    justify-items: center
-    font-size: 1.8rem
-    font-family: $urbanist
-    @media (max-width: 600px)
-      text-align: left
-      justify-items: left
-      font-size: 1.5rem
-      margin-bottom: 0.3rem
-
-[class^="pos"]
-    text-transform: uppercase
-    font-weight: 800
-[class^="job"]
-    font-style: italic
-[class^="exp"]
-    text-align: left
-    font-family: $urbanist
-
-
-// dates with smaller size
-.date
-  font-size: smaller
-  text-align: center
+.date // dates of experiences with smaller size
+  font-size: 1rem
+  text-align: left
+  justify-content: left
   font-family: $urbanist
-  @media (max-width: 600px)
-    line-height: 1.5
-    text-align: left
-    justify-items: left
-    margin-bottom: 0.3rem
-    font-size: 0.8rem
+
+.cv-title // main title of resume section
+  margin: 0 0 0.7rem 4rem
+  font-family: $urbanist
+  font-size: 5rem
+  font-weight: 700
+  text-align: left
+
+.cv-subtitle //subtitles for each resume section
+  text-align: left
+  font-family: $alice
+  font-size: 2.3rem
+  padding-bottom: 0.5rem
+  font-optical-sizing: auto
+  margin-top: 1.5rem
 
 // skills & studies section
 .college
-  display: inline-flex
-  margin-left: 0.5rem
+  display: grid
+  grid-template-columns: 1fr 1fr  
+  grid-auto-rows: auto
   font-family: $urbanist
-  .date1
-    text-align: right
-    font-size: 0.9rem
-    align-content: center
-    margin-left: 19rem
-  @media (max-width: 600px)
-    display: block
-    margin: 0
-    padding: 0
+  .school
+    justify-self: left
+    font-size: 1.1rem
     text-align: left
-    .date1
-      text-align: left
-      margin-top: 0.5rem
-      margin-left: 0
-      font-size: 0.75rem
+  .dateCol
+    justify-self: flex-end
+    text-align: right
+    align-content: center
 
 .courses
   font-family: $urbanist
   max-width: 600px
   justify-self: left
   align-self: left
-  line-height: 2
+  line-height: 1.8
   margin-left: 0.5rem
+  font-size: 1.1rem
   a
     color: $offwhite
     text-decoration: none
     &:hover
       color: $lavender
-  @media (max-width: 600px)
-    padding: 0
-    margin: 0
-    justify-items: left
-    width: 100%
 
 .skills
   justify-self: left
   font-family: $urbanist
-  line-height: 2
+  line-height: 1.8
   margin-left: 0.5rem
+  font-size: 1.1rem
   .highlight-skill
     font-weight: bold
-    font-size: 1.1rem
+    font-size: 1.2rem
     text-decoration: underline
-  @media (max-width: 600px)
-    margin: 0
-    display: block
-    padding-bottom: 0
 
 .resumeDownload-btn
   cursor: pointer
-  margin: 1rem 0
+  margin: 1.5rem 0 3rem 0
   padding: 1rem 2rem
   background: none
   border-radius: 4rem
-  border: 0.1rem solid $offwhite
+  border: none
+  background: #E30B5D
   &:hover
     transition: background-color 0.3s ease
     background: $lavender
@@ -431,84 +384,58 @@ hr.solid //decor dividers
     background: none
     font-family: $urbanist
     font-size: 1.2rem
-    color: $offwhite
+    color: $chalk
     text-decoration: none
     padding: 1rem
     font-weight: 600
     &:hover
       transition: color 0.3s ease
       color: $midnight
-  @media (max-width: 767px)
-    display: block
-    padding: 0.5rem 1rem
-    a
-      font-size: 1rem
-      align-self: center
-      justify-self: center
 
-// conatct info
-.contact-wrap
-  padding: 1rem
-  width: 100%
-  @media (max-width: 767px)
-    padding: 0
+@media (max-width: 768px) 
+  hr.solid
+    margin: 0.2rem 0
+  .resume-wrap
+    max-width: 100%
+    margin: 1rem auto
+    padding: 1rem
+    .cv-title
+      font-size: 3rem
+      margin: 0.7rem
+      padding-top: 0.5rem 
+  .resume-layout
+    width: 90%
+    padding: 0 1rem
     margin: 0
-    .section-title .contact
-      justify-content: center
-
-.contact-text
-  width: 400px
-  font-family: $urbanist
-  font-size: 1.2rem
-  padding: 0 0 2rem 0
-  justify-content: space-between
-  justify-self: center
-  @media (max-width: 600px)
+    .cv-subtitle
+      font-size: 1.5rem
+  .experience-grid
+    display: flex
+    flex-direction: column
+    .experience-title, .experience-job 
+      font-size: 1.5rem
+      margin: 0.3rem 0
+    .date
+      font-size: 1rem
+      margin: 0.3rem 0
+    .experience-list
+      justify-self: left
+      text-align: left
+      font-size: 1rem
+      line-height: 1.4
+      list-style-type: none
+  .college
+    display: flex
+    flex-direction: column
+    .school, .dateCol
+      font-size: 1rem
+      text-align: left
+      margin: 0.3rem 0
+  .courses, .skills, .highlight-skill
     font-size: 1rem
-    margin-left: 1.5rem
-
-.contact-items // wrap for all social icons
-  display: flex
-  justify-content: space-between
-  justify-self: center
-  padding-left: 1rem
-  @media (max-width: 600px)
-    padding-bottom: 0.5rem
-
-.social-icon
-  width: 3rem
-  height: auto
-  margin-right: 2rem
-  object-fit: contain
-  color: $offwhite
-  &:hover
-    color: $lavender
-  @media (max-width: 600px)
-      width: 1.5rem
-
-// footer & bye-bye :)
-footer
-  padding: 1rem
-  font-family: $urbanist
-  font-size: 1rem
-  color: white
-  background: $midnight
-  width: 100%
-  content: center
-  text-align: center
-  margin: 0 auto
-  line-height: 1.5
-  .rights-footer
-    display: block
-    margin: 0 auto
-    text-align: center
-    justify-content: center
-  .myName-footer
-    font-weight: bold
-  @media (max-width: 600px)
-    width: 100%
-    display: block
-    font-size: 0.9rem
-    height: 10rem
-    p
-      width: 90%
+    margin: 0
+    line-height: 1.5
+  .resumeDownload-btn
+    margin: 0.5rem 0
+    padding: 0.5rem 1rem
+    font-size: 1rem

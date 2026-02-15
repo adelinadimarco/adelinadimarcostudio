@@ -1,63 +1,63 @@
 /////////////////////////// COLORS 
 $midnight: #080101
-$offwhite: #FAF9F6
-$lavender: #9185b1
-$light-lavender: #9185b1b5
-$purple: #2a023d
+$chalk: #FBF7F5
+$rasp: #E30B5D
+
 
 //////////////////////// FONTS
-
 @font-face // main sans-serif font
   font-family: "Urbanist"
   src: url("assets/Urbanist-VariableFont_wght.ttf") format("truetype-variations")
   font-weight: 100 900
 
-@font-face // serif font
-  font-family: "Prata", serif
-  src: url("assets/Prata-Regular.ttf") format("truetype")
-
-@font-face // cursive font
-  font-family: "Oooh Baby", cursive
-  src: url("assets/OoohBaby-Regular.ttf") format("truetype")
-
 $urbanist: "Urbanist", sans-serif
-$prata: "Prata", serif
-$ooohbaby: "Oooh Baby", cursive
 
 header
   width: 100%
   margin: 0 auto
+  overflow: hidden
 
-.menu-header
-  background: $midnight
-  color: $offwhite
+.header-box
   display: flex
-
+  justify-content: space-between
+  align-items: center
+  width: 100%
+  overflow: hidden
+  background: $chalk
+  a
+    color: $midnight
 
 // navigation menu
-.logo
+.AD-logo
   height: 3rem
   width: auto
-  margin: 0.5rem 1rem
+  margin: 0.5rem 1rem 0.5rem 10rem
   justify-content: left
   align-content: center
+  img
+    height: 100%
+    width: auto
+
+.AD-logo-index
+  height: 4rem
+  width: auto
+  margin: 0.5rem 1rem
+  justify-content: center
+  align-content: center
+  img
+    height: 100%
+    width: auto
 
 .nav-menu
-    justify-content: right
-    position: relative
-    height: 2rem
-    top: 0.5rem
+    justify-content: center
+    align-content: center
 
-.polygon
-  position: absolute
-  clip-path: polygon(46% 0%, 100% 0%, 100% 100%, 44% 100%)
-  background: $light-lavender
-  z-index: 9998   
-  width: 25rem
-  padding: 0.6rem 1.8rem 0.6rem 25rem
+.hidden-menu
+  left: 0
+  padding: 0 8rem
 
 .menu-items
-  position: absolute
+  positiona: absolute
   padding: 1rem 0
   z-index: 9999
   display: flex
@@ -65,28 +65,28 @@ header
   list-style: none
   gap: 0.5rem
   white-space: nowrap
-  -webkit-touch-callout: none
-  -webkit-user-select: none
-  -khtml-user-select: none
-  user-select: none
+  right: 0
   a
-    font-family: $ooohbaby
+    font-family: $urbanist
     text-transform: uppercase
-    color: $offwhite
-    font-weight: 900
+    color: $midnight
+    font-weight: 800
     text-decoration: none
+    font-size: 1rem
     padding: 0.5rem
     &:hover
-      color: $purple
+      color: $rasp
 
 .social
   width: 1.4rem
   height: 1.4rem
   vertical-align: middle
+  justify-content: center 
+  align-content: center
     
 .menu-toggle 
   position: fixed
-  width: 25px
+  width: 25rem
   height: 25px
   cursor: pointer
   z-index: 9999
@@ -102,7 +102,7 @@ header
 .menu-toggle::before, .menu-toggle::after 
         content: ''
         position: absolute
-        background: $offwhite
+        background: $chalk
         transition: transform 0.2s ease
 .menu-toggle::before 
         width: 100%
@@ -160,3 +160,85 @@ header
   .cross-opened.active
     .nav-list
       display: flex
+
+//////////////////////////////////////////////////////
+// bye-bye :)
+footer
+  display: flex
+  margin: 3rem 0
+  padding: 5rem 0
+  font-family: $urbanist
+  font-size: 1rem
+  color: $chalk
+  background: $midnight
+  width: 100%
+  content: center
+  text-align: center
+  margin: 0 auto
+  line-height: 1.75rem
+  .rights-footer
+    display: flex
+    flex-direction: column
+    margin: 0 auto
+    text-align: center
+    justify-content: center
+    align-content: center
+    a
+      color: $chalk
+      text-decoration: none
+      &:hover
+        color: $rasp
+    .cclicense
+      justify-content: center
+      align-content: center
+      width: 1.5rem 
+  .thanks-footer
+    display: flex
+    flex-direction: column
+    font-size: 1.1rem
+
+// conatct info
+.contact-items // all social icons
+  display: flex
+  justify-content: space-between
+  justify-content: center
+  align-content: center
+  gap: 1.5rem
+  
+.social-icon
+  width: 2.8rem
+  height: auto
+  object-fit: contain
+  color: $chalk
+  align-content: center
+  &:hover
+    color: $rasp
+
+//MOBILE DISPLAY FOR FOOTER
+@media (max-width: 768px) 
+  footer
+    flex-direction: column
+    margin: 0 
+    padding: 1rem 0
+    justify-content: center
+    align-content: center
+    gap: 1rem
+    .rights-footer
+      margin: 0
+      justify-content: center
+      align-content: center
+      .cclicense
+        width: 1.4rem
+        align-self: center
+    .social-icon
+      width: 1.5rem
+
+.header-proj
+  width: 100%
+  position: absolute
+
+.header-main
+  background: $midnight
+  color: $chalk
+  a
+    color:$chalk

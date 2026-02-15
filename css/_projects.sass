@@ -24,21 +24,9 @@ $urbanist: "Urbanist", sans-serif
 $prata: "Prata", serif
 $ooohbaby: "Oooh Baby", cursive
 
-/////////////////////
-.work-wrap 
-  margin: 1rem 4rem
-  display: block
-  width: 1200px
+////////////////////////// PROJECTS STYLES
 
 // texts
-.work-title
-  font-family: $ooohbaby
-  font-size: 4rem
-  text-align: center
-  font-weight: 800
-  @media (max-width: 767px)
-    font-size: 2rem
-
 .work-sec-title
   font-family: $urbanist
   text-align: left
@@ -48,47 +36,54 @@ $ooohbaby: "Oooh Baby", cursive
   font-family: $urbanist
   font-size: 1.3rem
   line-height: 2rem
+  text-align: left
 
 // corleone-ercolini project styles
-.CE-presentation
-  margin: 0 auto
-  width: 100%
-  height: auto
-  background-image: url("../images/CE-logosAll.png")
-  background-repeat: no-repeat
-  background-position: center
-  background-size: cover
-  color: $lavender
+.CE-presentation // with image as a background
+  margin: 5rem 0 1rem 0
+  max-width: 100%
+  height: 100%
+  img
+    width: 100%
+    height: auto
+  @media (max-width: 767px)
+    font-size: 2.5rem
+    padding-top: 30vh
+
 
 .CE-about
-  margin: 0.5rem 0
+  width: 750px
+  margin: 2rem auto
+  gap: 1.5rem 
   display: flex
   flex-direction: row
+  justify-content: center
   align-items: center
-  justify-content: flex-start
-  gap: 1.5rem
   @media (max-width: 767px)
+    display: flex
     flex-direction: column
     align-items: stretch
     gap: 1rem
     max-width: 95%
 
-.CE-logo
+.CE-logo // section logo
   margin: 2rem 0
   display: flex
   flex-direction: column
   width: 100%
   align-items: center
   justify-items: center
+  background: $offwhite
+  color: $midnight
 
 .CE-logos-text
+  width: 750px
+  margin: 2rem auto
+  gap: 1.5rem 
   display: flex
   flex-direction: row
-  text-align: left
-  margin-top: 1rem
-  gap: 1rem
+  justify-content: center
   align-items: center
-  justify-items: center
   @media (max-width: 767px)
     display: block
     max-width: 95%
@@ -111,26 +106,28 @@ $ooohbaby: "Oooh Baby", cursive
       height: 200px
 
 .CE-colors
+  width: 800px
+  margin: 2rem auto
+  gap: 1.5rem 
   display: flex
-  flex-direction: row
+  flex-direction: column
+  justify-items: center
+  align-content: center
   .work-colors-img
     width: 600px
     height: auto
-    margin: 1rem
 
 .CE-colors-text
+  width: 750px
+  margin: 2rem auto
+  gap: 1.5rem 
   display: flex
-  flex-direction: column
-  text-align: left
-  margin-top: 2rem
+  flex-direction: row
+  justify-content: center
+  align-items: center
   @media (max-width: 767px)
     display: block
     max-width: 90%
-
-.work-colors-img
-  width: 95%
-  height: auto
-  margin: 0.3rem 0
 
 .CE-typo
   margin: 2rem 0
@@ -152,23 +149,31 @@ $ooohbaby: "Oooh Baby", cursive
       margin: 0
 
 .CE-typo-text
+  width: 750px
+  margin: 2rem auto
+  gap: 1.5rem 
   display: flex
-  flex-direction: column
+  flex-direction: row
+  justify-content: center
+  align-items: center
 
 .CE-mail
-  margin: 2rem 0
+  width: 800px
+  margin: 2rem auto
+  gap: 1.5rem 
   display: flex
   flex-direction: column
-  align-content: center
   justify-content: center
+  align-content: center
   h4
     font-family: $urbanist
     font-size: 2rem
-    margin-right: 1rem
   .CE-mail-img
     width: 500px
     height: auto
     margin: 1rem
+    justify-self: center
+    align-self: center
   @media (max-width: 767px)
     display: block
     max-width: 95%
@@ -176,15 +181,19 @@ $ooohbaby: "Oooh Baby", cursive
       width: 100%
       height: auto
 
+.btn-viewMore
+  display: flex
+  justify-content: center
+  align-content: center
+  margin: 2rem auto
+
 .btn-viewBrand
   cursor: pointer
-  margin: 1.5rem auto
-  align-self: center
-  justify-self: center
+  margin: 1rem auto
   padding: 1rem 2rem
   font-size: 1rem
+  font-weight: 700
   border-radius: 2rem
-  border: none
   background: $light-lavender
   color: $offwhite
   &:hover
@@ -197,32 +206,37 @@ $ooohbaby: "Oooh Baby", cursive
 
 // project disclaimer text
 .work-disclaimer
-  margin: 1rem 
+  width: 700px
+  margin: 2rem auto
+  gap: 1.5rem 
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-content: center
   font-family: $urbanist
   p
     font-size: 0.7rem
     line-height: 1.5rem
 
 // buttons to move between works
-.change-btns
+.change-btn-wrap
   display: flex
   flex-direction: row
-  justify-content: space-between
-  align-items: center
-  margin: 2rem auto
-  width: 90%
+  width: 100vw
+  margin: 5rem 0.5rem
+  justify-content: space-around
+  align-content: center
   @media (max-width: 767px)
     display: block
     margin: 1rem auto
 
-// go back to index button
-.btn-back
+.change-btn
   cursor: pointer
-  margin: 1rem
   font-size: 1.2rem
   background: none
   border: none
   a
+    font-family: $urbanist
     text-decoration: none 
     color: $offwhite
     &:hover
