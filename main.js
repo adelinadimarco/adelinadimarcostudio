@@ -1,7 +1,7 @@
 const menuToggle = document.getElementById('menuToggle');
-const navList = document.querySelector('.nav-list');
+const menuItems = document.querySelector('.menu-items');
 
 menuToggle.addEventListener('click', () => {
   menuToggle.classList.toggle('open');
-  navList.classList.toggle("active");
+  menuItems.classList.toggle("active");
 })
