@@ -3,14 +3,8 @@
 @use 'menu' 
 
 /////////////////////////// COLORS 
-$midnight: #080101
-$offwhite: #fcfafc
+$midnight: #00010c
 $chalk: #FBF7F5
-
-$ink: #00010c
-$lavender: #9185b1
-$light-lavender: #9185b1b5
-$purple: #2a023d
 $rasp: #E30B5D
 
 //////////////////////// FONTS
@@ -161,22 +155,26 @@ body
     text-align: center
   a 
     text-decoration: none
-    color: $offwhite
+    color: $chalk
 
 .view-more-btn
   margin-top: 1rem
-  padding: 0.5rem 1.2rem
-  font-size: 0.9rem
+  padding: 0.5rem 0
+  width: 10rem
   font-weight: 600
   border-radius: 2rem
-  background: $light-lavender
-  color: $offwhite
+  background: $chalk
+  opacity: 0.5
   font-family: $urbanist
   border: none
   cursor: pointer
+  text-align: center
+  a
+    color: $midnight
+    font-size: 0.9rem
+
   &:hover
-    background: $lavender
-    color: $purple
+    opacity: 1
 
 .mobile-view-more-btn
   display: none
@@ -217,7 +215,7 @@ hr.solid //decor dividers
 .resume-wrap // main resume section wrapper
   max-width: 100%
   padding: 2rem 0
-  background: $offwhite
+  background: $chalk
   color: $midnight
 
 .resume-layout
@@ -352,10 +350,10 @@ hr.solid //decor dividers
   margin-left: 0.5rem
   font-size: 1.1rem
   a
-    color: $offwhite
+    color: $chalk
     text-decoration: none
     &:hover
-      color: $lavender
+      color: $rasp
 
 .skills
   justify-self: left
@@ -378,7 +376,7 @@ hr.solid //decor dividers
   background: #E30B5D
   &:hover
     transition: background-color 0.3s ease
-    background: $lavender
+    background: $rasp
     border: none
   a
     background: none

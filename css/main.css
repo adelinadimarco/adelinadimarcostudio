@@ -4,12 +4,8 @@
   font-weight: 100 900;
 }
 @font-face {
-  font-family: "Prata", serif;
-  src: url("assets/Prata-Regular.ttf") format("truetype");
-}
-@font-face {
-  font-family: "Oooh Baby", cursive;
-  src: url("assets/OoohBaby-Regular.ttf") format("truetype");
+  font-family: "Alice", serif;
+  src: url("assets/Alice-Regular.ttf") format("truetype");
 }
 .work-sec-title {
   font-family: "Urbanist", sans-serif;
@@ -20,10 +16,19 @@
 .work-text {
   font-family: "Urbanist", sans-serif;
   font-size: 1.3rem;
-  line-height: 2rem;
+  line-height: 2;
   text-align: left;
 }
 
+@media (max-width: 768px) {
+  .work-sec-title {
+    font-size: 2.8rem;
+  }
+  .work-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+}
 .CE-presentation {
   margin: 5rem 0 1rem 0;
   max-width: 100%;
@@ -33,15 +38,9 @@
   width: 100%;
   height: auto;
 }
-@media (max-width: 767px) {
-  .CE-presentation {
-    font-size: 2.5rem;
-    padding-top: 30vh;
-  }
-}
 
-.CE-about {
-  width: 750px;
+.CE-about-wrap {
+  width: 55%;
   margin: 2rem auto;
   gap: 1.5rem;
   display: flex;
@@ -49,41 +48,29 @@
   justify-content: center;
   align-items: center;
 }
-@media (max-width: 767px) {
-  .CE-about {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 1rem;
-    max-width: 95%;
-  }
-}
 
-.CE-logo {
+.CE-logo-wrap {
   margin: 2rem 0;
   display: flex;
   flex-direction: column;
   width: 100%;
   align-items: center;
   justify-items: center;
-  background: #FAF9F6;
-  color: #080101;
+  background: #FBF7F5;
+  color: #00010c;
+}
+.CE-logo-wrap h2 {
+  padding: 1rem 0 0 0;
 }
 
 .CE-logos-text {
-  width: 750px;
-  margin: 2rem auto;
+  width: 50%;
+  margin: 1rem auto;
   gap: 1.5rem;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-}
-@media (max-width: 767px) {
-  .CE-logos-text {
-    display: block;
-    max-width: 95%;
-  }
 }
 
 .CE-logos2 {
@@ -94,49 +81,31 @@
   gap: 1rem;
 }
 .CE-logos2 img {
-  width: 350px;
+  width: 25rem;
   height: auto;
 }
-@media screen and (max-width: 767px) {
-  .CE-logos2 {
-    width: 95%;
-    height: auto;
-    justify-items: center;
-  }
-  .CE-logos2 img {
-    width: auto;
-    height: 200px;
-  }
-}
 
-.CE-colors {
-  width: 800px;
+.CE-colors-wrap {
+  width: 60%;
   margin: 2rem auto;
   gap: 1.5rem;
   display: flex;
   flex-direction: column;
-  justify-items: center;
+  justify-content: center;
   align-content: center;
 }
-.CE-colors .work-colors-img {
-  width: 600px;
+.CE-colors-wrap .CE-colors-img {
+  width: 50rem;
   height: auto;
 }
 
 .CE-colors-text {
-  width: 750px;
+  width: 90%;
   margin: 2rem auto;
-  gap: 1.5rem;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-}
-@media (max-width: 767px) {
-  .CE-colors-text {
-    display: block;
-    max-width: 90%;
-  }
 }
 
 .CE-typo {
@@ -146,26 +115,14 @@
   text-align: left;
 }
 .CE-typo img {
-  width: 1200px;
+  width: 75rem;
   height: auto;
   margin: 0.5rem;
   align-self: center;
 }
-@media (max-width: 767px) {
-  .CE-typo {
-    margin: 1rem 0;
-    width: 95%;
-  }
-  .CE-typo img {
-    justify-self: left;
-    width: 90%;
-    height: auto;
-    margin: 0;
-  }
-}
 
 .CE-typo-text {
-  width: 750px;
+  width: 50%;
   margin: 2rem auto;
   gap: 1.5rem;
   display: flex;
@@ -175,7 +132,7 @@
 }
 
 .CE-mail {
-  width: 800px;
+  width: 40rem;
   margin: 2rem auto;
   gap: 1.5rem;
   display: flex;
@@ -188,56 +145,130 @@
   font-size: 2rem;
 }
 .CE-mail .CE-mail-img {
-  width: 500px;
+  width: 40rem;
   height: auto;
   margin: 1rem;
   justify-self: center;
   align-self: center;
 }
-@media (max-width: 767px) {
-  .CE-mail {
-    display: block;
-    max-width: 95%;
-  }
-  .CE-mail .CE-mail-img {
-    width: 100%;
-    height: auto;
-  }
-}
 
-.btn-viewMore {
+.btn-more-box {
   display: flex;
   justify-content: center;
   align-content: center;
   margin: 2rem auto;
+  width: 25rem;
+  height: auto;
 }
-
-.btn-viewBrand {
+.btn-more-box .btn-more {
   cursor: pointer;
   margin: 1rem auto;
   padding: 1rem 2rem;
   font-size: 1rem;
   font-weight: 700;
   border-radius: 2rem;
-  background: rgba(145, 133, 177, 0.7098039216);
-  color: #FAF9F6;
+  border: none;
+  color: #00010c;
+  background: #FBF7F5;
 }
-.btn-viewBrand:hover {
-  background: #9185b1;
-  color: #2a023d;
+.btn-more-box .btn-more:hover {
+  background: #E30B5D;
 }
-@media (max-width: 767px) {
-  .btn-viewBrand {
+
+@media (max-width: 768px) {
+  .CE-full-wrap {
+    max-width: 100%;
+    align-content: center;
+    justify-content: center;
+  }
+  .CE-presentation {
+    margin: 2.7rem 0 0 0;
+    width: 100%;
+  }
+  .CE-about-wrap {
+    flex-direction: column;
+    width: 90%;
+    margin: 1rem 2rem;
+    align-content: center;
+    justify-content: center;
+    gap: 0;
+  }
+  .CE-logo-wrap {
+    margin: 1rem 0;
+  }
+  .CE-logo-wrap .CE-logos-text {
+    flex-direction: column;
+    width: 90%;
+    gap: 0;
     margin: 0;
-    font-size: 0.9rem;
+  }
+  .CE-logo-wrap .CE-logos2 {
+    justify-content: center;
+    align-content: center;
+    gap: 0.5;
+  }
+  .CE-logo-wrap .CE-logos2 img {
+    height: 20rem;
+    width: auto;
+  }
+  .CE-colors-wrap {
+    width: 90%;
+    margin: 1rem 2rem;
+    justify-content: center;
+    align-content: center;
+    gap: 0.5;
+  }
+  .CE-colors-wrap img {
+    max-width: 100%;
+    margin: 0;
+    align-self: center;
+  }
+  .CE-colors-wrap .CE-colors-text {
+    flex-direction: column;
+    width: 100%;
+    align-self: center;
+    margin: 0.5rem 0;
+  }
+  .CE-typo {
+    margin: 1rem 2rem;
+    width: 90%;
+    align-content: center;
+    justify-content: center;
+  }
+  .CE-typo img {
+    width: 100%;
+    margin: 1rem 0;
+  }
+  .CE-typo-text {
+    margin: 0.5rem 0;
+    flex-direction: column;
+    width: 100%;
+    gap: 0.3;
+    align-content: center;
+    justify-content: center;
+  }
+  .CE-mail {
+    margin: 1rem 2rem;
+    width: 90%;
+  }
+  .CE-mail h4 {
+    font: size 1.2rem;
+  }
+  .CE-mail .CE-mail-img {
+    width: 70%;
+    margin: 0.5rem 1rem;
+  }
+  .btn-more-box {
+    width: 50%;
+  }
+  .btn-more-box .btn-more {
+    margin: 1rem 1.5rem;
     padding: 0.5rem 1rem;
   }
 }
-
 .work-disclaimer {
   width: 700px;
   margin: 2rem auto;
-  gap: 1.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -249,19 +280,20 @@
   line-height: 1.5rem;
 }
 
+@media (max-width: 768px) {
+  .work-disclaimer {
+    margin: 2rem;
+    width: 90%;
+    gap: 0;
+  }
+}
 .change-btn-wrap {
   display: flex;
   flex-direction: row;
   width: 100vw;
-  margin: 5rem 0.5rem;
-  justify-content: space-around;
+  margin: 5rem 2rem;
+  justify-content: space-between;
   align-content: center;
-}
-@media (max-width: 767px) {
-  .change-btn-wrap {
-    display: block;
-    margin: 1rem auto;
-  }
 }
 
 .change-btn {
@@ -273,33 +305,17 @@
 .change-btn a {
   font-family: "Urbanist", sans-serif;
   text-decoration: none;
-  color: #FAF9F6;
+  color: #FBF7F5;
 }
 .change-btn a:hover {
-  color: #9185b1;
-}
-.change-btn a::before {
-  content: "";
-  position: absolute;
-  transform: scaleX(0);
-  height: 1px;
-  bottom: -2px;
-  left: 0;
-  transform-origin: bottom left;
-  transition: transform 0.3s ease-out;
-}
-.change-btn a:hover::before {
-  transform: scaleX(1);
-  color: #2a023d;
-}
-@media (max-width: 767px) {
-  .change-btn {
-    margin: 1rem 0.2rem;
-    padding: 0.5rem 1rem;
-    font-size: 0.9rem;
-  }
+  color: #E30B5D;
 }
 
+@media (max-width: 768px) {
+  .change-btn-wrap {
+    width: 90%;
+  }
+}
 @font-face {
   font-family: "Urbanist";
   src: url("assets/Urbanist-VariableFont_wght.ttf") format("truetype-variations");
@@ -320,7 +336,7 @@ header {
   background: #FBF7F5;
 }
 .header-box a {
-  color: #080101;
+  color: #00010c;
 }
 
 .AD-logo {
@@ -371,7 +387,7 @@ header {
 .menu-items a {
   font-family: "Urbanist", sans-serif;
   text-transform: uppercase;
-  color: #080101;
+  color: #00010c;
   font-weight: 800;
   text-decoration: none;
   font-size: 1rem;
@@ -492,7 +508,7 @@ footer {
   font-family: "Urbanist", sans-serif;
   font-size: 1rem;
   color: #FBF7F5;
-  background: #080101;
+  background: #00010c;
   width: 100%;
   content: center;
   text-align: center;
@@ -573,7 +589,7 @@ footer .thanks-footer {
 }
 
 .header-main {
-  background: #080101;
+  background: #00010c;
   color: #FBF7F5;
 }
 .header-main a {
@@ -609,7 +625,7 @@ body {
 
 .main-page {
   margin: 0 auto;
-  background: #080101;
+  background: #00010c;
   color: #FBF7F5;
   overflow-x: hidden;
   max-width: 100%;
@@ -744,24 +760,28 @@ body {
 }
 .show-text a {
   text-decoration: none;
-  color: #fcfafc;
+  color: #FBF7F5;
 }
 
 .view-more-btn {
   margin-top: 1rem;
-  padding: 0.5rem 1.2rem;
-  font-size: 0.9rem;
+  padding: 0.5rem 0;
+  width: 10rem;
   font-weight: 600;
   border-radius: 2rem;
-  background: rgba(145, 133, 177, 0.7098039216);
-  color: #fcfafc;
+  background: #FBF7F5;
+  opacity: 0.5;
   font-family: "Urbanist", sans-serif;
   border: none;
   cursor: pointer;
+  text-align: center;
+}
+.view-more-btn a {
+  color: #00010c;
+  font-size: 0.9rem;
 }
 .view-more-btn:hover {
-  background: #9185b1;
-  color: #2a023d;
+  opacity: 1;
 }
 
 .mobile-view-more-btn {
@@ -806,8 +826,8 @@ hr.solid {
 .resume-wrap {
   max-width: 100%;
   padding: 2rem 0;
-  background: #fcfafc;
-  color: #080101;
+  background: #FBF7F5;
+  color: #00010c;
 }
 
 .resume-layout {
@@ -970,11 +990,11 @@ hr.solid {
   font-size: 1.1rem;
 }
 .courses a {
-  color: #fcfafc;
+  color: #FBF7F5;
   text-decoration: none;
 }
 .courses a:hover {
-  color: #9185b1;
+  color: #E30B5D;
 }
 
 .skills {
@@ -1001,7 +1021,7 @@ hr.solid {
 }
 .resumeDownload-btn:hover {
   transition: background-color 0.3s ease;
-  background: #9185b1;
+  background: #E30B5D;
   border: none;
 }
 .resumeDownload-btn a {
@@ -1015,7 +1035,7 @@ hr.solid {
 }
 .resumeDownload-btn a:hover {
   transition: color 0.3s ease;
-  color: #080101;
+  color: #00010c;
 }
 
 @media (max-width: 768px) {

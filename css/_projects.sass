@@ -1,93 +1,75 @@
 /////////////////////////// COLORS 
-$midnight: #080101
-$offwhite: #FAF9F6
-$lavender: #9185b1
-$light-lavender: #9185b1b5
-$purple: #2a023d
+$midnight: #00010c
+$chalk: #FBF7F5
+$rasp: #E30B5D
 
-//////////////////////// FONTS
-
+///////////////////////////////// FONTS
 @font-face // main sans-serif font
   font-family: "Urbanist"
   src: url("assets/Urbanist-VariableFont_wght.ttf") format("truetype-variations")
   font-weight: 100 900
 
 @font-face // serif font
-  font-family: "Prata", serif
-  src: url("assets/Prata-Regular.ttf") format("truetype")
-
-@font-face // cursive font
-  font-family: "Oooh Baby", cursive
-  src: url("assets/OoohBaby-Regular.ttf") format("truetype")
+  font-family: "Alice", serif
+  src: url("assets/Alice-Regular.ttf") format("truetype")
 
 $urbanist: "Urbanist", sans-serif
-$prata: "Prata", serif
-$ooohbaby: "Oooh Baby", cursive
+$alice: "Alice", serif
 
-////////////////////////// PROJECTS STYLES
-
-// texts
+////////////////////////////// PROJECTS STYLES
+// TEXTS
 .work-sec-title
   font-family: $urbanist
   text-align: left
   font-size: 3rem
-
 .work-text
   font-family: $urbanist
   font-size: 1.3rem
-  line-height: 2rem
+  line-height: 2
   text-align: left
+@media (max-width: 768px) 
+  .work-sec-title
+    font-size: 2.8rem
+  .work-text
+    font-size: 1.1rem
+    line-height: 1.6
 
-// corleone-ercolini project styles
-.CE-presentation // with image as a background
+/////////////////////////////////////////////////
+// CORLEONE ERCOLINI 
+.CE-presentation 
   margin: 5rem 0 1rem 0
   max-width: 100%
   height: 100%
   img
     width: 100%
     height: auto
-  @media (max-width: 767px)
-    font-size: 2.5rem
-    padding-top: 30vh
-
-
-.CE-about
-  width: 750px
+.CE-about-wrap
+  width: 55%
   margin: 2rem auto
   gap: 1.5rem 
   display: flex
   flex-direction: row
   justify-content: center
   align-items: center
-  @media (max-width: 767px)
-    display: flex
-    flex-direction: column
-    align-items: stretch
-    gap: 1rem
-    max-width: 95%
-
-.CE-logo // section logo
+.CE-logo-wrap // section logo
   margin: 2rem 0
   display: flex
   flex-direction: column
   width: 100%
   align-items: center
   justify-items: center
-  background: $offwhite
+  background: $chalk
   color: $midnight
-
+  h2
+    padding: 1rem 0 0 0
 .CE-logos-text
-  width: 750px
-  margin: 2rem auto
+  width: 50%
+  margin: 1rem auto
   gap: 1.5rem 
   display: flex
   flex-direction: row
   justify-content: center
   align-items: center
-  @media (max-width: 767px)
-    display: block
-    max-width: 95%
-
 .CE-logos2
   display: flex
   flex-direction: row
@@ -95,70 +77,46 @@ $ooohbaby: "Oooh Baby", cursive
   margin: 1rem
   gap: 1rem
   img
-    width: 350px
+    width: 25rem
     height: auto
-  @media screen and (max-width: 767px) 
-    width: 95%
-    height: auto
-    justify-items: center
-    img
-      width: auto
-      height: 200px
-
-.CE-colors
-  width: 800px
+.CE-colors-wrap
+  width: 60%
   margin: 2rem auto
   gap: 1.5rem 
   display: flex
   flex-direction: column
-  justify-items: center
+  justify-content: center
   align-content: center
-  .work-colors-img
-    width: 600px
+  .CE-colors-img
+    width: 50rem
     height: auto
-
 .CE-colors-text
-  width: 750px
+  width: 90%
   margin: 2rem auto
-  gap: 1.5rem 
   display: flex
   flex-direction: row
   justify-content: center
   align-items: center
-  @media (max-width: 767px)
-    display: block
-    max-width: 90%
-
 .CE-typo
   margin: 2rem 0
   display: flex
   flex-direction: column
   text-align: left
   img
-    width: 1200px
+    width: 75rem
     height: auto
     margin: 0.5rem
     align-self: center
-  @media (max-width: 767px)
-    margin: 1rem 0
-    width: 95%
-    img
-      justify-self: left
-      width: 90%
-      height: auto
-      margin: 0
-
 .CE-typo-text
-  width: 750px
+  width: 50%
   margin: 2rem auto
   gap: 1.5rem 
   display: flex
   flex-direction: row
   justify-content: center
   align-items: center
-
 .CE-mail
-  width: 800px
+  width: 40rem
   margin: 2rem auto
   gap: 1.5rem 
   display: flex
@@ -169,46 +127,109 @@ $ooohbaby: "Oooh Baby", cursive
     font-family: $urbanist
     font-size: 2rem
   .CE-mail-img
-    width: 500px
+    width: 40rem
     height: auto
     margin: 1rem
     justify-self: center
     align-self: center
-  @media (max-width: 767px)
-    display: block
-    max-width: 95%
-    .CE-mail-img
-      width: 100%
-      height: auto
-
-.btn-viewMore
+// ?????????????????????
+.btn-more-box // view more about the brand
   display: flex
   justify-content: center
   align-content: center
   margin: 2rem auto
+  width: 25rem
+  height: auto
+  .btn-more
+    cursor: pointer
+    margin: 1rem auto
+    padding: 1rem 2rem
+    font-size: 1rem
+    font-weight: 700
+    border-radius: 2rem
+    border: none
+    color: $midnight
+    background: $chalk
+    &:hover
+        background: $rasp
+// CORLEONE ERCOLINI MOBILE DISPLAY 
+@media (max-width: 768px)
+  .CE-full-wrap
+    max-width: 100%
+    align-content: center
+    justify-content: center 
+  .CE-presentation
+    margin: 2.7rem 0 0 0
+    width: 100%
+  .CE-about-wrap
+    flex-direction: column
+    width: 90%
+    margin: 1rem 2rem
+    align-content: center
+    justify-content: center
+    gap: 0
+  .CE-logo-wrap // section logo
+    margin: 1rem 0
+    .CE-logos-text
+      flex-direction: column
+      width: 90%
+      gap: 0
+      margin: 0
+    .CE-logos2
+      justify-content: center
+      align-content: center
+      gap: 0.5
+      img
+        height: 20rem
+        width: auto
+  .CE-colors-wrap
+    width: 90%
+    margin: 1rem 2rem
+    justify-content: center 
+    align-content: center
+    gap: 0.5
+    img
+      max-width: 100%
+      margin: 0
+      align-self: center
+    .CE-colors-text
+      flex-direction: column
+      width: 100%
+      align-self: center
+      margin: 0.5rem 0
+  .CE-typo
+    margin: 1rem 2rem
+    width: 90%
+    align-content: center
+    justify-content: center
+    img
+      width: 100%
+      margin: 1rem 0
+  .CE-typo-text
+    margin: 0.5rem 0
+    flex-direction: column
+    width: 100%
+    gap: 0.3
+    align-content: center
+    justify-content: center
+  .CE-mail
+    margin: 1rem 2rem
+    width: 90%
+    h4
+      font: size 1.2rem
+    .CE-mail-img
+      width: 70%
+      margin: 0.5rem 1rem
+  .btn-more-box
+    width: 50%
+    .btn-more
+      margin: 1rem 1.5rem
+      padding: 0.5rem 1rem
 
-.btn-viewBrand
-  cursor: pointer
-  margin: 1rem auto
-  padding: 1rem 2rem
-  font-size: 1rem
-  font-weight: 700
-  border-radius: 2rem
-  background: $light-lavender
-  color: $offwhite
-  &:hover
-    background: $lavender
-    color: $purple
-  @media (max-width: 767px)
-    margin: 0
-    font-size: 0.9rem
-    padding: 0.5rem 1rem
-
-// project disclaimer text
+// DISCLAIMER TEXT
 .work-disclaimer
   width: 700px
   margin: 2rem auto
-  gap: 1.5rem 
   display: flex
   flex-direction: column
   justify-content: center
@@ -217,19 +238,21 @@ $ooohbaby: "Oooh Baby", cursive
   p
     font-size: 0.7rem
     line-height: 1.5rem
+@media (max-width: 768px)
+  .work-disclaimer
+    margin: 2rem
+    width: 90%
+    gap: 0
 
-// buttons to move between works
+//////////////////////////////////////////////
+// INSIDE NAVIGATION BUTTONS
 .change-btn-wrap
   display: flex
   flex-direction: row
   width: 100vw
-  margin: 5rem 0.5rem
-  justify-content: space-around
+  margin: 5rem 2rem
+  justify-content: space-between
   align-content: center
-  @media (max-width: 767px)
-    display: block
-    margin: 1rem auto
-
 .change-btn
   cursor: pointer
   font-size: 1.2rem
@@ -238,23 +261,12 @@ $ooohbaby: "Oooh Baby", cursive
   a
     font-family: $urbanist
     text-decoration: none 
-    color: $offwhite
+    color: $chalk
     &:hover
-      color: $lavender
-  a::before
-      content: ''
-      position: absolute
-      transform: scaleX(0)
-      height: 1px
-      bottom: -2px
-      left: 0
-      transform-origin: bottom left
-      transition: transform 0.3s ease-out
-  a:hover::before 
-        transform: scaleX(1)
-        color: $purple
-  @media (max-width: 767px)
-    margin: 1rem 0.2rem
-    padding: 0.5rem 1rem
-    font-size: 0.9rem
+      color: $rasp
+@media (max-width: 768px) 
+  .change-btn-wrap
+    width: 90%
+    
+
 
