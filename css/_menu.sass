@@ -1,7 +1,7 @@
 /////////////////////////// COLORS 
 $midnight: #00010c
 $chalk: #FBF7F5
-$rasp: #E30B5D
+$gum:	#ff77bc
 
 //////////////////////// FONTS
 @font-face // main sans-serif font
@@ -75,7 +75,7 @@ header
     font-size: 1rem
     padding: 0.5rem
     &:hover
-      color: $rasp
+      color: $gum
 
 .social
   width: 1.4rem
@@ -148,76 +148,98 @@ header
   
 
 //////////////////////////////////////////////////////
-// bye-bye :)
+// FOOTER'S GENERAL DESKTOP DISPLAY
 footer
-  display: flex
-  margin: 3rem 0
-  padding: 5rem 0
+  margin: 0
+  max-width: 100%
+  padding: 3rem 0 
   font-family: $urbanist
-  font-size: 1rem
   color: $chalk
   background: $midnight
-  width: 100%
-  content: center
-  text-align: center
-  margin: 0 auto
   line-height: 1.75rem
-  .rights-footer
-    display: flex
-    flex-direction: column
-    margin: 0 auto
+  .thanks-footer
+    margin: 4rem 0
+    font-size: 1.1rem
     text-align: center
-    justify-content: center
+  .footer-wrap
+    display: flex
+    flex-direction: row
+    justify-content: space-around
+    margin: 1rem 2rem
     align-content: center
-    a
-      color: $chalk
-      text-decoration: none
-      &:hover
-        color: $rasp
-    .cclicense
+    .rights-footer
+      display: flex
+      flex-direction: column
+      text-align: center
       justify-content: center
       align-content: center
-      width: 1.5rem 
-  .thanks-footer
-    display: flex
-    flex-direction: column
-    font-size: 1.1rem
-
-// conatct info
-.contact-items // all social icons
-  display: flex
-  justify-content: space-between
-  justify-content: center
-  align-content: center
-  gap: 1.5rem
-  
-.social-icon
-  width: 2.8rem
-  height: auto
-  object-fit: contain
-  color: $chalk
-  align-content: center
-  &:hover
-    color: $rasp
+      font-size: 0.8rem
+      a
+        color: $chalk
+        text-decoration: none
+        &:hover
+          color: $gum
+      .cclicense
+        justify-content: center
+        align-content: center
+        width: 1.5rem 
+    .contact-icons-wrap // all social icons
+      margin: 0
+      max-height: 3rem
+      display: flex
+      justify-content: center
+      align-content: center
+      gap: 1.5rem
+      .social-icon
+        width: 2.5rem
+        height: auto
+        object-fit: contain
+        color: $chalk
+        align-content: center
+        a
+          color: $chalk
+          &:hover
+            color: $gum
 
 //MOBILE DISPLAY FOR FOOTER
 @media (max-width: 768px) 
   footer
+    margin: 0
+    width: 100%
+    padding: 1rem 1rem 3rem 1rem
+    display: flex
     flex-direction: column
-    margin: 0 
-    padding: 1rem 0
+    line-height: 1.3rem
     justify-content: center
     align-content: center
-    gap: 1rem
-    .rights-footer
-      margin: 0
+    .thanks-footer
+      margin: 1rem 0
+      font-size: 1rem
+      text-align: center
+      padding: 1rem 0
+    .footer-wrap
+      flex-direction: column
       justify-content: center
       align-content: center
+      .rights-footer
+        text-align: center
       .cclicense
-        width: 1.4rem
-        align-self: center
-    .social-icon
-      width: 1.5rem
+        width: 1.5rem 
+        margin: 0
+    .contact-items // all social icons
+      margin: 0
+      padding: 1rem 0
+      flex-direction: row
+      justify-content: center
+      align-content: center
+      gap: 1.5rem
+      .social-icon
+        width: 2rem
+        height: auto
+        object-fit: contain
+        align-content: center
+
+//////////////////////////////////////////
 
 .header-proj
   width: 100%
