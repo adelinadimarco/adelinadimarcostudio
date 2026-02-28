@@ -102,8 +102,16 @@ header
     transform: translateX(100%)
 
 @media (max-width: 768px) 
+  * 
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+  body.menu-open 
+    overflow: hidden
   .header-box
     width: 100%
+    position: relative
+    z-index: 1000
   .AD-logo-index  
       width: auto
       height: 1.7rem
@@ -114,58 +122,29 @@ header
     height: 1.8rem
     max-width: 100%
     justify-content: space-evenly
-    .toggle-box
-      display: flex
-      justify-content: center
-      align-content: center
-      max-width: 3rem
-      max-height: 3rem
-      margin-right: 1rem
-      overflow: hidden
-    .menu-toggle
-      display: flex
-      max-width: 100%
-      max-height: 100%
-      cursor: pointer
-      z-index: 9999
-      background: none
-      border: none
-      color: $chalk
-      max-width: 100%
-
-    .menu-toggle::before, .menu-toggle::after 
-          content: ''
-          position: fixed
-          background: $chalk
-          transition: transform 0.2s ease
-    .menu-toggle::before 
-            width: 100%
-            height: 0.1rem
-            top: 50%
-            left: 0
-            transform: translateY(-50%)
-    .menu-toggle::after 
-            width: 100%
-            height: 0.1rem
-            top: 0
-            left: 50%
-            transform: translateX(-50%)
-    .menu-toggle.open::before 
-            transform: translateY(-50%) rotate(-45deg)
-    .menu-toggle.open::after 
-            transform: translateY(-50%) rotate(45deg)
-            top: 50%
-            left: 50%
-
-  .menu-toggle.active
-  .menu-toggle.active ~ .menu-items
+  .toggle-box, .menu-toggle
     display: flex
-    .menu-items
-      display: flex
-      flex-direction: column
-      align-items: center
-      gap: 1rem
-      animation: slide-left-to-right 0.3s ease-out
+    justify-content: center
+    align-content: center
+    max-width: 3rem
+    max-height: 3rem
+    margin-right: 1rem
+    overflow: hidden
+    border: none
+    background: none
+
+  .menu-mob-open
+    display: flex
+    cursor: pointer
+    color: $chalk
+    padding: 0.5rem 0
+    width: 80%
+    font-weight: 600
+    background: $midnight
+    border: none
+  .menu-mob-close
+    display: none
+
   
 
 //////////////////////////////////////////////////////

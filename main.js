@@ -1,7 +1,6 @@
-const menuToggle = document.getElementById('menuToggle');
-const menuItems = document.querySelector('.menu-items');
+const toggleBtn = document.querySelector('.menu-toggle');
+const body = document.body;
 
-menuToggle.addEventListener('click', () => {
-  menuToggle.classList.toggle('open');
-  menuItems.classList.toggle("active");
-})
+toggleBtn.addEventListener('click', () => {
+  body.classList.toggle('menu-mob-open');
+});
