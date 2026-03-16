@@ -7,14 +7,15 @@ $midnight: #00010c
 $chalk: #FBF7F5
 $rasp: #E30B5D
 $gum:	#ff77bc
+$whitey: #fffffb
 
 //////////////////////// FONTS
-@font-face // main sans-serif font
-  font-family: "Urbanist"
+@font-face 
+  font-family: "Urbanist", sans-serif
   src: url("assets/Urbanist-VariableFont_wght.ttf") format("truetype-variations")
   font-weight: 100 900
 
-@font-face // serif font
+@font-face
   font-family: "Alice", serif
   src: url("assets/Alice-Regular.ttf") format("truetype")
 
@@ -43,94 +44,75 @@ body
   max-width: 100%
 
 /////////////////////////////////////////
-// WORK SECTION 
-.work-wrap // on grid display
+// WORK SECTION - DISPLAY PROJECTS
+.work-wrap // WORK GRID DISPLAY
   display: grid
   max-width: 100%
   margin: 2rem 3rem
-  grid-template-columns: 2fr 2fr 2fr
+  grid-template-columns: 1fr 1fr
   grid-template-rows: auto
-  gap: 1rem
   justify-items: center
   align-items: center
-
-.work-card
-  display: block
+.work-card // EACH PROJECT CARD
+  display: flex
+  flex-direction: column
   position: relative
+  width: 95%
   justify-content: center
   align-content: center
-
-.work-box // work preview box
-  position: relative
+  .work-box // WORK PREVIEW BOX
+    position: relative
+    justify-content: center
+    align-content: center
+    width: 100%
+    height: auto
+    transition: 0.5s ease
+    font-family: $urbanist
+    a
+      color: $gum
+      font-size: 4rem
+      font-weight: 700
+      text-align: center
+      text-decoration: none
+  .work-box::before // WITH HOVER
+    content: ""
+    position: absolute
+    inset: -1rem
+    z-index: 0
+  .work-box:hover img
+    opacity: 0.5
+  .work-box:hover .show-text
+    opacity: 1
+  .work-img // PROJECT IMAGE
+    width: 100%
+    height: auto
+    display: block 
+  .show-text // HOVER TEXT ON EACH IMAGE
+    justify-content: center
+    align-content: center
+    transition: 0.5s ease
+    opacity: 0
+    position: absolute
+    z-index: 200
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    -ms-transform: translate(-50%, -50%)
+.work-titles
+  margin: 1rem 0
   justify-content: center
   align-content: center
-  width: 100%
-  height: auto
-  transition: 0.5s ease
-
-.work-box::before
-  content: ""
-  position: absolute
-  inset: -1rem
-  z-index: 0
-
-.work-box:hover img
-  opacity: 0.1
-
-.work-box:hover .show-text
-  opacity: 1
-
-.work-pic
-  width: 100%
-  height: auto
-  display: block
-  margin: 0 auto
-
-.show-text // hover text on each project image
-  justify-content: center
-  align-content: center
-  transition: 0.5s ease
-  opacity: 0
-  position: absolute
-  z-index: 200
-  top: 50%
-  left: 50%
-  transform: translate(-50%, -50%)
-  -ms-transform: translate(-50%, -50%)
   .work-name
     font-family: $urbanist
-    font-size: 2rem
+    font-size: 3rem
     font-weight: bold
     text-align: center
     text-transform: uppercase
   .work-tag
     font-family: $urbanist
-    font-size: 1.1rem
+    font-size: 1.5rem
     text-align: center
-  a 
-    text-decoration: none
-    color: $chalk
-
-.view-more-btn
-  margin-top: 1rem
-  padding: 0.5rem 0
-  width: 10rem
-  font-weight: 600
-  border-radius: 2rem
-  background: $gum
-  opacity: 0.5
-  font-family: $urbanist
-  border: none
-  cursor: pointer
-  text-align: center
-  a
-    color: $midnight
-    font-size: 0.9rem
-
-  &:hover
-    opacity: 1
-
-.mobile-view-more-btn
+.view-work-btn // BUTTON FOR MOBILE DISPLAY
   display: none
 
 // MOBILE DISPLAY FOR MAIN INDEX / WORK PROJECTS
@@ -138,60 +120,93 @@ body
   .work-wrap
     grid-template-columns: 1fr
     grid-auto-rows: auto
+    justify-content: center
+    align-content: center
     margin: 1rem 0.5rem
-    gap: 0.6em
-  .mobile-view-more-btn
+    .work-card // EACH PROJECT CARD
+      justify-content: center
+      align-content: center
+      margin: 0 0 1rem 0
+      width: 90%
+    .work-box // WORK PREVIEW BOX
+      justify-content: center
+      align-content: center
+      height: auto
+      margin: 0
+      .work-img
+        width: 100%
+        margin: 0
+    .work-titles
+      justify-content: center
+      align-content: center
+      width: 100%
+      .work-name
+        font-size: 1.5rem
+      .work-tag
+        font-size: 1rem
+  .view-work-btn //btn
     display: flex
-    margin: 1rem 0
-    font-size: 2rem
-    font-weight: 700
-    color: $chalk
+    margin: 0.8rem auto
+    padding: 0.5rem 1rem
+    border-radius: 3rem
+    background: $gum
+    opacity: 1
     font-family: $urbanist
     border: none
     cursor: pointer
-    justify-content: center 
-    align-content: center
-    a 
+    text-align: center
+    a
+      color: $midnight
+      font-size: 0.9rem
+      font-weight: 700
       text-decoration: none
-      color: $chalk
     &:hover
-      text-decoration: underline
-  .view-more-btn
+      opacity: 0.7
+  .show-text
     display: none
 
 ////////////////////////////////////////////////////
 // ABOUT ME SECTION
 .about-wrapper
   display: flex
-  margin: 0
-  padding: 2rem 13rem
+  margin: 0 auto
   max-width: 100%
-  background: $chalk
+  background: $whitey
   color: $midnight
-  .profile-pic // about me profile picture
+  .about-sec
+    width: 80%
+    display: flex
+    text-align: left
+    justify-content: left
+    align-content: flex-start
+  .profile-pic // ABOUT ME - PROFILE PICTURE
     object-fit: contain
     width: auto
     height: 40rem
     margin: 1rem
   .about-text
-    margin: 0
+    margin: 0 auto
     display: flex
     flex-direction: column
     font-family: $urbanist
-    width: 80%
-    line-height: 1.8
+    width: 50%
+    line-height: 1.7
     font-size: 1.1rem
     text-align: left
     justify-content: left
-    align-content: flex-start
+    align-content: center
     p
-      margin: 0.3rem 0 0 0
-  .hola //subtitle for about me text
+      margin: 0
+    .script-font
+      font-family: $alice
+      font-weight: 700
+  .hola // SUBTITLE FOR ABOUT ME SEC
     font-family: $urbanist
     font-weight: 700
     font-size: 4rem
     text-align: left
     justify-content: left
+    align-content: center
     margin: 0
 
 // MOBILE DISPLAY FOR ABOUT ME
@@ -200,155 +215,85 @@ body
     display: flex
     flex-direction: column
     align-items: center
-    margin: 0 auto
-    padding-bottom: 2rem
-  .hola
-    font-size: 3rem
-    padding-bottom: 1rem
-    text-align: center
-  .about-text
-    font-size: 1rem
-    line-height: 1.6
-  .profile-pic
-    width: 100%
-    height: auto
-    margin: 0 auto
+    max-width: 100%
+    .about-sec
+      width: 100%
+      flex-direction: column
+      .profile-pic
+        width: 100%
+        height: auto
+        margin: 0
+    .about-text
+      width: 90%
+      margin: 0 auto
+      font-size: 1rem
+      line-height: 1.6
+      margin-bottom: 1rem
+      letter-spacing: 0.02rem
+      .hola 
+        font-size:3rem
+        text-align: left
+        justify-content: left
+        margin: 0
 
 ///////////////////////////////////////
 // STARTS RESUME SECTION
-hr.solid //decor dividers
-  border-top: 0.3px solid #3d3d3d
-  margin: 1rem 0
-
-.resume-wrap // main resume section wrapper
+hr.solid // DECOR DIVIDERS
+  border-top: 0.3px solid $gum
+  margin: 0.5rem 0
+.resume-wrap // MAIN RESUME SECTION WRAPPER
   max-width: 100%
-  padding: 2rem 0
-  background: $chalk
+  background: $whitey
   color: $midnight
+.resume-layout // DESKTOP VIEW
+  width: 50%
+  display: flex
+  flex-direction: column
+  line-height: 1.6
 
-.resume-layout
-  width: 65%
-
-// resume - experience section
-.experience-grid //experiences grid display
-  display: grid
-  grid-template-columns: 1.3fr 2.3fr
-  grid-auto-rows: auto
-  .experience-title
-      font-family: $alice
-      font-size: 1.7rem
-      font-weight: 800
-      text-align: left
-  .experience-job
-      font-family: $urbanist
-      font-size: 1.5rem
-      font-weight: 700
-      text-align: left
-  .experience-list
-    font-family: $urbanist
-    font-size: 1.1rem
-    line-height: 1.6
-    letter-spacing: 0.02rem
-    list-style-position: inside
-  // grid positions
-  .pos1
-    grid-column: 1
-    grid-row: 1
-  .job1
-    grid-column: 1
-    grid-row: 2
-  .date1
-    grid-column: 1
-    grid-row: 3
-  .exp1
-    grid-column: 2
-    grid-row-start: 1
-    grid-row-end: 4
-  .bar-exp2
-    grid-column: 1 / -1
-    grid-row: 4
-    width: 100%
-  .pos2
-    grid-column: 1
-    grid-row: 5
-  .job2
-    grid-column: 1
-    grid-row: 6
-  .date2
-    grid-column: 1
-    grid-row: 7
-  .exp2
-    grid-column: 2
-    grid-row: 5 / 8
-  .bar-exp3
-    grid-column: 1 / -1
-    grid-row: 8
-    width: 100%
-  .pos3
-    grid-column: 1
-    grid-row: 9
-  .job3
-    grid-column: 1
-    grid-row: 10
-  .date3
-    grid-column: 1
-    grid-row: 11
-  .exp3
-    grid-column: 2
-    grid-row: 9 / 12
-  .bar-exp4
-    grid-column: 1 / -1
-    grid-row: 12
-    width: 100%
-  .pos4
-    grid-column: 1
-    grid-row: 13
-  .job4
-    grid-column: 1
-    grid-row: 14
-  .date4
-    grid-column: 1
-    grid-row: 15
-  .exp4
-    grid-column: 2
-    grid-row: 13 / 16
-
-.date // dates of experiences with smaller size
-  font-size: 1rem
-  text-align: left
-  justify-content: left
-  font-family: $urbanist
-
-.cv-title // main title of resume section
-  margin: 0 0 0.7rem 4rem
+.cv-title // MAIN TITLE FOR RESUME SECTION
+  margin: 0 0 0.5rem 4rem
   font-family: $urbanist
   font-size: 5rem
   font-weight: 700
   text-align: left
-
-.cv-subtitle //subtitles for each resume section
-  text-align: left
+.cv-subtitle // SUBTITLES FOR EACH RESUME SECTION
+  margin: 1rem 0 0.3rem 0
   font-family: $alice
   font-size: 2.3rem
-  padding-bottom: 0.5rem
   font-optical-sizing: auto
-  margin-top: 1.5rem
+  text-align: center
 
-// skills & studies section
-.college
-  display: grid
-  grid-template-columns: 1fr 1fr  
-  grid-auto-rows: auto
+// RESUME - EXPERIENCE SECTION
+.experience-title
+  font-family: $alice
+  font-size: 2rem
+  font-weight: 800
+  text-align: left
+.experience-job
   font-family: $urbanist
-  .school
-    justify-self: left
-    font-size: 1.1rem
-    text-align: left
-  .dateCol
-    justify-self: flex-end
-    text-align: right
-    align-content: center
+  font-size: 1.7rem
+  font-weight: 800
+  text-align: left
+.experience-list
+  font-family: $urbanist
+  font-size: 1.1rem
+  line-height: 1.6
+  list-style-position: inside
+.date // DATES FOR EXPERIENCES
+  font-size: 1rem
+  text-align: left
+  justify-content: left
+  align-content: flex-start
+  font-family: $urbanist
 
+// SKILLS & STUDIES SECTION
+.college
+  font-family: $urbanist
+  margin: 0
+  text-align: left
+  .school
+    font-size: 1.1rem
 .courses
   font-family: $urbanist
   max-width: 600px
@@ -358,11 +303,10 @@ hr.solid //decor dividers
   margin-left: 0.5rem
   font-size: 1.1rem
   a
-    color: $chalk
+    color: black
     text-decoration: none
     &:hover
-      color: $rasp
-
+      color: $gum
 .skills
   justify-self: left
   font-family: $urbanist
@@ -374,7 +318,8 @@ hr.solid //decor dividers
     font-size: 1.2rem
     text-decoration: underline
 
-.resumeDownload-btn // VIEW/DOWNLOAD RESUME BUTTON
+// VIEW/DOWNLOAD RESUME BUTTON
+.resume-download-btn 
   cursor: pointer
   margin: 1.5rem 0 3rem 0
   padding: 1rem
@@ -382,20 +327,18 @@ hr.solid //decor dividers
   border-radius: 4rem
   border: none
   background: $gum
+  width: 30%
   &:hover
     transition: background-color 0.3s ease
     background: $midnight
+    a
+     color: $gum
   a
-    background: none
     font-family: $urbanist
-    font-size: 1.2rem
+    font-size: 1.1rem
     color: $midnight
     text-decoration: none
-    padding: 1rem
     font-weight: 600
-    &:hover
-      transition: color 0.3s ease
-      color: $gum
 
 // MOBILE DISPLAY FOR RESUME
 @media (max-width: 768px) 
@@ -403,21 +346,18 @@ hr.solid //decor dividers
     margin: 0.2rem 0
   .resume-wrap
     max-width: 100%
-    margin: 1rem auto
-    padding: 1rem
+    margin: 0 auto
+    padding: 0.5rem
     .cv-title
       font-size: 3rem
       margin: 0.7rem
       padding-top: 0.5rem 
   .resume-layout
-    width: 90%
+    width: 100%
     padding: 0 1rem
     margin: 0
     .cv-subtitle
       font-size: 1.5rem
-  .experience-grid
-    display: flex
-    flex-direction: column
     .experience-title, .experience-job 
       font-size: 1.5rem
       margin: 0.3rem 0
@@ -428,7 +368,7 @@ hr.solid //decor dividers
       justify-self: left
       text-align: left
       font-size: 1rem
-      line-height: 1.4
+      line-height: 1.6
       list-style-type: none
   .college
     display: flex
@@ -441,7 +381,9 @@ hr.solid //decor dividers
     font-size: 1rem
     margin: 0
     line-height: 1.5
-  .resumeDownload-btn
+  .resume-download-btn
     margin: 0.5rem 0
     padding: 0.5rem 1rem
     font-size: 1rem
+    width: 50%
+    justify-content: center

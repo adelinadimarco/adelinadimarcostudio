@@ -3,6 +3,7 @@ $midnight: #00010c
 $chalk: #FBF7F5
 $rasp: #E30B5D
 $gum:	#ff77bc
+$whitey: #fffffb
 
 ///////////////////////////////// FONTS
 @font-face // main sans-serif font
@@ -38,27 +39,62 @@ $alice: "Alice", serif
 /////////////////////////////////////////////////
 // CARADZOGLU - DESKTOP DISPLAY
 .carad-main-wrap
-  margin: 5rem 3rem 2rem 3rem
-  padding: 1rem
+  margin: 1rem auto
   max-width: 60%
   display: flex
   flex-direction: column
   align-content: center
   justify-content: center
-  .carad-intro
-    flex-direction: row
-    .carad-intro-text
-      flex-direction: column
+.carad-intro
+  display: flex
+  flex-direction: row
+  gap: 1.5rem
+  img 
+    height: 100%
+  .carad-intro-text
+    flex-direction: column
 .carad-logos
+  margin: 1rem auto
+  align-content: center
+  justify-content: center
   img
-    width: 20rem
-    height: auto
-
+    width: 33%
+.carad-typo
+  margin: 1rem auto
+  align-content: center
+  justify-content: center
+// CARADZOGLU - MOBILE DISPLAY 
+@media (max-width: 768px)
+  .carad-main-wrap
+    margin: 0
+    max-width: 100%
+    display: flex
+    flex-direction: column
+  .carad-intro
+    display: flex
+    flex-direction: column
+    gap: 1.5rem
+    img 
+      width: 100%
+    .carad-intro-text
+      width: 90%
+      margin: 0 0.5rem
+      flex-direction: column
+  .carad-logos
+    margin: 1rem auto
+    align-content: center
+    justify-content: center
+    img
+      width: 33%
+  .carad-typo
+    margin: 1rem auto
+    align-content: center
+    justify-content: center
 
 /////////////////////////////////////////////////
 // CORLEONE ERCOLINI - DESKTOP DISPLAY
 .CE-presentation 
-  margin: 5rem 0 1rem 0
+  margin: 0
   max-width: 100%
   height: 100%
   img
@@ -79,7 +115,7 @@ $alice: "Alice", serif
   width: 100%
   align-items: center
   justify-items: center
-  background: $chalk
+  background: $whitey
   color: $midnight
   h2
     padding: 1rem 0 0 0
@@ -118,6 +154,7 @@ $alice: "Alice", serif
   flex-direction: row
   justify-content: center
   align-items: center
+  gap: 1.5rem 
 .CE-typo
   margin: 2rem 0
   display: flex
@@ -144,22 +181,25 @@ $alice: "Alice", serif
   flex-direction: column
   justify-content: center
   align-content: center
-  h4
+  p
+    margin: 2rem 0 0 0
     font-family: $urbanist
     font-size: 2rem
+    text-align: center
+    font-weight: 600
   .CE-mail-img
     width: 40rem
     height: auto
-    margin: 1rem
+    margin: 0.5rem
     justify-self: center
     align-self: center
 // ?????????????????????
-.btn-about-proj-box // view more about the brand
+.btn-about-proj-box // VIEW MORE ABOUT THE BRAND BUTTON
   display: flex
   justify-content: center
   align-content: center
   margin: 2rem auto
-  width: 25rem
+  width: 30%
   height: auto
   .btn-about-proj
     cursor: pointer
@@ -170,9 +210,15 @@ $alice: "Alice", serif
     border-radius: 2rem
     border: none
     color: $midnight
-    background: $chalk
+    background: $gum
     &:hover
-        background: $gum
+      transition: color 0.3s ease
+      color:$gum
+      background: $midnight
+.CE-ending
+  width: 100%
+  background: $whitey
+  color: $midnight
 
 // CORLEONE ERCOLINI MOBILE DISPLAY 
 @media (max-width: 768px)
@@ -181,17 +227,17 @@ $alice: "Alice", serif
     align-content: center
     justify-content: center 
   .CE-presentation
-    margin: 2.7rem 0 0 0
+    margin: 0
     width: 100%
   .CE-about-wrap
     flex-direction: column
     width: 90%
-    margin: 1rem 2rem
+    margin: 1rem auto
     align-content: center
     justify-content: center
     gap: 0
-  .CE-logo-wrap // section logo
-    margin: 1rem 0
+  .CE-logo-wrap // LOGO SECTION
+    margin: 1rem auto
     .CE-logos-text
       flex-direction: column
       width: 90%
@@ -202,11 +248,11 @@ $alice: "Alice", serif
       align-content: center
       gap: 0.5
       img
-        height: 20rem
-        width: auto
+        width: 50%
+        height: auto
   .CE-colors-wrap
     width: 90%
-    margin: 1rem 2rem
+    margin: 1rem auto
     justify-content: center 
     align-content: center
     gap: 0.5
@@ -220,7 +266,7 @@ $alice: "Alice", serif
       align-self: center
       margin: 0.5rem 0
   .CE-typo
-    margin: 1rem 2rem
+    margin: 1rem auto
     width: 90%
     align-content: center
     justify-content: center
@@ -235,36 +281,56 @@ $alice: "Alice", serif
     align-content: center
     justify-content: center
   .CE-mail
-    margin: 1rem 2rem
+    margin: 1rem auto
     width: 90%
-    h4
-      font: size 1.2rem
+    p
+      font-size: 1.2rem
     .CE-mail-img
       width: 70%
-      margin: 0.5rem 1rem
-  .btn-more-box
-    width: 50%
-    .btn-more
-      margin: 1rem 1.5rem
-      padding: 0.5rem 1rem
+      margin: 0.5rem auto
+  .btn-about-proj-box // VIEW MORE ABOUT THE BRAND BUTTON
+    display: flex
+    justify-content: center
+    align-content: center
+    margin: 0.5rem auto
+    width: 80%
+    height: auto
+    .btn-about-proj
+      cursor: pointer
+      margin: 0
+      padding: 0.5rem 0.9rem
+      font-size: 1rem
+      font-weight: 700
+      border-radius: 4rem
+      border: none
+      color: $midnight
+      background: $gum
 
 // DISCLAIMER TEXT
 .work-disclaimer
-  width: 700px
-  margin: 2rem auto
+  width: 40%
+  margin: 0 auto
+  padding: 3rem
   display: flex
   flex-direction: column
   justify-content: center
   align-content: center
   font-family: $urbanist
+  text-align: left
+  summary
+    cursor: pointer
+    &:hover
+      color: $gum
   p
-    font-size: 0.7rem
+    margin: 0.5rem auto
+    font-size: 0.8rem
     line-height: 1.5rem
 @media (max-width: 768px)
   .work-disclaimer
-    margin: 2rem
+    margin: auto
     width: 90%
-    gap: 0
+    p
+     line-height: 1.2rem
 
 //////////////////////////////////////////////
 // INSIDE NAVIGATION BUTTONS
@@ -283,12 +349,16 @@ $alice: "Alice", serif
   a
     font-family: $urbanist
     text-decoration: none 
-    color: $chalk
+    color: $gum
     &:hover
-      color: $gum
+      color: $whitey
+      text-decoration: underline
 @media (max-width: 768px) 
   .change-btn-wrap
     width: 90%
+    margin: 2rem auto
+    a
+      color: $gum
     
 
 

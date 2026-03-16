@@ -2,6 +2,7 @@
 $midnight: #00010c
 $chalk: #FBF7F5
 $gum:	#ff77bc
+$whitey: #fffffb
 
 //////////////////////// FONTS
 @font-face // main sans-serif font
@@ -16,54 +17,33 @@ header
   width: 100%
   margin: 0 auto
   overflow: hidden
-
 .header-box
   display: flex
   justify-content: space-between
   align-items: center
   width: 100%
   overflow: hidden
-  background: $chalk
+  background: $whitey
   a
     color: $midnight
-
-// navigation menu
-.AD-logo
-  height: 3rem
+.ade-logo-box
+  height: 2.8rem
   width: auto
-  margin: 0.5rem 1rem 0.5rem 10rem
-  justify-content: left
-  align-content: center
-  img
-    height: 100%
-    width: auto
-
-.AD-logo-index
-  height: 4rem
-  width: auto
-  margin: 0.5rem 1rem
+  margin: 0.8rem 2rem 0.8rem 20rem
   justify-content: center
   align-content: center
-  img
-    height: 100%
-    width: auto
-
-.nav-menu
-    justify-content: center
-    align-content: center
-
-.hidden-menu
-  left: 0
-  padding: 0 8rem
-
+  .adelina-logo-svg
+    color: $midnight
+.nav-menu // NAVIGATION MENU
+  justify-content: end
+  align-content: center
 .menu-items
   positiona: absolute
-  padding: 1rem 0
+  padding: 1rem 0.5rem
   z-index: 9999
   display: flex
   align-items: center
   list-style: none
-  gap: 0.5rem
   white-space: nowrap
   right: 0
   a
@@ -76,53 +56,37 @@ header
     padding: 0.5rem
     &:hover
       color: $gum
+  .social // MENU'S SOCIAL ICONS
+    width: 1.4rem
+    height: 1.4rem
+    vertical-align: middle
+    justify-content: center 
+    align-content: center
 
-.social
-  width: 1.4rem
-  height: 1.4rem
-  vertical-align: middle
-  justify-content: center 
-  align-content: center
-    
-.menu-toggle 
+.toggle-box, .mobile-menu
   display: none
 
-
-
-// animation for mobile menu / slide in & out
-@keyframes slide-left-to-right 
-    from 
-      transform: translateX(100%) 
-    to 
-      transform: translateX(0)
-@keyframes slide-right-to-left 
-  from 
-    transform: translateX(0) 
-  to 
-    transform: translateX(100%)
-
+// HEADER & MENU MOBILE DISPLAY
 @media (max-width: 768px) 
   * 
     margin: 0
     padding: 0
     box-sizing: border-box
-  body.menu-open 
-    overflow: hidden
   .header-box
     width: 100%
     position: relative
     z-index: 1000
-  .AD-logo-index  
-      width: auto
-      height: 1.7rem
-  .hidden-menu, .menu-items
+  .ade-logo-box
+    width: auto
+    height: 2rem
+  .hidden-menu, .menu-items // ITEMS IN NAV UL HIDDEN
     display: none
   .nav-menu
     display: flex
     height: 1.8rem
     max-width: 100%
     justify-content: space-evenly
-  .toggle-box, .menu-toggle
+  .toggle-box
     display: flex
     justify-content: center
     align-content: center
@@ -132,41 +96,37 @@ header
     overflow: hidden
     border: none
     background: none
-
   .menu-mob-open
     display: flex
     cursor: pointer
-    color: $chalk
+    color: $midnight
     padding: 0.5rem 0
     width: 80%
     font-weight: 600
-    background: $midnight
+    background: $gum
     border: none
-  .menu-mob-close
-    display: none
-
-  
 
 //////////////////////////////////////////////////////
 // FOOTER'S GENERAL DESKTOP DISPLAY
 footer
   margin: 0
   max-width: 100%
-  padding: 3rem 0 
+  padding: 1rem 0 
   font-family: $urbanist
-  color: $chalk
+  color: $whitey
   background: $midnight
   line-height: 1.75rem
   .thanks-footer
-    margin: 4rem 0
+    margin: 1rem 0
     font-size: 1.1rem
     text-align: center
   .footer-wrap
     display: flex
     flex-direction: row
-    justify-content: space-around
-    margin: 1rem 2rem
+    margin: 3rem auto
+    width: 90%
     align-content: center
+    justify-content: space-between
     .rights-footer
       display: flex
       flex-direction: column
@@ -175,33 +135,34 @@ footer
       align-content: center
       font-size: 0.8rem
       a
-        color: $chalk
+        color: $whitey
         text-decoration: none
         &:hover
           color: $gum
       .cclicense
         justify-content: center
         align-content: center
-        width: 1.5rem 
-    .contact-icons-wrap // all social icons
-      margin: 0
-      max-height: 3rem
-      display: flex
-      justify-content: center
+        width: 1.3rem 
+    .rights-footer-mobile
+        display: none
+  .contact-icons-wrap // SOCIAL MEDIA ICONS
+    margin: 0 
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-content: center
+    .social-icon
+      width: 2rem
+      height: 2rem
+      margin: 1.5rem
+      object-fit: contain
       align-content: center
-      gap: 1.5rem
-      .social-icon
-        width: 2.5rem
-        height: auto
-        object-fit: contain
-        color: $chalk
-        align-content: center
-        a
-          color: $chalk
-          &:hover
-            color: $gum
+      svg
+        color: $whitey
+        &:hover
+          color: $gum
 
-//MOBILE DISPLAY FOR FOOTER
+// FOOTER'S MOBILE DISPLAY 
 @media (max-width: 768px) 
   footer
     margin: 0
@@ -213,31 +174,40 @@ footer
     justify-content: center
     align-content: center
     .thanks-footer
-      margin: 1rem 0
+      margin: 0
       font-size: 1rem
       text-align: center
-      padding: 1rem 0
+      padding: 0
     .footer-wrap
       flex-direction: column
       justify-content: center
       align-content: center
       .rights-footer
+        display: none
+      .rights-footer-mobile
+        display: flex
+        flex-direction: column
         text-align: center
-      .cclicense
-        width: 1.5rem 
-        margin: 0
-    .contact-items // all social icons
-      margin: 0
-      padding: 1rem 0
-      flex-direction: row
-      justify-content: center
-      align-content: center
-      gap: 1.5rem
-      .social-icon
-        width: 2rem
-        height: auto
-        object-fit: contain
+        justify-content: center
         align-content: center
+        font-size: 0.8rem
+        margin: 1rem 0 0 0
+        a
+          color: $whitey
+          text-decoration: none
+          &:hover
+            color: $gum
+        svg
+            justify-content: center
+            align-content: center
+            width: 1.2rem 
+    .social-icon
+      width: 1.7rem
+      height: 1.7rem
+      object-fit: contain
+      align-content: center
+      svg
+        color: $gum
 
 //////////////////////////////////////////
 

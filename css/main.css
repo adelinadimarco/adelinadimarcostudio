@@ -30,28 +30,77 @@
   }
 }
 .carad-main-wrap {
-  margin: 5rem 3rem 2rem 3rem;
-  padding: 1rem;
+  margin: 1rem auto;
   max-width: 60%;
   display: flex;
   flex-direction: column;
   align-content: center;
   justify-content: center;
 }
-.carad-main-wrap .carad-intro {
+
+.carad-intro {
+  display: flex;
   flex-direction: row;
+  gap: 1.5rem;
 }
-.carad-main-wrap .carad-intro .carad-intro-text {
+.carad-intro img {
+  height: 100%;
+}
+.carad-intro .carad-intro-text {
   flex-direction: column;
 }
 
+.carad-logos {
+  margin: 1rem auto;
+  align-content: center;
+  justify-content: center;
+}
 .carad-logos img {
-  width: 20rem;
-  height: auto;
+  width: 33%;
 }
 
+.carad-typo {
+  margin: 1rem auto;
+  align-content: center;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .carad-main-wrap {
+    margin: 0;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .carad-intro {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .carad-intro img {
+    width: 100%;
+  }
+  .carad-intro .carad-intro-text {
+    width: 90%;
+    margin: 0 0.5rem;
+    flex-direction: column;
+  }
+  .carad-logos {
+    margin: 1rem auto;
+    align-content: center;
+    justify-content: center;
+  }
+  .carad-logos img {
+    width: 33%;
+  }
+  .carad-typo {
+    margin: 1rem auto;
+    align-content: center;
+    justify-content: center;
+  }
+}
 .CE-presentation {
-  margin: 5rem 0 1rem 0;
+  margin: 0;
   max-width: 100%;
   height: 100%;
 }
@@ -77,7 +126,7 @@
   width: 100%;
   align-items: center;
   justify-items: center;
-  background: #FBF7F5;
+  background: #fffffb;
   color: #00010c;
 }
 .CE-logo-wrap h2 {
@@ -127,6 +176,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  gap: 1.5rem;
 }
 
 .CE-typo {
@@ -161,14 +211,17 @@
   justify-content: center;
   align-content: center;
 }
-.CE-mail h4 {
+.CE-mail p {
+  margin: 2rem 0 0 0;
   font-family: "Urbanist", sans-serif;
   font-size: 2rem;
+  text-align: center;
+  font-weight: 600;
 }
 .CE-mail .CE-mail-img {
   width: 40rem;
   height: auto;
-  margin: 1rem;
+  margin: 0.5rem;
   justify-self: center;
   align-self: center;
 }
@@ -178,7 +231,7 @@
   justify-content: center;
   align-content: center;
   margin: 2rem auto;
-  width: 25rem;
+  width: 30%;
   height: auto;
 }
 .btn-about-proj-box .btn-about-proj {
@@ -190,10 +243,18 @@
   border-radius: 2rem;
   border: none;
   color: #00010c;
-  background: #FBF7F5;
+  background: #ff77bc;
 }
 .btn-about-proj-box .btn-about-proj:hover {
-  background: #ff77bc;
+  transition: color 0.3s ease;
+  color: #ff77bc;
+  background: #00010c;
+}
+
+.CE-ending {
+  width: 100%;
+  background: #fffffb;
+  color: #00010c;
 }
 
 @media (max-width: 768px) {
@@ -203,19 +264,19 @@
     justify-content: center;
   }
   .CE-presentation {
-    margin: 2.7rem 0 0 0;
+    margin: 0;
     width: 100%;
   }
   .CE-about-wrap {
     flex-direction: column;
     width: 90%;
-    margin: 1rem 2rem;
+    margin: 1rem auto;
     align-content: center;
     justify-content: center;
     gap: 0;
   }
   .CE-logo-wrap {
-    margin: 1rem 0;
+    margin: 1rem auto;
   }
   .CE-logo-wrap .CE-logos-text {
     flex-direction: column;
@@ -229,12 +290,12 @@
     gap: 0.5;
   }
   .CE-logo-wrap .CE-logos2 img {
-    height: 20rem;
-    width: auto;
+    width: 50%;
+    height: auto;
   }
   .CE-colors-wrap {
     width: 90%;
-    margin: 1rem 2rem;
+    margin: 1rem auto;
     justify-content: center;
     align-content: center;
     gap: 0.5;
@@ -251,7 +312,7 @@
     margin: 0.5rem 0;
   }
   .CE-typo {
-    margin: 1rem 2rem;
+    margin: 1rem auto;
     width: 90%;
     align-content: center;
     justify-content: center;
@@ -269,43 +330,66 @@
     justify-content: center;
   }
   .CE-mail {
-    margin: 1rem 2rem;
+    margin: 1rem auto;
     width: 90%;
   }
-  .CE-mail h4 {
-    font: size 1.2rem;
+  .CE-mail p {
+    font-size: 1.2rem;
   }
   .CE-mail .CE-mail-img {
     width: 70%;
-    margin: 0.5rem 1rem;
+    margin: 0.5rem auto;
   }
-  .btn-more-box {
-    width: 50%;
+  .btn-about-proj-box {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin: 0.5rem auto;
+    width: 80%;
+    height: auto;
   }
-  .btn-more-box .btn-more {
-    margin: 1rem 1.5rem;
-    padding: 0.5rem 1rem;
+  .btn-about-proj-box .btn-about-proj {
+    cursor: pointer;
+    margin: 0;
+    padding: 0.5rem 0.9rem;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 4rem;
+    border: none;
+    color: #00010c;
+    background: #ff77bc;
   }
 }
 .work-disclaimer {
-  width: 700px;
-  margin: 2rem auto;
+  width: 40%;
+  margin: 0 auto;
+  padding: 3rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-content: center;
   font-family: "Urbanist", sans-serif;
+  text-align: left;
+}
+.work-disclaimer summary {
+  cursor: pointer;
+}
+.work-disclaimer summary:hover {
+  color: #ff77bc;
 }
 .work-disclaimer p {
-  font-size: 0.7rem;
+  margin: 0.5rem auto;
+  font-size: 0.8rem;
   line-height: 1.5rem;
 }
 
 @media (max-width: 768px) {
   .work-disclaimer {
-    margin: 2rem;
+    margin: auto;
     width: 90%;
-    gap: 0;
+  }
+  .work-disclaimer p {
+    line-height: 1.2rem;
   }
 }
 .change-btn-wrap {
@@ -326,15 +410,20 @@
 .change-btn a {
   font-family: "Urbanist", sans-serif;
   text-decoration: none;
-  color: #FBF7F5;
+  color: #ff77bc;
 }
 .change-btn a:hover {
-  color: #ff77bc;
+  color: #fffffb;
+  text-decoration: underline;
 }
 
 @media (max-width: 768px) {
   .change-btn-wrap {
     width: 90%;
+    margin: 2rem auto;
+  }
+  .change-btn-wrap a {
+    color: #ff77bc;
   }
 }
 @font-face {
@@ -354,54 +443,35 @@ header {
   align-items: center;
   width: 100%;
   overflow: hidden;
-  background: #FBF7F5;
+  background: #fffffb;
 }
 .header-box a {
   color: #00010c;
 }
 
-.AD-logo {
-  height: 3rem;
+.ade-logo-box {
+  height: 2.8rem;
   width: auto;
-  margin: 0.5rem 1rem 0.5rem 10rem;
-  justify-content: left;
-  align-content: center;
-}
-.AD-logo img {
-  height: 100%;
-  width: auto;
-}
-
-.AD-logo-index {
-  height: 4rem;
-  width: auto;
-  margin: 0.5rem 1rem;
+  margin: 0.8rem 2rem 0.8rem 20rem;
   justify-content: center;
   align-content: center;
 }
-.AD-logo-index img {
-  height: 100%;
-  width: auto;
+.ade-logo-box .adelina-logo-svg {
+  color: #00010c;
 }
 
 .nav-menu {
-  justify-content: center;
+  justify-content: end;
   align-content: center;
-}
-
-.hidden-menu {
-  left: 0;
-  padding: 0 8rem;
 }
 
 .menu-items {
   positiona: absolute;
-  padding: 1rem 0;
+  padding: 1rem 0.5rem;
   z-index: 9999;
   display: flex;
   align-items: center;
   list-style: none;
-  gap: 0.5rem;
   white-space: nowrap;
   right: 0;
 }
@@ -417,8 +487,7 @@ header {
 .menu-items a:hover {
   color: #ff77bc;
 }
-
-.social {
+.menu-items .social {
   width: 1.4rem;
   height: 1.4rem;
   vertical-align: middle;
@@ -426,43 +495,24 @@ header {
   align-content: center;
 }
 
-.menu-toggle {
+.toggle-box, .mobile-menu {
   display: none;
 }
 
-@keyframes slide-left-to-right {
-  from {
-    transform: translateX(100%);
-  }
-  to {
-    transform: translateX(0);
-  }
-}
-@keyframes slide-right-to-left {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(100%);
-  }
-}
 @media (max-width: 768px) {
   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
-  body.menu-open {
-    overflow: hidden;
-  }
   .header-box {
     width: 100%;
     position: relative;
     z-index: 1000;
   }
-  .AD-logo-index {
+  .ade-logo-box {
     width: auto;
-    height: 1.7rem;
+    height: 2rem;
   }
   .hidden-menu, .menu-items {
     display: none;
@@ -473,7 +523,7 @@ header {
     max-width: 100%;
     justify-content: space-evenly;
   }
-  .toggle-box, .menu-toggle {
+  .toggle-box {
     display: flex;
     justify-content: center;
     align-content: center;
@@ -487,37 +537,35 @@ header {
   .menu-mob-open {
     display: flex;
     cursor: pointer;
-    color: #FBF7F5;
+    color: #00010c;
     padding: 0.5rem 0;
     width: 80%;
     font-weight: 600;
-    background: #00010c;
+    background: #ff77bc;
     border: none;
-  }
-  .menu-mob-close {
-    display: none;
   }
 }
 footer {
   margin: 0;
   max-width: 100%;
-  padding: 3rem 0;
+  padding: 1rem 0;
   font-family: "Urbanist", sans-serif;
-  color: #FBF7F5;
+  color: #fffffb;
   background: #00010c;
   line-height: 1.75rem;
 }
 footer .thanks-footer {
-  margin: 4rem 0;
+  margin: 1rem 0;
   font-size: 1.1rem;
   text-align: center;
 }
 footer .footer-wrap {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  margin: 1rem 2rem;
+  margin: 3rem auto;
+  width: 90%;
   align-content: center;
+  justify-content: space-between;
 }
 footer .footer-wrap .rights-footer {
   display: flex;
@@ -528,7 +576,7 @@ footer .footer-wrap .rights-footer {
   font-size: 0.8rem;
 }
 footer .footer-wrap .rights-footer a {
-  color: #FBF7F5;
+  color: #fffffb;
   text-decoration: none;
 }
 footer .footer-wrap .rights-footer a:hover {
@@ -537,28 +585,30 @@ footer .footer-wrap .rights-footer a:hover {
 footer .footer-wrap .rights-footer .cclicense {
   justify-content: center;
   align-content: center;
-  width: 1.5rem;
+  width: 1.3rem;
 }
-footer .footer-wrap .contact-icons-wrap {
+footer .footer-wrap .rights-footer-mobile {
+  display: none;
+}
+footer .contact-icons-wrap {
   margin: 0;
-  max-height: 3rem;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-content: center;
-  gap: 1.5rem;
 }
-footer .footer-wrap .contact-icons-wrap .social-icon {
-  width: 2.5rem;
-  height: auto;
+footer .contact-icons-wrap .social-icon {
+  width: 2rem;
+  height: 2rem;
+  margin: 1.5rem;
   -o-object-fit: contain;
      object-fit: contain;
-  color: #FBF7F5;
   align-content: center;
 }
-footer .footer-wrap .contact-icons-wrap .social-icon a {
-  color: #FBF7F5;
+footer .contact-icons-wrap .social-icon svg {
+  color: #fffffb;
 }
-footer .footer-wrap .contact-icons-wrap .social-icon a:hover {
+footer .contact-icons-wrap .social-icon svg:hover {
   color: #ff77bc;
 }
 
@@ -574,10 +624,10 @@ footer .footer-wrap .contact-icons-wrap .social-icon a:hover {
     align-content: center;
   }
   footer .thanks-footer {
-    margin: 1rem 0;
+    margin: 0;
     font-size: 1rem;
     text-align: center;
-    padding: 1rem 0;
+    padding: 0;
   }
   footer .footer-wrap {
     flex-direction: column;
@@ -585,26 +635,38 @@ footer .footer-wrap .contact-icons-wrap .social-icon a:hover {
     align-content: center;
   }
   footer .footer-wrap .rights-footer {
+    display: none;
+  }
+  footer .footer-wrap .rights-footer-mobile {
+    display: flex;
+    flex-direction: column;
     text-align: center;
-  }
-  footer .footer-wrap .cclicense {
-    width: 1.5rem;
-    margin: 0;
-  }
-  footer .contact-items {
-    margin: 0;
-    padding: 1rem 0;
-    flex-direction: row;
     justify-content: center;
     align-content: center;
-    gap: 1.5rem;
+    font-size: 0.8rem;
+    margin: 1rem 0 0 0;
   }
-  footer .contact-items .social-icon {
-    width: 2rem;
-    height: auto;
+  footer .footer-wrap .rights-footer-mobile a {
+    color: #fffffb;
+    text-decoration: none;
+  }
+  footer .footer-wrap .rights-footer-mobile a:hover {
+    color: #ff77bc;
+  }
+  footer .footer-wrap .rights-footer-mobile svg {
+    justify-content: center;
+    align-content: center;
+    width: 1.2rem;
+  }
+  footer .social-icon {
+    width: 1.7rem;
+    height: 1.7rem;
     -o-object-fit: contain;
        object-fit: contain;
     align-content: center;
+  }
+  footer .social-icon svg {
+    color: #ff77bc;
   }
 }
 .header-proj {
@@ -621,7 +683,7 @@ footer .footer-wrap .contact-icons-wrap .social-icon a:hover {
 }
 
 @font-face {
-  font-family: "Urbanist";
+  font-family: "Urbanist", sans-serif;
   src: url("assets/Urbanist-VariableFont_wght.ttf") format("truetype-variations");
   font-weight: 100 900;
 }
@@ -659,52 +721,54 @@ body {
   display: grid;
   max-width: 100%;
   margin: 2rem 3rem;
-  grid-template-columns: 2fr 2fr 2fr;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
-  gap: 1rem;
   justify-items: center;
   align-items: center;
 }
 
 .work-card {
-  display: block;
+  display: flex;
+  flex-direction: column;
   position: relative;
+  width: 95%;
   justify-content: center;
   align-content: center;
 }
-
-.work-box {
+.work-card .work-box {
   position: relative;
   justify-content: center;
   align-content: center;
   width: 100%;
   height: auto;
   transition: 0.5s ease;
+  font-family: "Urbanist", sans-serif;
 }
-
-.work-box::before {
+.work-card .work-box a {
+  color: #ff77bc;
+  font-size: 4rem;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+}
+.work-card .work-box::before {
   content: "";
   position: absolute;
   inset: -1rem;
   z-index: 0;
 }
-
-.work-box:hover img {
-  opacity: 0.1;
+.work-card .work-box:hover img {
+  opacity: 0.5;
 }
-
-.work-box:hover .show-text {
+.work-card .work-box:hover .show-text {
   opacity: 1;
 }
-
-.work-pic {
+.work-card .work-img {
   width: 100%;
   height: auto;
   display: block;
-  margin: 0 auto;
 }
-
-.show-text {
+.work-card .show-text {
   justify-content: center;
   align-content: center;
   transition: 0.5s ease;
@@ -716,45 +780,26 @@ body {
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
 }
-.show-text .work-name {
+
+.work-titles {
+  margin: 1rem 0;
+  justify-content: center;
+  align-content: center;
+}
+.work-titles .work-name {
   font-family: "Urbanist", sans-serif;
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: bold;
   text-align: center;
   text-transform: uppercase;
 }
-.show-text .work-tag {
+.work-titles .work-tag {
   font-family: "Urbanist", sans-serif;
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   text-align: center;
 }
-.show-text a {
-  text-decoration: none;
-  color: #FBF7F5;
-}
 
-.view-more-btn {
-  margin-top: 1rem;
-  padding: 0.5rem 0;
-  width: 10rem;
-  font-weight: 600;
-  border-radius: 2rem;
-  background: #ff77bc;
-  opacity: 0.5;
-  font-family: "Urbanist", sans-serif;
-  border: none;
-  cursor: pointer;
-  text-align: center;
-}
-.view-more-btn a {
-  color: #00010c;
-  font-size: 0.9rem;
-}
-.view-more-btn:hover {
-  opacity: 1;
-}
-
-.mobile-view-more-btn {
+.view-work-btn {
   display: none;
 }
 
@@ -762,39 +807,75 @@ body {
   .work-wrap {
     grid-template-columns: 1fr;
     grid-auto-rows: auto;
+    justify-content: center;
+    align-content: center;
     margin: 1rem 0.5rem;
-    gap: 0.6em;
   }
-  .mobile-view-more-btn {
+  .work-wrap .work-card {
+    justify-content: center;
+    align-content: center;
+    margin: 0 0 1rem 0;
+    width: 90%;
+  }
+  .work-wrap .work-box {
+    justify-content: center;
+    align-content: center;
+    height: auto;
+    margin: 0;
+  }
+  .work-wrap .work-box .work-img {
+    width: 100%;
+    margin: 0;
+  }
+  .work-wrap .work-titles {
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+  }
+  .work-wrap .work-titles .work-name {
+    font-size: 1.5rem;
+  }
+  .work-wrap .work-titles .work-tag {
+    font-size: 1rem;
+  }
+  .view-work-btn {
     display: flex;
-    margin: 1rem 0;
-    font-size: 2rem;
-    font-weight: 700;
-    color: #FBF7F5;
+    margin: 0.8rem auto;
+    padding: 0.5rem 1rem;
+    border-radius: 3rem;
+    background: #ff77bc;
+    opacity: 1;
     font-family: "Urbanist", sans-serif;
     border: none;
     cursor: pointer;
-    justify-content: center;
-    align-content: center;
+    text-align: center;
   }
-  .mobile-view-more-btn a {
+  .view-work-btn a {
+    color: #00010c;
+    font-size: 0.9rem;
+    font-weight: 700;
     text-decoration: none;
-    color: #FBF7F5;
   }
-  .mobile-view-more-btn:hover {
-    text-decoration: underline;
+  .view-work-btn:hover {
+    opacity: 0.7;
   }
-  .view-more-btn {
+  .show-text {
     display: none;
   }
 }
 .about-wrapper {
   display: flex;
-  margin: 0;
-  padding: 2rem 13rem;
+  margin: 0 auto;
   max-width: 100%;
-  background: #FBF7F5;
+  background: #fffffb;
   color: #00010c;
+}
+.about-wrapper .about-sec {
+  width: 80%;
+  display: flex;
+  text-align: left;
+  justify-content: left;
+  align-content: flex-start;
 }
 .about-wrapper .profile-pic {
   -o-object-fit: contain;
@@ -804,19 +885,23 @@ body {
   margin: 1rem;
 }
 .about-wrapper .about-text {
-  margin: 0;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   font-family: "Urbanist", sans-serif;
-  width: 80%;
-  line-height: 1.8;
+  width: 50%;
+  line-height: 1.7;
   font-size: 1.1rem;
   text-align: left;
   justify-content: left;
-  align-content: flex-start;
+  align-content: center;
 }
 .about-wrapper .about-text p {
-  margin: 0.3rem 0 0 0;
+  margin: 0;
+}
+.about-wrapper .about-text .script-font {
+  font-family: "Alice", serif;
+  font-weight: 700;
 }
 .about-wrapper .hola {
   font-family: "Urbanist", sans-serif;
@@ -824,6 +909,7 @@ body {
   font-size: 4rem;
   text-align: left;
   justify-content: left;
+  align-content: center;
   margin: 0;
 }
 
@@ -832,154 +918,52 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0 auto;
-    padding-bottom: 2rem;
+    max-width: 100%;
   }
-  .hola {
-    font-size: 3rem;
-    padding-bottom: 1rem;
-    text-align: center;
+  .about-wrapper .about-sec {
+    width: 100%;
+    flex-direction: column;
   }
-  .about-text {
-    font-size: 1rem;
-    line-height: 1.6;
-  }
-  .profile-pic {
+  .about-wrapper .about-sec .profile-pic {
     width: 100%;
     height: auto;
+    margin: 0;
+  }
+  .about-wrapper .about-text {
+    width: 90%;
     margin: 0 auto;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    letter-spacing: 0.02rem;
+  }
+  .about-wrapper .about-text .hola {
+    font-size: 3rem;
+    text-align: left;
+    justify-content: left;
+    margin: 0;
   }
 }
 hr.solid {
-  border-top: 0.3px solid #3d3d3d;
-  margin: 1rem 0;
+  border-top: 0.3px solid #ff77bc;
+  margin: 0.5rem 0;
 }
 
 .resume-wrap {
   max-width: 100%;
-  padding: 2rem 0;
-  background: #FBF7F5;
+  background: #fffffb;
   color: #00010c;
 }
 
 .resume-layout {
-  width: 65%;
-}
-
-.experience-grid {
-  display: grid;
-  grid-template-columns: 1.3fr 2.3fr;
-  grid-auto-rows: auto;
-}
-.experience-grid .experience-title {
-  font-family: "Alice", serif;
-  font-size: 1.7rem;
-  font-weight: 800;
-  text-align: left;
-}
-.experience-grid .experience-job {
-  font-family: "Urbanist", sans-serif;
-  font-size: 1.5rem;
-  font-weight: 700;
-  text-align: left;
-}
-.experience-grid .experience-list {
-  font-family: "Urbanist", sans-serif;
-  font-size: 1.1rem;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
   line-height: 1.6;
-  letter-spacing: 0.02rem;
-  list-style-position: inside;
-}
-.experience-grid .pos1 {
-  grid-column: 1;
-  grid-row: 1;
-}
-.experience-grid .job1 {
-  grid-column: 1;
-  grid-row: 2;
-}
-.experience-grid .date1 {
-  grid-column: 1;
-  grid-row: 3;
-}
-.experience-grid .exp1 {
-  grid-column: 2;
-  grid-row-start: 1;
-  grid-row-end: 4;
-}
-.experience-grid .bar-exp2 {
-  grid-column: 1/-1;
-  grid-row: 4;
-  width: 100%;
-}
-.experience-grid .pos2 {
-  grid-column: 1;
-  grid-row: 5;
-}
-.experience-grid .job2 {
-  grid-column: 1;
-  grid-row: 6;
-}
-.experience-grid .date2 {
-  grid-column: 1;
-  grid-row: 7;
-}
-.experience-grid .exp2 {
-  grid-column: 2;
-  grid-row: 5/8;
-}
-.experience-grid .bar-exp3 {
-  grid-column: 1/-1;
-  grid-row: 8;
-  width: 100%;
-}
-.experience-grid .pos3 {
-  grid-column: 1;
-  grid-row: 9;
-}
-.experience-grid .job3 {
-  grid-column: 1;
-  grid-row: 10;
-}
-.experience-grid .date3 {
-  grid-column: 1;
-  grid-row: 11;
-}
-.experience-grid .exp3 {
-  grid-column: 2;
-  grid-row: 9/12;
-}
-.experience-grid .bar-exp4 {
-  grid-column: 1/-1;
-  grid-row: 12;
-  width: 100%;
-}
-.experience-grid .pos4 {
-  grid-column: 1;
-  grid-row: 13;
-}
-.experience-grid .job4 {
-  grid-column: 1;
-  grid-row: 14;
-}
-.experience-grid .date4 {
-  grid-column: 1;
-  grid-row: 15;
-}
-.experience-grid .exp4 {
-  grid-column: 2;
-  grid-row: 13/16;
-}
-
-.date {
-  font-size: 1rem;
-  text-align: left;
-  justify-content: left;
-  font-family: "Urbanist", sans-serif;
 }
 
 .cv-title {
-  margin: 0 0 0.7rem 4rem;
+  margin: 0 0 0.5rem 4rem;
   font-family: "Urbanist", sans-serif;
   font-size: 5rem;
   font-weight: 700;
@@ -987,29 +971,49 @@ hr.solid {
 }
 
 .cv-subtitle {
-  text-align: left;
+  margin: 1rem 0 0.3rem 0;
   font-family: "Alice", serif;
   font-size: 2.3rem;
-  padding-bottom: 0.5rem;
   font-optical-sizing: auto;
-  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.experience-title {
+  font-family: "Alice", serif;
+  font-size: 2rem;
+  font-weight: 800;
+  text-align: left;
+}
+
+.experience-job {
+  font-family: "Urbanist", sans-serif;
+  font-size: 1.7rem;
+  font-weight: 800;
+  text-align: left;
+}
+
+.experience-list {
+  font-family: "Urbanist", sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  list-style-position: inside;
+}
+
+.date {
+  font-size: 1rem;
+  text-align: left;
+  justify-content: left;
+  align-content: flex-start;
+  font-family: "Urbanist", sans-serif;
 }
 
 .college {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-auto-rows: auto;
   font-family: "Urbanist", sans-serif;
-}
-.college .school {
-  justify-self: left;
-  font-size: 1.1rem;
+  margin: 0;
   text-align: left;
 }
-.college .dateCol {
-  justify-self: flex-end;
-  text-align: right;
-  align-content: center;
+.college .school {
+  font-size: 1.1rem;
 }
 
 .courses {
@@ -1022,11 +1026,11 @@ hr.solid {
   font-size: 1.1rem;
 }
 .courses a {
-  color: #FBF7F5;
+  color: black;
   text-decoration: none;
 }
 .courses a:hover {
-  color: #E30B5D;
+  color: #ff77bc;
 }
 
 .skills {
@@ -1042,7 +1046,7 @@ hr.solid {
   text-decoration: underline;
 }
 
-.resumeDownload-btn {
+.resume-download-btn {
   cursor: pointer;
   margin: 1.5rem 0 3rem 0;
   padding: 1rem;
@@ -1050,23 +1054,21 @@ hr.solid {
   border-radius: 4rem;
   border: none;
   background: #ff77bc;
+  width: 30%;
 }
-.resumeDownload-btn:hover {
+.resume-download-btn:hover {
   transition: background-color 0.3s ease;
   background: #00010c;
 }
-.resumeDownload-btn a {
-  background: none;
+.resume-download-btn:hover a {
+  color: #ff77bc;
+}
+.resume-download-btn a {
   font-family: "Urbanist", sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: #00010c;
   text-decoration: none;
-  padding: 1rem;
   font-weight: 600;
-}
-.resumeDownload-btn a:hover {
-  transition: color 0.3s ease;
-  color: #ff77bc;
 }
 
 @media (max-width: 768px) {
@@ -1075,8 +1077,8 @@ hr.solid {
   }
   .resume-wrap {
     max-width: 100%;
-    margin: 1rem auto;
-    padding: 1rem;
+    margin: 0 auto;
+    padding: 0.5rem;
   }
   .resume-wrap .cv-title {
     font-size: 3rem;
@@ -1084,30 +1086,26 @@ hr.solid {
     padding-top: 0.5rem;
   }
   .resume-layout {
-    width: 90%;
+    width: 100%;
     padding: 0 1rem;
     margin: 0;
   }
   .resume-layout .cv-subtitle {
     font-size: 1.5rem;
   }
-  .experience-grid {
-    display: flex;
-    flex-direction: column;
-  }
-  .experience-grid .experience-title, .experience-grid .experience-job {
+  .resume-layout .experience-title, .resume-layout .experience-job {
     font-size: 1.5rem;
     margin: 0.3rem 0;
   }
-  .experience-grid .date {
+  .resume-layout .date {
     font-size: 1rem;
     margin: 0.3rem 0;
   }
-  .experience-grid .experience-list {
+  .resume-layout .experience-list {
     justify-self: left;
     text-align: left;
     font-size: 1rem;
-    line-height: 1.4;
+    line-height: 1.6;
     list-style-type: none;
   }
   .college {
@@ -1124,9 +1122,11 @@ hr.solid {
     margin: 0;
     line-height: 1.5;
   }
-  .resumeDownload-btn {
+  .resume-download-btn {
     margin: 0.5rem 0;
     padding: 0.5rem 1rem;
     font-size: 1rem;
+    width: 50%;
+    justify-content: center;
   }
 }/*# sourceMappingURL=main.css.map */
