@@ -1,31 +1,52 @@
 /////////////////////////// COLORS 
-$midnight: #00010c
-$chalk: #FBF7F5
-$rasp: #E30B5D
-$gum:	#ff77bc
+$midnight: #000004
 $whitey: #fffffb
+$rasp: #E30B5D
+$blue: #001DD9
+$blues: #488ff3
+$gum:	#ff77bc
 
-///////////////////////////////// FONTS
-@font-face // main sans-serif font
-  font-family: "Urbanist"
-  src: url("assets/Urbanist-VariableFont_wght.ttf") format("truetype-variations")
-  font-weight: 100 900
-
-@font-face // serif font
-  font-family: "Alice", serif
-  src: url("assets/Alice-Regular.ttf") format("truetype")
-
-$urbanist: "Urbanist", sans-serif
-$alice: "Alice", serif
+//////////////////////// FONTS
+$gopher: "Gopher", sans-serif
+@font-face // REGULAR
+  font-family: "Gopher"
+  src: url("../assets/Gopher-Regular.woff2") format("woff2")
+  font-weight: 400
+  font-style: normal
+  font-display: swap
+@font-face // BOLD
+  font-family: "Gopher" 
+  src: url("../assets/Gopher-Bold.woff2") format("woff2")
+  font-weight: 700
+  font-style: normal
+  font-display: swap
+@font-face // BLACK
+  font-family: "Gopher"
+  src: url("../assets/Gopher-Black.woff2") format("woff2")
+  font-weight: 900
+  font-style: normal
+  font-display: swap
+@font-face // ITALIC
+  font-family: "Gopher"
+  src: url("../assets/Gopher-Italic.woff2") format("woff2")
+  font-weight: 400  
+  font-style: italic
+  font-display: swap
+@font-face // HAIRLINE
+  font-family: "Gopher"
+  src: url("../assets/Gopher-Hairline.woff2") format("woff2")
+  font-weight: 400  
+  font-style: normal
+  font-display: swap
 
 ////////////////////////////// PROJECTS STYLES
 // TEXTS
 .work-sec-title
-  font-family: $urbanist
+  font-family: $gopher
   text-align: left
   font-size: 3rem
 .work-text
-  font-family: $urbanist
+  font-family: $gopher
   font-size: 1.3rem
   line-height: 2
   text-align: left
@@ -108,7 +129,7 @@ $alice: "Alice", serif
   flex-direction: row
   justify-content: center
   align-items: center
-.CE-logo-wrap // section logo
+.CE-logo-wrap // CORLEONE ERCOLINI LOGO SECTION
   margin: 2rem 0
   display: flex
   flex-direction: column
@@ -183,7 +204,7 @@ $alice: "Alice", serif
   align-content: center
   p
     margin: 2rem 0 0 0
-    font-family: $urbanist
+    font-family: $gopher
     font-size: 2rem
     text-align: center
     font-weight: 600
@@ -219,7 +240,6 @@ $alice: "Alice", serif
   width: 100%
   background: $whitey
   color: $midnight
-
 // CORLEONE ERCOLINI MOBILE DISPLAY 
 @media (max-width: 768px)
   .CE-full-wrap
@@ -288,23 +308,6 @@ $alice: "Alice", serif
     .CE-mail-img
       width: 70%
       margin: 0.5rem auto
-  .btn-about-proj-box // VIEW MORE ABOUT THE BRAND BUTTON
-    display: flex
-    justify-content: center
-    align-content: center
-    margin: 0.5rem auto
-    width: 80%
-    height: auto
-    .btn-about-proj
-      cursor: pointer
-      margin: 0
-      padding: 0.5rem 0.9rem
-      font-size: 1rem
-      font-weight: 700
-      border-radius: 4rem
-      border: none
-      color: $midnight
-      background: $gum
 
 // DISCLAIMER TEXT
 .work-disclaimer
@@ -315,12 +318,12 @@ $alice: "Alice", serif
   flex-direction: column
   justify-content: center
   align-content: center
-  font-family: $urbanist
+  font-family: $gopher
   text-align: left
   summary
     cursor: pointer
     &:hover
-      color: $gum
+      color: $blue
   p
     margin: 0.5rem auto
     font-size: 0.8rem
@@ -333,26 +336,30 @@ $alice: "Alice", serif
      line-height: 1.2rem
 
 //////////////////////////////////////////////
-// INSIDE NAVIGATION BUTTONS
+// CHANGE PROJECT BUTTONS
 .change-btn-wrap
   display: flex
   flex-direction: row
-  width: 100vw
-  margin: 5rem 2rem
+  width: 100%
+  height: 5rem
+  margin: 0
   justify-content: space-between
   align-content: center
-.change-btn
-  cursor: pointer
-  font-size: 1.2rem
-  background: none
-  border: none
-  a
-    font-family: $urbanist
-    text-decoration: none 
-    color: $gum
-    &:hover
+  background: $whitey
+  color: $midnight
+  .change-btn
+    cursor: pointer
+    font-size: 1.2rem
+    background: $blue
+    border: none
+    border-radius: 4rem
+    padding: 1rem
+    a
+      font-family: $gopher
+      text-decoration: none 
       color: $whitey
-      text-decoration: underline
+    &:hover
+      opacity: 0.7
 @media (max-width: 768px) 
   .change-btn-wrap
     width: 90%

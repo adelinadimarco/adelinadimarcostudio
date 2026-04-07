@@ -3,24 +3,45 @@
 @use 'menu' 
 
 /////////////////////////// COLORS 
-$midnight: #00010c
-$chalk: #FBF7F5
-$rasp: #E30B5D
-$gum:	#ff77bc
+$midnight: #000004
 $whitey: #fffffb
+$rasp: #E30B5D
+$blue: #001DD9
+$blues: #488ff3
+$gum:	#ff77bc
 
-//////////////////////// FONTS
-@font-face 
-  font-family: "Urbanist", sans-serif
-  src: url("assets/Urbanist-VariableFont_wght.ttf") format("truetype-variations")
-  font-weight: 100 900
-
-@font-face
-  font-family: "Alice", serif
-  src: url("assets/Alice-Regular.ttf") format("truetype")
-
-$urbanist: "Urbanist", sans-serif
-$alice: "Alice", serif
+/////////////////////////////////////////
+$gopher: "Gopher", sans-serif
+@font-face // REGULAR
+  font-family: "Gopher"
+  src: url("../assets/Gopher-Regular.woff2") format("woff2")
+  font-weight: 400
+  font-style: normal
+  font-display: swap
+@font-face // MEDIUM
+  font-family: "Gopher"
+  src: url("../assets/Gopher-Medium.woff2") format("woff2")
+  font-weight: 500
+  font-style: normal
+  font-display: swap
+@font-face // BOLD
+  font-family: "Gopher" 
+  src: url("../assets/Gopher-Bold.woff2") format("woff2")
+  font-weight: 700
+  font-style: normal
+  font-display: swap
+@font-face // BLACK
+  font-family: "Gopher"
+  src: url("../assets/Gopher-Black.woff2") format("woff2")
+  font-weight: 900
+  font-style: normal
+  font-display: swap
+@font-face // ITALIC
+  font-family: "Gopher"
+  src: url("../assets/Gopher-Italic.woff2") format("woff2")
+  font-weight: 400  
+  font-style: italic
+  font-display: swap
 
 ///////////////////////////////////////// GENERAL DISPLAY
 *
@@ -39,9 +60,10 @@ body
 .main-page
   margin: 0 auto
   background: $midnight
-  color: $chalk
+  color: $whitey
   overflow-x: hidden
   max-width: 100%
+  font-family: $gopher
 
 /////////////////////////////////////////
 // WORK SECTION - DISPLAY PROJECTS
@@ -60,16 +82,15 @@ body
   width: 95%
   justify-content: center
   align-content: center
-  .work-box // WORK PREVIEW BOX
+  .work-box // WORK PREVIEW CARD BOX
     position: relative
     justify-content: center
     align-content: center
     width: 100%
     height: auto
     transition: 0.5s ease
-    font-family: $urbanist
-    a
-      color: $gum
+    a // VIEW PROJECT LINK TEXT
+      color: $blue
       font-size: 4rem
       font-weight: 700
       text-align: center
@@ -98,19 +119,19 @@ body
     left: 50%
     transform: translate(-50%, -50%)
     -ms-transform: translate(-50%, -50%)
-.work-titles
+.work-titles // PROJECT'S NAME & TAG
   margin: 1rem 0
   justify-content: center
   align-content: center
   .work-name
-    font-family: $urbanist
     font-size: 3rem
-    font-weight: bold
+    font-weight: 700
     text-align: center
     text-transform: uppercase
   .work-tag
-    font-family: $urbanist
+    font-family: $gopher
     font-size: 1.5rem
+    font-weight: 400
     text-align: center
 .view-work-btn // BUTTON FOR MOBILE DISPLAY
   display: none
@@ -144,14 +165,14 @@ body
         font-size: 1.5rem
       .work-tag
         font-size: 1rem
-  .view-work-btn //btn
+  .view-work-btn // VIEW PROJECT BUTTON FOR MOBILE
     display: flex
     margin: 0.8rem auto
     padding: 0.5rem 1rem
     border-radius: 3rem
     background: $gum
     opacity: 1
-    font-family: $urbanist
+    font-family: $gopher
     border: none
     cursor: pointer
     text-align: center
@@ -188,26 +209,31 @@ body
     margin: 0 auto
     display: flex
     flex-direction: column
-    font-family: $urbanist
     width: 50%
-    line-height: 1.7
+    line-height: 1.8
     font-size: 1.1rem
     text-align: left
     justify-content: left
     align-content: center
     p
       margin: 0
-    .script-font
-      font-family: $alice
-      font-weight: 700
-  .hola // SUBTITLE FOR ABOUT ME SEC
-    font-family: $urbanist
-    font-weight: 700
+    .highlighted-font
+      font-weight: 900
+      font-style: italic
+  .hola // SUBTITLE FOR ABOUT ME SECTION
     font-size: 4rem
     text-align: left
     justify-content: left
     align-content: center
     margin: 0
+.mail-me // CONTACT EMAIL LINK
+  margin: 0
+  font-size: 1.1rem
+  font-weight: 600
+  color: $midnight
+  text-decoration: none
+  &:hover
+    color: $blue
 
 // MOBILE DISPLAY FOR ABOUT ME
 @media (max-width: 768px) 
@@ -239,7 +265,7 @@ body
 ///////////////////////////////////////
 // STARTS RESUME SECTION
 hr.solid // DECOR DIVIDERS
-  border-top: 0.3px solid $gum
+  border-top: 0.3px solid $blue
   margin: 0.5rem 0
 .resume-wrap // MAIN RESUME SECTION WRAPPER
   max-width: 100%
@@ -251,51 +277,52 @@ hr.solid // DECOR DIVIDERS
   flex-direction: column
   line-height: 1.6
 
-.cv-title // MAIN TITLE FOR RESUME SECTION
-  margin: 0 0 0.5rem 4rem
-  font-family: $urbanist
-  font-size: 5rem
+.cv-title // MAIN TITLE TO OPEN RESUME SECTION
+  margin: 0 0 0 4rem
+  padding-top: 2rem
+  font-family: $gopher
+  font-size: 4rem
   font-weight: 700
   text-align: left
 .cv-subtitle // SUBTITLES FOR EACH RESUME SECTION
   margin: 1rem 0 0.3rem 0
-  font-family: $alice
+  font-family: $gopher
   font-size: 2.3rem
   font-optical-sizing: auto
   text-align: center
 
 // RESUME - EXPERIENCE SECTION
 .experience-title
-  font-family: $alice
+  font-family: $gopher
   font-size: 2rem
   font-weight: 800
   text-align: left
 .experience-job
-  font-family: $urbanist
-  font-size: 1.7rem
+  font-family: $gopher
+  font-size: 1.5rem
   font-weight: 800
   text-align: left
+  text-transform: uppercase
 .experience-list
-  font-family: $urbanist
+  font-family: $gopher
   font-size: 1.1rem
-  line-height: 1.6
+  line-height: 1.7
   list-style-position: inside
 .date // DATES FOR EXPERIENCES
   font-size: 1rem
   text-align: left
   justify-content: left
   align-content: flex-start
-  font-family: $urbanist
 
 // SKILLS & STUDIES SECTION
 .college
-  font-family: $urbanist
+  font-family: $gopher
   margin: 0
   text-align: left
   .school
     font-size: 1.1rem
 .courses
-  font-family: $urbanist
+  font-family: $gopher
   max-width: 600px
   justify-self: left
   align-self: left
@@ -306,17 +333,16 @@ hr.solid // DECOR DIVIDERS
     color: black
     text-decoration: none
     &:hover
-      color: $gum
+      color: $blue
 .skills
   justify-self: left
-  font-family: $urbanist
+  font-family: $gopher
   line-height: 1.8
   margin-left: 0.5rem
   font-size: 1.1rem
   .highlight-skill
-    font-weight: bold
+    font-weight: 900
     font-size: 1.2rem
-    text-decoration: underline
 
 // VIEW/DOWNLOAD RESUME BUTTON
 .resume-download-btn 
@@ -326,19 +352,17 @@ hr.solid // DECOR DIVIDERS
   background: none
   border-radius: 4rem
   border: none
-  background: $gum
-  width: 30%
+  background: $blue
+  width: 50%
+  a
+    font-family: $gopher
+    font-size: 1.1rem
+    color: $whitey
+    text-decoration: none
+    font-weight: 600
   &:hover
     transition: background-color 0.3s ease
     background: $midnight
-    a
-     color: $gum
-  a
-    font-family: $urbanist
-    font-size: 1.1rem
-    color: $midnight
-    text-decoration: none
-    font-weight: 600
 
 // MOBILE DISPLAY FOR RESUME
 @media (max-width: 768px) 
@@ -385,5 +409,5 @@ hr.solid // DECOR DIVIDERS
     margin: 0.5rem 0
     padding: 0.5rem 1rem
     font-size: 1rem
-    width: 50%
+    width: 100%
     justify-content: center

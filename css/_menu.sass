@@ -1,16 +1,43 @@
 /////////////////////////// COLORS 
-$midnight: #00010c
-$chalk: #FBF7F5
-$gum:	#ff77bc
+$midnight: #000004
 $whitey: #fffffb
+$rasp: #E30B5D
+$blue: #001DD9
+$blues: #488ff3
+$gum:	#ff77bc
 
 //////////////////////// FONTS
-@font-face // main sans-serif font
-  font-family: "Urbanist"
-  src: url("assets/Urbanist-VariableFont_wght.ttf") format("truetype-variations")
-  font-weight: 100 900
-
-$urbanist: "Urbanist", sans-serif
+$gopher: "Gopher", sans-serif
+@font-face // REGULAR
+  font-family: "Gopher"
+  src: url("../assets/Gopher-Regular.woff2") format("woff2")
+  font-weight: 400
+  font-style: normal
+  font-display: swap
+@font-face // MEDIUM
+  font-family: "Gopher"
+  src: url("../assets/Gopher-Medium.woff2") format("woff2")
+  font-weight: 500
+  font-style: normal
+  font-display: swap
+@font-face // BOLD
+  font-family: "Gopher" 
+  src: url("../assets/Gopher-Bold.woff2") format("woff2")
+  font-weight: 700
+  font-style: normal
+  font-display: swap
+@font-face // BLACK
+  font-family: "Gopher"
+  src: url("../assets/Gopher-Black.woff2") format("woff2")
+  font-weight: 900
+  font-style: normal
+  font-display: swap
+@font-face // ITALIC
+  font-family: "Gopher"
+  src: url("../assets/Gopher-Italic.woff2") format("woff2")
+  font-weight: 400  
+  font-style: italic
+  font-display: swap
 
 //////////////////////////////////////////////
 header
@@ -21,47 +48,69 @@ header
   display: flex
   justify-content: space-between
   align-items: center
+  position: relative
   width: 100%
   overflow: hidden
   background: $whitey
+  height: 6rem
   a
     color: $midnight
 .ade-logo-box
-  height: 2.8rem
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  height: auto
   width: auto
-  margin: 0.8rem 2rem 0.8rem 20rem
-  justify-content: center
-  align-content: center
-  .adelina-logo-svg
-    color: $midnight
-.nav-menu // NAVIGATION MENU
-  justify-content: end
-  align-content: center
-.menu-items
-  positiona: absolute
-  padding: 1rem 0.5rem
-  z-index: 9999
+  margin: 0
   display: flex
+  justify-content: center
   align-items: center
-  list-style: none
-  white-space: nowrap
-  right: 0
   a
-    font-family: $urbanist
-    text-transform: uppercase
+   font-family: $gopher
+   font-size: 3rem
+   letter-spacing: 0.05rem
+   text-decoration: none
+   color: $midnight
+   padding: 2rem 0
+   font-weight: 500
+.left-menu
+  position: absolute
+  top: 50%
+  left: 2rem
+  transform: translateY(-50%)
+  display: flex
+  flex-direction: row
+  gap: 1rem
+  a
+    font-family: $gopher
     color: $midnight
-    font-weight: 800
+    font-weight: 700
     text-decoration: none
-    font-size: 1rem
+    font-size: 1.2rem
     padding: 0.5rem
     &:hover
-      color: $gum
-  .social // MENU'S SOCIAL ICONS
+      color: $blue
+.nav-menu // NAVIGATION MENU
+  position: absolute
+  top: 50%
+  right: 2rem
+  transform: translateY(-50%)
+  display: flex
+  align-items: center
+  ul 
+    display: flex
+    flex-direction: row
+    list-style: none
+  .social-menu // MENU'S SOCIAL ICONS
     width: 1.4rem
     height: 1.4rem
+    margin: 1rem
     vertical-align: middle
     justify-content: center 
     align-content: center
+    &:hover
+      color: $blue
 
 .toggle-box, .mobile-menu
   display: none
@@ -78,14 +127,17 @@ header
     z-index: 1000
   .ade-logo-box
     width: auto
-    height: 2rem
+    position: static
+    transform: none
+    a
+      font-size: 2.5rem
+      margin: 0.5rem
+  .left-menu
+    display: none
   .hidden-menu, .menu-items // ITEMS IN NAV UL HIDDEN
     display: none
   .nav-menu
-    display: flex
-    height: 1.8rem
-    max-width: 100%
-    justify-content: space-evenly
+    display: none
   .toggle-box
     display: flex
     justify-content: center
@@ -101,9 +153,8 @@ header
     cursor: pointer
     color: $midnight
     padding: 0.5rem 0
-    width: 80%
+    width: 70%
     font-weight: 600
-    background: $gum
     border: none
 
 //////////////////////////////////////////////////////
@@ -111,40 +162,57 @@ header
 footer
   margin: 0
   max-width: 100%
-  padding: 1rem 0 
-  font-family: $urbanist
+  padding: 1rem
+  font-family: $gopher
   color: $whitey
   background: $midnight
   line-height: 1.75rem
-  .thanks-footer
-    margin: 1rem 0
-    font-size: 1.1rem
-    text-align: center
-  .footer-wrap
+  .reach-me
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    div:first-child
+      text-align: center
+      margin-top: 2rem
+    a
+      color: $whitey
+      align-content: center
+      justify-content: center
+  .footer-wrap // FOOTER'S RIGHTS & THANKS WRAPPER
+    padding: 0
     display: flex
     flex-direction: row
     margin: 3rem auto
-    width: 90%
-    align-content: center
-    justify-content: space-between
+    width: 100%
+    align-items: center
+    gap: 2rem
     .rights-footer
       display: flex
       flex-direction: column
-      text-align: center
       justify-content: center
-      align-content: center
-      font-size: 0.8rem
+      align-items: flex-start
+      font-size: 0.9rem
+      flex: 0 0 auto
       a
         color: $whitey
         text-decoration: none
         &:hover
-          color: $gum
-      .cclicense
+          color: $blue
+      .cclicense // CREATIVE COMMONS LICENSE ICON
         justify-content: center
         align-content: center
-        width: 1.3rem 
-    .rights-footer-mobile
-        display: none
+        width: 1.8rem 
+    .thanks-footer
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: flex-end
+      margin-left: auto
+      font-size: 1rem
+      text-align: right
+      flex: 0 0 auto
+
   .contact-icons-wrap // SOCIAL MEDIA ICONS
     margin: 0 
     display: flex
@@ -160,63 +228,40 @@ footer
       svg
         color: $whitey
         &:hover
-          color: $gum
+          color: $blue
 
 // FOOTER'S MOBILE DISPLAY 
 @media (max-width: 768px) 
   footer
     margin: 0
     width: 100%
-    padding: 1rem 1rem 3rem 1rem
+    padding: 0
     display: flex
-    flex-direction: column
-    line-height: 1.3rem
-    justify-content: center
-    align-content: center
-    .thanks-footer
-      margin: 0
-      font-size: 1rem
-      text-align: center
-      padding: 0
-    .footer-wrap
-      flex-direction: column
-      justify-content: center
+    flex-direction: column 
+    a 
+      color: $whitey
       align-content: center
-      .rights-footer
-        display: none
-      .rights-footer-mobile
-        display: flex
-        flex-direction: column
-        text-align: center
-        justify-content: center
-        align-content: center
-        font-size: 0.8rem
-        margin: 1rem 0 0 0
-        a
-          color: $whitey
-          text-decoration: none
-          &:hover
-            color: $gum
-        svg
-            justify-content: center
-            align-content: center
-            width: 1.2rem 
+      justify-content: center
+      text-align:  center
     .social-icon
       width: 1.7rem
       height: 1.7rem
       object-fit: contain
       align-content: center
-      svg
-        color: $gum
-
+    .footer-wrap 
+      padding: 0
+      display: flex
+      flex-direction: column
+      margin: 0
+      align-items: center
+      justify-content: center
+      .rights-footer
+        width: 100%
+        text-align: center
+        .cclicense 
+          width: 1.8rem
+      .thanks-footer
+        width: 100%
+        font-size: 1rem
+        text-align: center
 //////////////////////////////////////////
-
-.header-proj
-  width: 100%
-  position: absolute
-
-.header-main
-  background: $midnight
-  color: $chalk
-  a
-    color:$chalk

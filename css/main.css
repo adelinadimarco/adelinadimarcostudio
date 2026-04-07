@@ -1,20 +1,46 @@
 @font-face {
-  font-family: "Urbanist";
-  src: url("assets/Urbanist-VariableFont_wght.ttf") format("truetype-variations");
-  font-weight: 100 900;
+  font-family: "Gopher";
+  src: url("../assets/Gopher-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
 @font-face {
-  font-family: "Alice", serif;
-  src: url("assets/Alice-Regular.ttf") format("truetype");
+  font-family: "Gopher";
+  src: url("../assets/Gopher-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gopher";
+  src: url("../assets/Gopher-Black.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gopher";
+  src: url("../assets/Gopher-Italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gopher";
+  src: url("../assets/Gopher-Hairline.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
 .work-sec-title {
-  font-family: "Urbanist", sans-serif;
+  font-family: "Gopher", sans-serif;
   text-align: left;
   font-size: 3rem;
 }
 
 .work-text {
-  font-family: "Urbanist", sans-serif;
+  font-family: "Gopher", sans-serif;
   font-size: 1.3rem;
   line-height: 2;
   text-align: left;
@@ -127,7 +153,7 @@
   align-items: center;
   justify-items: center;
   background: #fffffb;
-  color: #00010c;
+  color: #000004;
 }
 .CE-logo-wrap h2 {
   padding: 1rem 0 0 0;
@@ -213,7 +239,7 @@
 }
 .CE-mail p {
   margin: 2rem 0 0 0;
-  font-family: "Urbanist", sans-serif;
+  font-family: "Gopher", sans-serif;
   font-size: 2rem;
   text-align: center;
   font-weight: 600;
@@ -242,19 +268,19 @@
   font-weight: 700;
   border-radius: 2rem;
   border: none;
-  color: #00010c;
+  color: #000004;
   background: #ff77bc;
 }
 .btn-about-proj-box .btn-about-proj:hover {
   transition: color 0.3s ease;
   color: #ff77bc;
-  background: #00010c;
+  background: #000004;
 }
 
 .CE-ending {
   width: 100%;
   background: #fffffb;
-  color: #00010c;
+  color: #000004;
 }
 
 @media (max-width: 768px) {
@@ -340,25 +366,6 @@
     width: 70%;
     margin: 0.5rem auto;
   }
-  .btn-about-proj-box {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    margin: 0.5rem auto;
-    width: 80%;
-    height: auto;
-  }
-  .btn-about-proj-box .btn-about-proj {
-    cursor: pointer;
-    margin: 0;
-    padding: 0.5rem 0.9rem;
-    font-size: 1rem;
-    font-weight: 700;
-    border-radius: 4rem;
-    border: none;
-    color: #00010c;
-    background: #ff77bc;
-  }
 }
 .work-disclaimer {
   width: 40%;
@@ -368,14 +375,14 @@
   flex-direction: column;
   justify-content: center;
   align-content: center;
-  font-family: "Urbanist", sans-serif;
+  font-family: "Gopher", sans-serif;
   text-align: left;
 }
 .work-disclaimer summary {
   cursor: pointer;
 }
 .work-disclaimer summary:hover {
-  color: #ff77bc;
+  color: #001DD9;
 }
 .work-disclaimer p {
   margin: 0.5rem auto;
@@ -395,26 +402,29 @@
 .change-btn-wrap {
   display: flex;
   flex-direction: row;
-  width: 100vw;
-  margin: 5rem 2rem;
+  width: 100%;
+  height: 5rem;
+  margin: 0;
   justify-content: space-between;
   align-content: center;
+  background: #fffffb;
+  color: #000004;
 }
-
-.change-btn {
+.change-btn-wrap .change-btn {
   cursor: pointer;
   font-size: 1.2rem;
-  background: none;
+  background: #001DD9;
   border: none;
+  border-radius: 4rem;
+  padding: 1rem;
 }
-.change-btn a {
-  font-family: "Urbanist", sans-serif;
+.change-btn-wrap .change-btn a {
+  font-family: "Gopher", sans-serif;
   text-decoration: none;
-  color: #ff77bc;
-}
-.change-btn a:hover {
   color: #fffffb;
-  text-decoration: underline;
+}
+.change-btn-wrap .change-btn:hover {
+  opacity: 0.7;
 }
 
 @media (max-width: 768px) {
@@ -427,9 +437,39 @@
   }
 }
 @font-face {
-  font-family: "Urbanist";
-  src: url("assets/Urbanist-VariableFont_wght.ttf") format("truetype-variations");
-  font-weight: 100 900;
+  font-family: "Gopher";
+  src: url("../assets/Gopher-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gopher";
+  src: url("../assets/Gopher-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gopher";
+  src: url("../assets/Gopher-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gopher";
+  src: url("../assets/Gopher-Black.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gopher";
+  src: url("../assets/Gopher-Italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
 }
 header {
   width: 100%;
@@ -441,58 +481,82 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
   width: 100%;
   overflow: hidden;
   background: #fffffb;
+  height: 6rem;
 }
 .header-box a {
-  color: #00010c;
+  color: #000004;
 }
 
 .ade-logo-box {
-  height: 2.8rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: auto;
   width: auto;
-  margin: 0.8rem 2rem 0.8rem 20rem;
+  margin: 0;
+  display: flex;
   justify-content: center;
-  align-content: center;
+  align-items: center;
 }
-.ade-logo-box .adelina-logo-svg {
-  color: #00010c;
+.ade-logo-box a {
+  font-family: "Gopher", sans-serif;
+  font-size: 3rem;
+  letter-spacing: 0.05rem;
+  text-decoration: none;
+  color: #000004;
+  padding: 2rem 0;
+  font-weight: 500;
+}
+
+.left-menu {
+  position: absolute;
+  top: 50%;
+  left: 2rem;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+.left-menu a {
+  font-family: "Gopher", sans-serif;
+  color: #000004;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+}
+.left-menu a:hover {
+  color: #001DD9;
 }
 
 .nav-menu {
-  justify-content: end;
-  align-content: center;
-}
-
-.menu-items {
-  positiona: absolute;
-  padding: 1rem 0.5rem;
-  z-index: 9999;
+  position: absolute;
+  top: 50%;
+  right: 2rem;
+  transform: translateY(-50%);
   display: flex;
   align-items: center;
+}
+.nav-menu ul {
+  display: flex;
+  flex-direction: row;
   list-style: none;
-  white-space: nowrap;
-  right: 0;
 }
-.menu-items a {
-  font-family: "Urbanist", sans-serif;
-  text-transform: uppercase;
-  color: #00010c;
-  font-weight: 800;
-  text-decoration: none;
-  font-size: 1rem;
-  padding: 0.5rem;
-}
-.menu-items a:hover {
-  color: #ff77bc;
-}
-.menu-items .social {
+.nav-menu .social-menu {
   width: 1.4rem;
   height: 1.4rem;
+  margin: 1rem;
   vertical-align: middle;
   justify-content: center;
   align-content: center;
+}
+.nav-menu .social-menu:hover {
+  color: #001DD9;
 }
 
 .toggle-box, .mobile-menu {
@@ -512,16 +576,21 @@ header {
   }
   .ade-logo-box {
     width: auto;
-    height: 2rem;
+    position: static;
+    transform: none;
+  }
+  .ade-logo-box a {
+    font-size: 2.5rem;
+    margin: 0.5rem;
+  }
+  .left-menu {
+    display: none;
   }
   .hidden-menu, .menu-items {
     display: none;
   }
   .nav-menu {
-    display: flex;
-    height: 1.8rem;
-    max-width: 100%;
-    justify-content: space-evenly;
+    display: none;
   }
   .toggle-box {
     display: flex;
@@ -537,58 +606,75 @@ header {
   .menu-mob-open {
     display: flex;
     cursor: pointer;
-    color: #00010c;
+    color: #000004;
     padding: 0.5rem 0;
-    width: 80%;
+    width: 70%;
     font-weight: 600;
-    background: #ff77bc;
     border: none;
   }
 }
 footer {
   margin: 0;
   max-width: 100%;
-  padding: 1rem 0;
-  font-family: "Urbanist", sans-serif;
+  padding: 1rem;
+  font-family: "Gopher", sans-serif;
   color: #fffffb;
-  background: #00010c;
+  background: #000004;
   line-height: 1.75rem;
 }
-footer .thanks-footer {
-  margin: 1rem 0;
-  font-size: 1.1rem;
+footer .reach-me {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+footer .reach-me div:first-child {
   text-align: center;
+  margin-top: 2rem;
+}
+footer .reach-me a {
+  color: #fffffb;
+  align-content: center;
+  justify-content: center;
 }
 footer .footer-wrap {
+  padding: 0;
   display: flex;
   flex-direction: row;
   margin: 3rem auto;
-  width: 90%;
-  align-content: center;
-  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  gap: 2rem;
 }
 footer .footer-wrap .rights-footer {
   display: flex;
   flex-direction: column;
-  text-align: center;
   justify-content: center;
-  align-content: center;
-  font-size: 0.8rem;
+  align-items: flex-start;
+  font-size: 0.9rem;
+  flex: 0 0 auto;
 }
 footer .footer-wrap .rights-footer a {
   color: #fffffb;
   text-decoration: none;
 }
 footer .footer-wrap .rights-footer a:hover {
-  color: #ff77bc;
+  color: #001DD9;
 }
 footer .footer-wrap .rights-footer .cclicense {
   justify-content: center;
   align-content: center;
-  width: 1.3rem;
+  width: 1.8rem;
 }
-footer .footer-wrap .rights-footer-mobile {
-  display: none;
+footer .footer-wrap .thanks-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  margin-left: auto;
+  font-size: 1rem;
+  text-align: right;
+  flex: 0 0 auto;
 }
 footer .contact-icons-wrap {
   margin: 0;
@@ -609,54 +695,22 @@ footer .contact-icons-wrap .social-icon svg {
   color: #fffffb;
 }
 footer .contact-icons-wrap .social-icon svg:hover {
-  color: #ff77bc;
+  color: #001DD9;
 }
 
 @media (max-width: 768px) {
   footer {
     margin: 0;
     width: 100%;
-    padding: 1rem 1rem 3rem 1rem;
-    display: flex;
-    flex-direction: column;
-    line-height: 1.3rem;
-    justify-content: center;
-    align-content: center;
-  }
-  footer .thanks-footer {
-    margin: 0;
-    font-size: 1rem;
-    text-align: center;
     padding: 0;
-  }
-  footer .footer-wrap {
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-  }
-  footer .footer-wrap .rights-footer {
-    display: none;
-  }
-  footer .footer-wrap .rights-footer-mobile {
     display: flex;
     flex-direction: column;
-    text-align: center;
-    justify-content: center;
-    align-content: center;
-    font-size: 0.8rem;
-    margin: 1rem 0 0 0;
   }
-  footer .footer-wrap .rights-footer-mobile a {
+  footer a {
     color: #fffffb;
-    text-decoration: none;
-  }
-  footer .footer-wrap .rights-footer-mobile a:hover {
-    color: #ff77bc;
-  }
-  footer .footer-wrap .rights-footer-mobile svg {
-    justify-content: center;
     align-content: center;
-    width: 1.2rem;
+    justify-content: center;
+    text-align: center;
   }
   footer .social-icon {
     width: 1.7rem;
@@ -665,31 +719,61 @@ footer .contact-icons-wrap .social-icon svg:hover {
        object-fit: contain;
     align-content: center;
   }
-  footer .social-icon svg {
-    color: #ff77bc;
+  footer .footer-wrap {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+  }
+  footer .footer-wrap .rights-footer {
+    width: 100%;
+    text-align: center;
+  }
+  footer .footer-wrap .rights-footer .cclicense {
+    width: 1.8rem;
+  }
+  footer .footer-wrap .thanks-footer {
+    width: 100%;
+    font-size: 1rem;
+    text-align: center;
   }
 }
-.header-proj {
-  width: 100%;
-  position: absolute;
-}
-
-.header-main {
-  background: #00010c;
-  color: #FBF7F5;
-}
-.header-main a {
-  color: #FBF7F5;
-}
-
 @font-face {
-  font-family: "Urbanist", sans-serif;
-  src: url("assets/Urbanist-VariableFont_wght.ttf") format("truetype-variations");
-  font-weight: 100 900;
+  font-family: "Gopher";
+  src: url("../assets/Gopher-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
 @font-face {
-  font-family: "Alice", serif;
-  src: url("assets/Alice-Regular.ttf") format("truetype");
+  font-family: "Gopher";
+  src: url("../assets/Gopher-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gopher";
+  src: url("../assets/Gopher-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gopher";
+  src: url("../assets/Gopher-Black.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gopher";
+  src: url("../assets/Gopher-Italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
 }
 * {
   margin: 0 auto;
@@ -711,10 +795,11 @@ body {
 
 .main-page {
   margin: 0 auto;
-  background: #00010c;
-  color: #FBF7F5;
+  background: #000004;
+  color: #fffffb;
   overflow-x: hidden;
   max-width: 100%;
+  font-family: "Gopher", sans-serif;
 }
 
 .work-wrap {
@@ -742,10 +827,9 @@ body {
   width: 100%;
   height: auto;
   transition: 0.5s ease;
-  font-family: "Urbanist", sans-serif;
 }
 .work-card .work-box a {
-  color: #ff77bc;
+  color: #001DD9;
   font-size: 4rem;
   font-weight: 700;
   text-align: center;
@@ -787,15 +871,15 @@ body {
   align-content: center;
 }
 .work-titles .work-name {
-  font-family: "Urbanist", sans-serif;
   font-size: 3rem;
-  font-weight: bold;
+  font-weight: 700;
   text-align: center;
   text-transform: uppercase;
 }
 .work-titles .work-tag {
-  font-family: "Urbanist", sans-serif;
+  font-family: "Gopher", sans-serif;
   font-size: 1.5rem;
+  font-weight: 400;
   text-align: center;
 }
 
@@ -845,13 +929,13 @@ body {
     border-radius: 3rem;
     background: #ff77bc;
     opacity: 1;
-    font-family: "Urbanist", sans-serif;
+    font-family: "Gopher", sans-serif;
     border: none;
     cursor: pointer;
     text-align: center;
   }
   .view-work-btn a {
-    color: #00010c;
+    color: #000004;
     font-size: 0.9rem;
     font-weight: 700;
     text-decoration: none;
@@ -868,7 +952,7 @@ body {
   margin: 0 auto;
   max-width: 100%;
   background: #fffffb;
-  color: #00010c;
+  color: #000004;
 }
 .about-wrapper .about-sec {
   width: 80%;
@@ -888,9 +972,8 @@ body {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  font-family: "Urbanist", sans-serif;
   width: 50%;
-  line-height: 1.7;
+  line-height: 1.8;
   font-size: 1.1rem;
   text-align: left;
   justify-content: left;
@@ -899,18 +982,27 @@ body {
 .about-wrapper .about-text p {
   margin: 0;
 }
-.about-wrapper .about-text .script-font {
-  font-family: "Alice", serif;
-  font-weight: 700;
+.about-wrapper .about-text .highlighted-font {
+  font-weight: 900;
+  font-style: italic;
 }
 .about-wrapper .hola {
-  font-family: "Urbanist", sans-serif;
-  font-weight: 700;
   font-size: 4rem;
   text-align: left;
   justify-content: left;
   align-content: center;
   margin: 0;
+}
+
+.mail-me {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #000004;
+  text-decoration: none;
+}
+.mail-me:hover {
+  color: #001DD9;
 }
 
 @media (max-width: 768px) {
@@ -945,14 +1037,14 @@ body {
   }
 }
 hr.solid {
-  border-top: 0.3px solid #ff77bc;
+  border-top: 0.3px solid #001DD9;
   margin: 0.5rem 0;
 }
 
 .resume-wrap {
   max-width: 100%;
   background: #fffffb;
-  color: #00010c;
+  color: #000004;
 }
 
 .resume-layout {
@@ -963,39 +1055,41 @@ hr.solid {
 }
 
 .cv-title {
-  margin: 0 0 0.5rem 4rem;
-  font-family: "Urbanist", sans-serif;
-  font-size: 5rem;
+  margin: 0 0 0 4rem;
+  padding-top: 2rem;
+  font-family: "Gopher", sans-serif;
+  font-size: 4rem;
   font-weight: 700;
   text-align: left;
 }
 
 .cv-subtitle {
   margin: 1rem 0 0.3rem 0;
-  font-family: "Alice", serif;
+  font-family: "Gopher", sans-serif;
   font-size: 2.3rem;
   font-optical-sizing: auto;
   text-align: center;
 }
 
 .experience-title {
-  font-family: "Alice", serif;
+  font-family: "Gopher", sans-serif;
   font-size: 2rem;
   font-weight: 800;
   text-align: left;
 }
 
 .experience-job {
-  font-family: "Urbanist", sans-serif;
-  font-size: 1.7rem;
+  font-family: "Gopher", sans-serif;
+  font-size: 1.5rem;
   font-weight: 800;
   text-align: left;
+  text-transform: uppercase;
 }
 
 .experience-list {
-  font-family: "Urbanist", sans-serif;
+  font-family: "Gopher", sans-serif;
   font-size: 1.1rem;
-  line-height: 1.6;
+  line-height: 1.7;
   list-style-position: inside;
 }
 
@@ -1004,11 +1098,10 @@ hr.solid {
   text-align: left;
   justify-content: left;
   align-content: flex-start;
-  font-family: "Urbanist", sans-serif;
 }
 
 .college {
-  font-family: "Urbanist", sans-serif;
+  font-family: "Gopher", sans-serif;
   margin: 0;
   text-align: left;
 }
@@ -1017,7 +1110,7 @@ hr.solid {
 }
 
 .courses {
-  font-family: "Urbanist", sans-serif;
+  font-family: "Gopher", sans-serif;
   max-width: 600px;
   justify-self: left;
   align-self: left;
@@ -1030,20 +1123,19 @@ hr.solid {
   text-decoration: none;
 }
 .courses a:hover {
-  color: #ff77bc;
+  color: #001DD9;
 }
 
 .skills {
   justify-self: left;
-  font-family: "Urbanist", sans-serif;
+  font-family: "Gopher", sans-serif;
   line-height: 1.8;
   margin-left: 0.5rem;
   font-size: 1.1rem;
 }
 .skills .highlight-skill {
-  font-weight: bold;
+  font-weight: 900;
   font-size: 1.2rem;
-  text-decoration: underline;
 }
 
 .resume-download-btn {
@@ -1053,22 +1145,19 @@ hr.solid {
   background: none;
   border-radius: 4rem;
   border: none;
-  background: #ff77bc;
-  width: 30%;
+  background: #001DD9;
+  width: 50%;
+}
+.resume-download-btn a {
+  font-family: "Gopher", sans-serif;
+  font-size: 1.1rem;
+  color: #fffffb;
+  text-decoration: none;
+  font-weight: 600;
 }
 .resume-download-btn:hover {
   transition: background-color 0.3s ease;
-  background: #00010c;
-}
-.resume-download-btn:hover a {
-  color: #ff77bc;
-}
-.resume-download-btn a {
-  font-family: "Urbanist", sans-serif;
-  font-size: 1.1rem;
-  color: #00010c;
-  text-decoration: none;
-  font-weight: 600;
+  background: #000004;
 }
 
 @media (max-width: 768px) {
@@ -1126,7 +1215,7 @@ hr.solid {
     margin: 0.5rem 0;
     padding: 0.5rem 1rem;
     font-size: 1rem;
-    width: 50%;
+    width: 100%;
     justify-content: center;
   }
 }/*# sourceMappingURL=main.css.map */
