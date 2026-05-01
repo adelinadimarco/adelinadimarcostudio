@@ -3,7 +3,6 @@ $midnight: #000004
 $whitey: #fffffb
 $rasp: #E30B5D
 $blue: #001DD9
-$blues: #488ff3
 $gum:	#ff77bc
 
 //////////////////////// FONTS
@@ -148,7 +147,7 @@ header
     overflow: hidden
     border: none
     background: none
-  .menu-mob-open
+  .menu-toggle
     display: flex
     cursor: pointer
     color: $midnight
@@ -156,6 +155,41 @@ header
     width: 70%
     font-weight: 600
     border: none
+  .mobile-menu
+    display: flex
+    flex-direction: column
+    height: 100vh
+    width: 100%
+    font-family: $gopher
+    align-content: center
+    justify-content: center
+    background: $gum4
+    a 
+      color: $midnight
+      text-decoration: none
+    .mobile-header
+      flex-direction: row
+      a 
+        font-size: 2.5rem
+        font-weight: 500
+        letter-spacing: 0.05rem
+      .close
+        width: 3rem
+        height: 3rem
+    .socials-mobile
+      display: flex
+      flex-direction: row
+      width: 2rem
+      height: 2rem
+      svg
+        color: $midnight
+    .mobile-menu-items
+      display: flex
+      flex-direction: column
+      a
+        color: $midnight
+        font-size: 2rem
+
 
 //////////////////////////////////////////////////////
 // FOOTER'S GENERAL DESKTOP DISPLAY
@@ -180,38 +214,32 @@ footer
       align-content: center
       justify-content: center
   .footer-wrap // FOOTER'S RIGHTS & THANKS WRAPPER
-    padding: 0
     display: flex
     flex-direction: row
-    margin: 3rem auto
-    width: 100%
     align-items: center
-    gap: 2rem
+    justify-content: space-between
+    margin: 3rem 0
+    padding: 0 3rem
+    width: 100%
     .rights-footer
       display: flex
       flex-direction: column
-      justify-content: center
-      align-items: flex-start
       font-size: 0.9rem
       flex: 0 0 auto
       a
         color: $whitey
         text-decoration: none
         &:hover
-          color: $blue
+          opacity: 0.8
       .cclicense // CREATIVE COMMONS LICENSE ICON
         justify-content: center
         align-content: center
+
         width: 1.8rem 
     .thanks-footer
       display: flex
       flex-direction: column
-      justify-content: center
-      align-items: flex-end
-      margin-left: auto
       font-size: 1rem
-      text-align: right
-      flex: 0 0 auto
 
   .contact-icons-wrap // SOCIAL MEDIA ICONS
     margin: 0 
@@ -220,17 +248,18 @@ footer
     justify-content: center
     align-content: center
     .social-icon
+      display: flex
+      align-items: center
+      justify-content: center
       width: 2rem
       height: 2rem
-      margin: 1.5rem
-      object-fit: contain
-      align-content: center
+      margin: 2rem 1.5rem
       svg
         color: $whitey
         &:hover
-          color: $blue
+          opacity: 0.8
 
-// FOOTER'S MOBILE DISPLAY 
+// FOOTER'S MOBILE DISPLAY  //////////////////////////////////////////
 @media (max-width: 768px) 
   footer
     margin: 0
@@ -244,10 +273,14 @@ footer
       justify-content: center
       text-align:  center
     .social-icon
+      display: flex
+      align-items: center
+      justify-content: center
       width: 1.7rem
       height: 1.7rem
-      object-fit: contain
-      align-content: center
+      svg
+        display: block
+        margin: 0 auto
     .footer-wrap 
       padding: 0
       display: flex
@@ -264,4 +297,3 @@ footer
         width: 100%
         font-size: 1rem
         text-align: center
-//////////////////////////////////////////
