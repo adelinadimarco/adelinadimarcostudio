@@ -413,10 +413,10 @@
 .change-btn-wrap .change-btn {
   cursor: pointer;
   font-size: 1.2rem;
-  background: #001DD9;
+  background: #000004;
   border: none;
   border-radius: 4rem;
-  padding: 1rem;
+  padding: 1rem 2rem;
 }
 .change-btn-wrap .change-btn a {
   font-family: "Gopher", sans-serif;
@@ -472,7 +472,7 @@
   font-display: swap;
 }
 header {
-  width: 100%;
+  max-width: 100%;
   margin: 0 auto;
   overflow: hidden;
 }
@@ -531,7 +531,7 @@ header {
   padding: 0.5rem;
 }
 .left-menu a:hover {
-  color: #001DD9;
+  color: #ff77bc;
 }
 
 .nav-menu {
@@ -556,7 +556,7 @@ header {
   align-content: center;
 }
 .nav-menu .social-menu:hover {
-  color: #001DD9;
+  color: #ff77bc;
 }
 
 .toggle-box, .mobile-menu {
@@ -580,8 +580,10 @@ header {
     transform: none;
   }
   .ade-logo-box a {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
+    font-weight: 600;
     margin: 0.5rem;
+    letter-spacing: 0.05rem;
   }
   .left-menu {
     display: none;
@@ -596,12 +598,13 @@ header {
     display: flex;
     justify-content: center;
     align-content: center;
-    max-width: 3rem;
-    max-height: 3rem;
-    margin-right: 1rem;
+    max-width: 2rem;
+    max-height: 2rem;
+    margin-right: 0.5rem;
     overflow: hidden;
     border: none;
     background: none;
+    cursor: pointer;
   }
   .menu-toggle {
     display: flex;
@@ -613,7 +616,7 @@ header {
     border: none;
   }
   .mobile-menu {
-    display: flex;
+    display: none;
     flex-direction: column;
     height: 100vh;
     width: 100%;
@@ -621,39 +624,61 @@ header {
     align-content: center;
     justify-content: center;
     background: #ff77bc;
+    opacity: 0.9;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1001;
   }
-  .mobile-menu a {
+  .mobile-menu.active {
+    display: flex;
+  }
+  .mobile-menu.active a {
     color: #000004;
     text-decoration: none;
   }
-  .mobile-menu .mobile-header {
+  .mobile-menu.active .mobile-header {
+    display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
   }
-  .mobile-menu .mobile-header a {
-    font-size: 2.5rem;
-    font-weight: 500;
+  .mobile-menu.active .mobile-header a {
+    font-size: 2.2rem;
+    font-weight: 600;
     letter-spacing: 0.05rem;
   }
-  .mobile-menu .mobile-header .close {
-    width: 3rem;
-    height: 3rem;
+  .mobile-menu.active .mobile-header .close {
+    max-width: 1.5rem;
+    max-height: 1.5rem;
+    cursor: pointer;
   }
-  .mobile-menu .socials-mobile {
+  .mobile-menu.active .socials-mobile {
     display: flex;
     flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    margin: 2rem auto;
+    gap: 1.5rem;
+  }
+  .mobile-menu.active .socials-mobile svg {
     width: 2rem;
     height: 2rem;
-  }
-  .mobile-menu .socials-mobile svg {
     color: #000004;
   }
-  .mobile-menu .mobile-menu-items {
+  .mobile-menu.active .mobile-menu-items {
     display: flex;
     flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    margin: 2rem auto;
+    gap: 1.5rem;
+    text-align: center;
   }
-  .mobile-menu .mobile-menu-items a {
+  .mobile-menu.active .mobile-menu-items a {
     color: #000004;
-    font-size: 2rem;
+    font-size: 1.8rem;
+    font-weight: 600;
   }
 }
 footer {
@@ -661,8 +686,8 @@ footer {
   max-width: 100%;
   padding: 1rem;
   font-family: "Gopher", sans-serif;
-  color: #fffffb;
-  background: #000004;
+  color: #000004;
+  background: #fffffb;
   line-height: 1.75rem;
 }
 footer .reach-me {
@@ -676,7 +701,7 @@ footer .reach-me div:first-child {
   margin-top: 2rem;
 }
 footer .reach-me a {
-  color: #fffffb;
+  color: #000004;
   align-content: center;
   justify-content: center;
 }
@@ -696,7 +721,7 @@ footer .footer-wrap .rights-footer {
   flex: 0 0 auto;
 }
 footer .footer-wrap .rights-footer a {
-  color: #fffffb;
+  color: #000004;
   text-decoration: none;
 }
 footer .footer-wrap .rights-footer a:hover {
@@ -728,10 +753,11 @@ footer .contact-icons-wrap .social-icon {
   margin: 2rem 1.5rem;
 }
 footer .contact-icons-wrap .social-icon svg {
-  color: #fffffb;
+  color: #000004;
 }
 footer .contact-icons-wrap .social-icon svg:hover {
   opacity: 0.8;
+  color: #ff77bc;
 }
 
 @media (max-width: 768px) {
@@ -882,7 +908,7 @@ body {
   z-index: 0;
 }
 .work-card .work-box:hover img {
-  opacity: 0.5;
+  opacity: 0.05;
 }
 .work-card .work-box:hover .show-text {
   opacity: 1;
@@ -1185,7 +1211,7 @@ hr.solid {
   background: none;
   border-radius: 4rem;
   border: none;
-  background: #001DD9;
+  background: #000004;
   width: 50%;
 }
 .resume-download-btn a {
@@ -1197,7 +1223,7 @@ hr.solid {
 }
 .resume-download-btn:hover {
   transition: background-color 0.3s ease;
-  background: #000004;
+  background: #ff77bc;
 }
 
 @media (max-width: 768px) {

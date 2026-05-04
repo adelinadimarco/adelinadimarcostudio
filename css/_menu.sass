@@ -4,6 +4,8 @@ $whitey: #fffffb
 $rasp: #E30B5D
 $blue: #001DD9
 $gum:	#ff77bc
+$pink: #ff55aa
+
 
 //////////////////////// FONTS
 $gopher: "Gopher", sans-serif
@@ -40,7 +42,7 @@ $gopher: "Gopher", sans-serif
 
 //////////////////////////////////////////////
 header
-  width: 100%
+  max-width: 100%
   margin: 0 auto
   overflow: hidden
 .header-box
@@ -89,7 +91,7 @@ header
     font-size: 1.2rem
     padding: 0.5rem
     &:hover
-      color: $blue
+      color: $gum
 .nav-menu // NAVIGATION MENU
   position: absolute
   top: 50%
@@ -109,7 +111,7 @@ header
     justify-content: center 
     align-content: center
     &:hover
-      color: $blue
+      color: $gum
 
 .toggle-box, .mobile-menu
   display: none
@@ -129,8 +131,10 @@ header
     position: static
     transform: none
     a
-      font-size: 2.5rem
+      font-size: 2.2rem
+      font-weight: 600
       margin: 0.5rem
+      letter-spacing: 0.05rem
   .left-menu
     display: none
   .hidden-menu, .menu-items // ITEMS IN NAV UL HIDDEN
@@ -141,12 +145,13 @@ header
     display: flex
     justify-content: center
     align-content: center
-    max-width: 3rem
-    max-height: 3rem
-    margin-right: 1rem
+    max-width: 2rem
+    max-height: 2rem
+    margin-right: 0.5rem
     overflow: hidden
     border: none
     background: none
+    cursor: pointer
   .menu-toggle
     display: flex
     cursor: pointer
@@ -156,40 +161,60 @@ header
     font-weight: 600
     border: none
   .mobile-menu
-    display: flex
+    display: none
     flex-direction: column
     height: 100vh
     width: 100%
     font-family: $gopher
     align-content: center
     justify-content: center
-    background: $gum4
+    background: $gum
+    opacity: 0.9
+    position: fixed
+    top: 0
+    left: 0
+    z-index: 1001
+  .mobile-menu.active
+    display: flex
     a 
       color: $midnight
       text-decoration: none
     .mobile-header
+      display: flex
       flex-direction: row
+      justify-content: space-between
+      width: 90%
       a 
-        font-size: 2.5rem
-        font-weight: 500
+        font-size: 2.2rem
+        font-weight: 600
         letter-spacing: 0.05rem
       .close
-        width: 3rem
-        height: 3rem
+        max-width: 1.5rem
+        max-height: 1.5rem
+        cursor: pointer
     .socials-mobile
       display: flex
       flex-direction: row
-      width: 2rem
-      height: 2rem
+      align-content: center
+      justify-content: center
+      margin: 2rem auto
+      gap: 1.5rem
       svg
+        width: 2rem
+        height: 2rem
         color: $midnight
     .mobile-menu-items
       display: flex
       flex-direction: column
+      align-content: center
+      justify-content: center
+      margin: 2rem auto
+      gap: 1.5rem
+      text-align: center
       a
         color: $midnight
-        font-size: 2rem
-
+        font-size: 1.8rem
+        font-weight: 600
 
 //////////////////////////////////////////////////////
 // FOOTER'S GENERAL DESKTOP DISPLAY
@@ -198,8 +223,8 @@ footer
   max-width: 100%
   padding: 1rem
   font-family: $gopher
-  color: $whitey
-  background: $midnight
+  color: $midnight
+  background: $whitey
   line-height: 1.75rem
   .reach-me
     display: flex
@@ -210,7 +235,7 @@ footer
       text-align: center
       margin-top: 2rem
     a
-      color: $whitey
+      color: $midnight
       align-content: center
       justify-content: center
   .footer-wrap // FOOTER'S RIGHTS & THANKS WRAPPER
@@ -227,7 +252,7 @@ footer
       font-size: 0.9rem
       flex: 0 0 auto
       a
-        color: $whitey
+        color: $midnight
         text-decoration: none
         &:hover
           opacity: 0.8
@@ -255,9 +280,10 @@ footer
       height: 2rem
       margin: 2rem 1.5rem
       svg
-        color: $whitey
+        color: $midnight
         &:hover
           opacity: 0.8
+          color: $gum
 
 // FOOTER'S MOBILE DISPLAY  //////////////////////////////////////////
 @media (max-width: 768px) 
