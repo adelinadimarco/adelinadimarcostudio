@@ -269,11 +269,11 @@
   border-radius: 2rem;
   border: none;
   color: #000004;
-  background: #E30B5D;
+  background: #fffffb;
 }
 .btn-about-proj-box .btn-about-proj:hover {
   transition: color 0.3s ease;
-  color: #E30B5D;
+  color: #fffffb;
   background: #000004;
 }
 
@@ -382,7 +382,7 @@
   cursor: pointer;
 }
 .work-disclaimer summary:hover {
-  color: #001DD9;
+  opacity: 0.8;
 }
 .work-disclaimer p {
   margin: 0.5rem auto;
@@ -403,37 +403,28 @@
   display: flex;
   flex-direction: row;
   width: 100%;
-  height: 5rem;
-  margin: 0;
+  margin: 3rem auto;
   justify-content: space-between;
   align-content: center;
-  background: #fffffb;
-  color: #000004;
 }
 .change-btn-wrap .change-btn {
   cursor: pointer;
-  font-size: 1.2rem;
-  background: #000004;
+  font-family: "Gopher", sans-serif;
+  font-size: 0.9rem;
+  background: none;
   border: none;
-  border-radius: 4rem;
-  padding: 1rem 2rem;
 }
 .change-btn-wrap .change-btn a {
-  font-family: "Gopher", sans-serif;
-  text-decoration: none;
   color: #fffffb;
+  text-decoration: none;
 }
 .change-btn-wrap .change-btn:hover {
-  opacity: 0.7;
+  opacity: 0.9;
 }
 
 @media (max-width: 768px) {
   .change-btn-wrap {
-    width: 90%;
-    margin: 2rem auto;
-  }
-  .change-btn-wrap a {
-    color: #E30B5D;
+    margin: 1.5rem auto;
   }
 }
 @font-face {
@@ -484,7 +475,8 @@ header {
   position: relative;
   width: 100%;
   overflow: hidden;
-  background: #fffffb;
+  background: #000004;
+  color: #fffffb;
   height: 6rem;
 }
 .header-box a {
@@ -508,7 +500,7 @@ header {
   font-size: 3rem;
   letter-spacing: 0.05rem;
   text-decoration: none;
-  color: #000004;
+  color: #fffffb;
   padding: 2rem 0;
   font-weight: 500;
 }
@@ -524,14 +516,14 @@ header {
 }
 .left-menu a {
   font-family: "Gopher", sans-serif;
-  color: #000004;
+  color: #fffffb;
   font-weight: 700;
   text-decoration: none;
   font-size: 1.2rem;
   padding: 0.5rem;
 }
 .left-menu a:hover {
-  color: #ff77bc;
+  opacity: 0.8;
 }
 
 .nav-menu {
@@ -551,12 +543,13 @@ header {
   width: 1.4rem;
   height: 1.4rem;
   margin: 1rem;
+  color: #fffffb;
   vertical-align: middle;
   justify-content: center;
   align-content: center;
 }
 .nav-menu .social-menu:hover {
-  color: #ff77bc;
+  opacity: 0.8;
 }
 
 .toggle-box, .mobile-menu {
@@ -609,7 +602,7 @@ header {
   .menu-toggle {
     display: flex;
     cursor: pointer;
-    color: #000004;
+    color: #fffffb;
     padding: 0.5rem 0;
     width: 70%;
     font-weight: 600;
@@ -621,9 +614,11 @@ header {
     height: 100vh;
     width: 100%;
     font-family: "Gopher", sans-serif;
+    color: white;
+    text-align: center;
     align-content: center;
     justify-content: center;
-    background: #ff77bc;
+    background: #000004;
     opacity: 0.9;
     position: fixed;
     top: 0;
@@ -634,19 +629,20 @@ header {
     display: flex;
   }
   .mobile-menu.active a {
-    color: #000004;
+    color: #fffffb;
     text-decoration: none;
   }
   .mobile-menu.active .mobile-header {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     width: 90%;
   }
   .mobile-menu.active .mobile-header a {
     font-size: 2.2rem;
     font-weight: 600;
     letter-spacing: 0.05rem;
+    margin: auto 0.5rem;
   }
   .mobile-menu.active .mobile-header .close {
     max-width: 1.5rem;
@@ -664,7 +660,7 @@ header {
   .mobile-menu.active .socials-mobile svg {
     width: 2rem;
     height: 2rem;
-    color: #000004;
+    color: #fffffb;
   }
   .mobile-menu.active .mobile-menu-items {
     display: flex;
@@ -676,9 +672,9 @@ header {
     text-align: center;
   }
   .mobile-menu.active .mobile-menu-items a {
-    color: #000004;
+    color: #fffffb;
     font-size: 1.8rem;
-    font-weight: 600;
+    font-weight: 500;
   }
 }
 footer {
@@ -686,8 +682,8 @@ footer {
   max-width: 100%;
   padding: 1rem;
   font-family: "Gopher", sans-serif;
-  color: #000004;
-  background: #fffffb;
+  color: #fffffb;
+  background: #000004;
   line-height: 1.75rem;
 }
 footer .reach-me {
@@ -701,7 +697,7 @@ footer .reach-me div:first-child {
   margin-top: 2rem;
 }
 footer .reach-me a {
-  color: #000004;
+  color: #fffffb;
   align-content: center;
   justify-content: center;
 }
@@ -713,6 +709,7 @@ footer .footer-wrap {
   margin: 3rem 0;
   padding: 0 3rem;
   width: 100%;
+  gap: 1.5rem;
 }
 footer .footer-wrap .rights-footer {
   display: flex;
@@ -721,7 +718,7 @@ footer .footer-wrap .rights-footer {
   flex: 0 0 auto;
 }
 footer .footer-wrap .rights-footer a {
-  color: #000004;
+  color: #fffffb;
   text-decoration: none;
 }
 footer .footer-wrap .rights-footer a:hover {
@@ -735,7 +732,7 @@ footer .footer-wrap .rights-footer .cclicense {
 footer .footer-wrap .thanks-footer {
   display: flex;
   flex-direction: column;
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 footer .contact-icons-wrap {
   margin: 0;
@@ -753,17 +750,16 @@ footer .contact-icons-wrap .social-icon {
   margin: 2rem 1.5rem;
 }
 footer .contact-icons-wrap .social-icon svg {
-  color: #000004;
+  color: #fffffb;
 }
 footer .contact-icons-wrap .social-icon svg:hover {
   opacity: 0.8;
-  color: #ff77bc;
 }
 
 @media (max-width: 768px) {
   footer {
     margin: 0;
-    width: 100%;
+    max-width: 100%;
     padding: 0;
     display: flex;
     flex-direction: column;
@@ -773,6 +769,9 @@ footer .contact-icons-wrap .social-icon svg:hover {
     align-content: center;
     justify-content: center;
     text-align: center;
+  }
+  footer .reach-me {
+    width: 90%;
   }
   footer .social-icon {
     display: flex;
@@ -792,17 +791,17 @@ footer .contact-icons-wrap .social-icon svg:hover {
     margin: 0;
     align-items: center;
     justify-content: center;
+    font-size: 0.8rem;
   }
   footer .footer-wrap .rights-footer {
-    width: 100%;
     text-align: center;
+    margin: 0.5rem 0;
   }
   footer .footer-wrap .rights-footer .cclicense {
     width: 1.8rem;
   }
   footer .footer-wrap .thanks-footer {
-    width: 100%;
-    font-size: 1rem;
+    margin: 0.5rem 0;
     text-align: center;
   }
 }
@@ -895,7 +894,7 @@ body {
   transition: 0.5s ease;
 }
 .work-card .work-box a {
-  color: #001DD9;
+  color: white;
   font-size: 4rem;
   font-weight: 700;
   text-align: center;
@@ -993,7 +992,7 @@ body {
     margin: 0.8rem auto;
     padding: 0.5rem 1rem;
     border-radius: 3rem;
-    background: #ff77bc;
+    background: #fffffb;
     opacity: 1;
     font-family: "Gopher", sans-serif;
     border: none;
@@ -1002,12 +1001,12 @@ body {
   }
   .view-work-btn a {
     color: #000004;
-    font-size: 0.9rem;
-    font-weight: 700;
+    font-size: 1rem;
+    font-weight: 600;
     text-decoration: none;
   }
   .view-work-btn:hover {
-    opacity: 0.7;
+    opacity: 0.8;
   }
   .show-text {
     display: none;
@@ -1103,7 +1102,7 @@ body {
   }
 }
 hr.solid {
-  border-top: 0.3px solid #001DD9;
+  border-top: 0.3px solid #000004;
   margin: 0.5rem 0;
 }
 
@@ -1189,7 +1188,7 @@ hr.solid {
   text-decoration: none;
 }
 .courses a:hover {
-  color: #001DD9;
+  opacity: 0.8;
 }
 
 .skills {
@@ -1223,7 +1222,7 @@ hr.solid {
 }
 .resume-download-btn:hover {
   transition: background-color 0.3s ease;
-  background: #ff77bc;
+  opacity: 0.8;
 }
 
 @media (max-width: 768px) {

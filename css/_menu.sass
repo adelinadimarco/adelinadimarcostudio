@@ -2,10 +2,6 @@
 $midnight: #000004
 $whitey: #fffffb
 $rasp: #E30B5D
-$blue: #001DD9
-$gum:	#ff77bc
-$pink: #ff55aa
-
 
 //////////////////////// FONTS
 $gopher: "Gopher", sans-serif
@@ -52,7 +48,8 @@ header
   position: relative
   width: 100%
   overflow: hidden
-  background: $whitey
+  background: $midnight
+  color: $whitey
   height: 6rem
   a
     color: $midnight
@@ -72,7 +69,7 @@ header
    font-size: 3rem
    letter-spacing: 0.05rem
    text-decoration: none
-   color: $midnight
+   color: $whitey
    padding: 2rem 0
    font-weight: 500
 .left-menu
@@ -85,13 +82,13 @@ header
   gap: 1rem
   a
     font-family: $gopher
-    color: $midnight
+    color: $whitey
     font-weight: 700
     text-decoration: none
     font-size: 1.2rem
     padding: 0.5rem
     &:hover
-      color: $gum
+      opacity: 0.8
 .nav-menu // NAVIGATION MENU
   position: absolute
   top: 50%
@@ -107,13 +104,13 @@ header
     width: 1.4rem
     height: 1.4rem
     margin: 1rem
+    color: $whitey
     vertical-align: middle
     justify-content: center 
     align-content: center
     &:hover
-      color: $gum
-
-.toggle-box, .mobile-menu
+      opacity: 0.8
+.toggle-box, .mobile-menu // FOR MOBILE MENU, HIDDEN IN DESKTOP
   display: none
 
 // HEADER & MENU MOBILE DISPLAY
@@ -155,7 +152,7 @@ header
   .menu-toggle
     display: flex
     cursor: pointer
-    color: $midnight
+    color: $whitey
     padding: 0.5rem 0
     width: 70%
     font-weight: 600
@@ -166,10 +163,12 @@ header
     height: 100vh
     width: 100%
     font-family: $gopher
+    color: white
+    text-align: center
     align-content: center
     justify-content: center
-    background: $gum
-    opacity: 0.9
+    background: $midnight
+    opacity: 0.9 // BAKCGROUND TRANSPARENT
     position: fixed
     top: 0
     left: 0
@@ -177,17 +176,18 @@ header
   .mobile-menu.active
     display: flex
     a 
-      color: $midnight
+      color: $whitey
       text-decoration: none
     .mobile-header
       display: flex
       flex-direction: row
-      justify-content: space-between
+      justify-content: space-around
       width: 90%
       a 
         font-size: 2.2rem
         font-weight: 600
         letter-spacing: 0.05rem
+        margin: auto 0.5rem
       .close
         max-width: 1.5rem
         max-height: 1.5rem
@@ -202,7 +202,7 @@ header
       svg
         width: 2rem
         height: 2rem
-        color: $midnight
+        color: $whitey
     .mobile-menu-items
       display: flex
       flex-direction: column
@@ -212,9 +212,9 @@ header
       gap: 1.5rem
       text-align: center
       a
-        color: $midnight
+        color: $whitey
         font-size: 1.8rem
-        font-weight: 600
+        font-weight: 500
 
 //////////////////////////////////////////////////////
 // FOOTER'S GENERAL DESKTOP DISPLAY
@@ -223,8 +223,8 @@ footer
   max-width: 100%
   padding: 1rem
   font-family: $gopher
-  color: $midnight
-  background: $whitey
+  color: $whitey
+  background: $midnight
   line-height: 1.75rem
   .reach-me
     display: flex
@@ -235,7 +235,7 @@ footer
       text-align: center
       margin-top: 2rem
     a
-      color: $midnight
+      color: $whitey
       align-content: center
       justify-content: center
   .footer-wrap // FOOTER'S RIGHTS & THANKS WRAPPER
@@ -246,25 +246,25 @@ footer
     margin: 3rem 0
     padding: 0 3rem
     width: 100%
+    gap: 1.5rem
     .rights-footer
       display: flex
       flex-direction: column
       font-size: 0.9rem
       flex: 0 0 auto
       a
-        color: $midnight
+        color: $whitey
         text-decoration: none
         &:hover
           opacity: 0.8
       .cclicense // CREATIVE COMMONS LICENSE ICON
         justify-content: center
         align-content: center
-
         width: 1.8rem 
     .thanks-footer
       display: flex
       flex-direction: column
-      font-size: 1rem
+      font-size: 0.9rem
 
   .contact-icons-wrap // SOCIAL MEDIA ICONS
     margin: 0 
@@ -280,16 +280,15 @@ footer
       height: 2rem
       margin: 2rem 1.5rem
       svg
-        color: $midnight
+        color: $whitey
         &:hover
           opacity: 0.8
-          color: $gum
 
 // FOOTER'S MOBILE DISPLAY  //////////////////////////////////////////
 @media (max-width: 768px) 
   footer
     margin: 0
-    width: 100%
+    max-width: 100%
     padding: 0
     display: flex
     flex-direction: column 
@@ -298,6 +297,8 @@ footer
       align-content: center
       justify-content: center
       text-align:  center
+    .reach-me
+      width: 90%
     .social-icon
       display: flex
       align-items: center
@@ -314,12 +315,12 @@ footer
       margin: 0
       align-items: center
       justify-content: center
+      font-size: 0.8rem
       .rights-footer
-        width: 100%
         text-align: center
+        margin: 0.5rem 0
         .cclicense 
           width: 1.8rem
       .thanks-footer
-        width: 100%
-        font-size: 1rem
+        margin: 0.5rem 0
         text-align: center
