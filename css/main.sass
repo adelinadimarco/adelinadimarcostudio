@@ -1,4 +1,4 @@
-// files for special css 
+// FILES FOR DEDICATED SASS
 @use 'projects'  
 @use 'menu' 
 
@@ -7,6 +7,20 @@ $midnight: #000004
 $whitey: #fffffb
 
 /////////////////////////////////////////
+$montserrat: "Montserrat", sans-serif
+@font-face
+  font-family: "Montserrat"
+  src: url("../assets/Montserrat-VariableFont_wght.woff2") format("woff2")
+  font-weight: 400 900
+  font-style: normal
+  font-display: swap
+@font-face
+  font-family: "Montserrat"
+  src: url("../assets/Montserrat-Italic-VariableFont_wght.woff2") format("woff2")
+  font-weight: 400 900
+  font-style: italic
+  font-display: swap
+
 $gopher: "Gopher", sans-serif
 @font-face // REGULAR
   font-family: "Gopher"
@@ -59,7 +73,7 @@ body
   color: $whitey
   overflow-x: hidden
   max-width: 100%
-  font-family: $gopher
+  font-family: $montserrat
 
 /////////////////////////////////////////
 // WORK SECTION - DISPLAY PROJECTS
@@ -87,8 +101,8 @@ body
     transition: 0.5s ease
     a // VIEW PROJECT LINK TEXT
       color: white
-      font-size: 4rem
-      font-weight: 700
+      font-size: 3rem
+      font-weight: 500
       text-align: center
       text-decoration: none
   .work-box::before // WITH HOVER
@@ -121,13 +135,12 @@ body
   align-content: center
   .work-name
     font-size: 3rem
-    font-weight: 700
+    font-weight: 600
     text-align: center
     text-transform: uppercase
   .work-tag
-    font-family: $gopher
+    font-family: $montserrat
     font-size: 1.5rem
-    font-weight: 400
     text-align: center
 .view-work-btn // BUTTON FOR MOBILE DISPLAY
   display: none
@@ -168,7 +181,7 @@ body
     border-radius: 3rem
     background: $whitey
     opacity: 1
-    font-family: $gopher
+    font-family: $montserrat
     border: none
     cursor: pointer
     text-align: center
@@ -188,8 +201,9 @@ body
   display: flex
   margin: 0 auto
   max-width: 100%
-  background: $whitey
-  color: $midnight
+  background: $midnight
+  color: $whitey
+  padding-bottom: 2rem
   .about-sec
     width: 80%
     display: flex
@@ -206,6 +220,7 @@ body
     display: flex
     flex-direction: column
     width: 50%
+    font-family: $montserrat
     line-height: 1.8
     font-size: 1.1rem
     text-align: left
@@ -214,22 +229,23 @@ body
     p
       margin: 0
     .highlighted-font
-      font-weight: 900
+      font-weight: 800
       font-style: italic
   .hola // SUBTITLE FOR ABOUT ME SECTION
     font-size: 4rem
+    font-family: $montserrat
     text-align: left
     justify-content: left
     align-content: center
     margin: 0
 .mail-me // CONTACT EMAIL LINK
   margin: 0
-  font-size: 1.1rem
+  font-size: 1rem
   font-weight: 600
-  color: $midnight
+  color: $whitey
   text-decoration: none
   &:hover
-    opacity: 0.8
+    opacity: 0.9
 
 // MOBILE DISPLAY FOR ABOUT ME
 @media (max-width: 768px) 
@@ -254,8 +270,8 @@ body
       letter-spacing: 0.02rem
       .hola 
         font-size:3rem
-        text-align: left
-        justify-content: left
+        text-align: center
+        justify-content: center
         margin: 0
 
 ///////////////////////////////////////
@@ -276,31 +292,32 @@ hr.solid // DECOR DIVIDERS
 .cv-title // MAIN TITLE TO OPEN RESUME SECTION
   margin: 0 0 0 4rem
   padding-top: 2rem
-  font-family: $gopher
+  font-family: $montserrat
   font-size: 4rem
-  font-weight: 700
+  font-weight: 800
   text-align: left
 .cv-subtitle // SUBTITLES FOR EACH RESUME SECTION
   margin: 1rem 0 0.3rem 0
-  font-family: $gopher
+  font-family: $montserrat
   font-size: 2.3rem
   font-optical-sizing: auto
   text-align: center
 
 // RESUME - EXPERIENCE SECTION
 .experience-title
-  font-family: $gopher
-  font-size: 2rem
-  font-weight: 800
+  font-family: $montserrat
+  font-size: 1.7rem
+  font-weight: 700
   text-align: left
 .experience-job
-  font-family: $gopher
-  font-size: 1.5rem
-  font-weight: 800
+  width: 100%
+  font-family: $montserrat
+  font-size: 1.6rem
+  font-weight: 700
   text-align: left
   text-transform: uppercase
 .experience-list
-  font-family: $gopher
+  font-family: $montserrat
   font-size: 1.1rem
   line-height: 1.7
   list-style-position: inside
@@ -309,17 +326,15 @@ hr.solid // DECOR DIVIDERS
   text-align: left
   justify-content: left
   align-content: flex-start
-
 // SKILLS & STUDIES SECTION
 .college
-  font-family: $gopher
+  font-family: $montserrat
   margin: 0
   text-align: left
   .school
     font-size: 1.1rem
 .courses
-  font-family: $gopher
-  max-width: 600px
+  font-family: $montserrat
   justify-self: left
   align-self: left
   line-height: 1.8
@@ -329,16 +344,15 @@ hr.solid // DECOR DIVIDERS
     color: black
     text-decoration: none
     &:hover
-      opacity: 0.8
+      opacity: 0.9
 .skills
   justify-self: left
-  font-family: $gopher
+  font-family: $montserrat
   line-height: 1.8
   margin-left: 0.5rem
   font-size: 1.1rem
   .highlight-skill
-    font-weight: 900
-    font-size: 1.2rem
+    font-weight: 800
 
 // VIEW/DOWNLOAD RESUME BUTTON
 .resume-download-btn 
@@ -351,7 +365,7 @@ hr.solid // DECOR DIVIDERS
   background: $midnight
   width: 50%
   a
-    font-family: $gopher
+    font-family: $montserrat
     font-size: 1.1rem
     color: $whitey
     text-decoration: none

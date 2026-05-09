@@ -3,46 +3,28 @@ $midnight: #000004
 $whitey: #fffffb
 
 //////////////////////// FONTS
-$gopher: "Gopher", sans-serif
-@font-face // REGULAR
-  font-family: "Gopher"
-  src: url("../assets/Gopher-Regular.woff2") format("woff2")
-  font-weight: 400
+$montserrat: "Montserrat", sans-serif
+@font-face
+  font-family: "Montserrat"
+  src: url("../assets/Montserrat-VariableFont_wght.woff2") format("woff2")
+  font-weight: 400 900
   font-style: normal
   font-display: swap
-@font-face // BOLD
-  font-family: "Gopher" 
-  src: url("../assets/Gopher-Bold.woff2") format("woff2")
-  font-weight: 700
-  font-style: normal
-  font-display: swap
-@font-face // BLACK
-  font-family: "Gopher"
-  src: url("../assets/Gopher-Black.woff2") format("woff2")
-  font-weight: 900
-  font-style: normal
-  font-display: swap
-@font-face // ITALIC
-  font-family: "Gopher"
-  src: url("../assets/Gopher-Italic.woff2") format("woff2")
-  font-weight: 400  
+@font-face
+  font-family: "Montserrat"
+  src: url("../assets/Montserrat-Italic-VariableFont_wght.woff2") format("woff2")
+  font-weight: 400 900
   font-style: italic
-  font-display: swap
-@font-face // HAIRLINE
-  font-family: "Gopher"
-  src: url("../assets/Gopher-Hairline.woff2") format("woff2")
-  font-weight: 400  
-  font-style: normal
   font-display: swap
 
 ////////////////////////////// PROJECTS STYLES
 // TEXTS
 .work-sec-title
-  font-family: $gopher
+  font-family: $montserrat
   text-align: left
   font-size: 3rem
 .work-text
-  font-family: $gopher
+  font-family: $montserrat
   font-size: 1.3rem
   line-height: 2
   text-align: left
@@ -200,7 +182,7 @@ $gopher: "Gopher", sans-serif
   align-content: center
   p
     margin: 2rem 0 0 0
-    font-family: $gopher
+    font-family: $montserrat
     font-size: 2rem
     text-align: center
     font-weight: 600
@@ -314,7 +296,7 @@ $gopher: "Gopher", sans-serif
   flex-direction: column
   justify-content: center
   align-content: center
-  font-family: $gopher
+  font-family: $montserrat
   text-align: left
   summary
     cursor: pointer
@@ -342,7 +324,7 @@ $gopher: "Gopher", sans-serif
   align-content: center
   .change-btn
     cursor: pointer
-    font-family: $gopher
+    font-family: $montserrat
     font-size: 0.9rem
     background: none
     border: none
@@ -353,6 +335,7 @@ $gopher: "Gopher", sans-serif
       opacity: 0.9
 @media (max-width: 768px) 
   .change-btn-wrap
+    width: 95%
     margin: 1.5rem auto
     
 

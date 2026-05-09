@@ -1,38 +1,19 @@
 /////////////////////////// COLORS 
 $midnight: #000004
 $whitey: #fffffb
-$rasp: #E30B5D
 
 //////////////////////// FONTS
-$gopher: "Gopher", sans-serif
-@font-face // REGULAR
-  font-family: "Gopher"
-  src: url("../assets/Gopher-Regular.woff2") format("woff2")
-  font-weight: 400
+$montserrat: "Montserrat", sans-serif
+@font-face
+  font-family: "Montserrat"
+  src: url("../assets/Montserrat-VariableFont_wght.woff2") format("woff2")
+  font-weight: 400 900
   font-style: normal
   font-display: swap
-@font-face // MEDIUM
-  font-family: "Gopher"
-  src: url("../assets/Gopher-Medium.woff2") format("woff2")
-  font-weight: 500
-  font-style: normal
-  font-display: swap
-@font-face // BOLD
-  font-family: "Gopher" 
-  src: url("../assets/Gopher-Bold.woff2") format("woff2")
-  font-weight: 700
-  font-style: normal
-  font-display: swap
-@font-face // BLACK
-  font-family: "Gopher"
-  src: url("../assets/Gopher-Black.woff2") format("woff2")
-  font-weight: 900
-  font-style: normal
-  font-display: swap
-@font-face // ITALIC
-  font-family: "Gopher"
-  src: url("../assets/Gopher-Italic.woff2") format("woff2")
-  font-weight: 400  
+@font-face
+  font-family: "Montserrat"
+  src: url("../assets/Montserrat-Italic-VariableFont_wght.woff2") format("woff2")
+  font-weight: 400 900
   font-style: italic
   font-display: swap
 
@@ -65,13 +46,13 @@ header
   justify-content: center
   align-items: center
   a
-   font-family: $gopher
+   font-family: $montserrat
    font-size: 3rem
    letter-spacing: 0.05rem
    text-decoration: none
-   color: $whitey
    padding: 2rem 0
    font-weight: 500
+   color: white
 .left-menu
   position: absolute
   top: 50%
@@ -81,12 +62,13 @@ header
   flex-direction: row
   gap: 1rem
   a
-    font-family: $gopher
+    font-family: $montserrat
     color: $whitey
-    font-weight: 700
+    font-weight: 400
     text-decoration: none
-    font-size: 1.2rem
+    font-size: 1rem
     padding: 0.5rem
+    text-transform: uppercase
     &:hover
       opacity: 0.8
 .nav-menu // NAVIGATION MENU
@@ -101,8 +83,8 @@ header
     flex-direction: row
     list-style: none
   .social-menu // MENU'S SOCIAL ICONS
-    width: 1.4rem
-    height: 1.4rem
+    width: 1.3rem
+    height: 1.3rem
     margin: 1rem
     color: $whitey
     vertical-align: middle
@@ -123,6 +105,8 @@ header
     width: 100%
     position: relative
     z-index: 1000
+    padding: 0 0.7rem
+
   .ade-logo-box
     width: auto
     position: static
@@ -132,11 +116,9 @@ header
       font-weight: 600
       margin: 0.5rem
       letter-spacing: 0.05rem
-  .left-menu
-    display: none
-  .hidden-menu, .menu-items // ITEMS IN NAV UL HIDDEN
-    display: none
-  .nav-menu
+
+  // ITEMS IN NAV UL HIDDEN
+  .left-menu, .hidden-menu, .menu-items, .nav-menu 
     display: none
   .toggle-box
     display: flex
@@ -162,7 +144,7 @@ header
     flex-direction: column
     height: 100vh
     width: 100%
-    font-family: $gopher
+    font-family: $montserrat
     color: white
     text-align: center
     align-content: center
@@ -181,13 +163,11 @@ header
     .mobile-header
       display: flex
       flex-direction: row
-      justify-content: space-around
+      justify-content: space-between
       width: 90%
-      a 
-        font-size: 2.2rem
-        font-weight: 600
-        letter-spacing: 0.05rem
-        margin: auto 0.5rem
+      margin: 2rem auto
+      .logo-mobile 
+        margin: auto 0.9rem
       .close
         max-width: 1.5rem
         max-height: 1.5rem
@@ -222,10 +202,10 @@ footer
   margin: 0
   max-width: 100%
   padding: 1rem
-  font-family: $gopher
+  font-family: $montserrat
   color: $whitey
   background: $midnight
-  line-height: 1.75rem
+  line-height: 1.7rem
   .reach-me
     display: flex
     flex-direction: column
@@ -238,51 +218,44 @@ footer
       color: $whitey
       align-content: center
       justify-content: center
+  .contact-icons-wrap // SOCIAL MEDIA ICONS
+    margin: 0 
+    display: flex
+    flex-direction: row
+    justify-items: center
+    align-items: centerfdfg
+    .social-icon
+      width: 2rem
+      height: 2rem
+      margin: 1rem
+      svg
+        color: $whitey
+        &:hover
+          opacity: 0.8
   .footer-wrap // FOOTER'S RIGHTS & THANKS WRAPPER
     display: flex
     flex-direction: row
     align-items: center
     justify-content: space-between
-    margin: 3rem 0
+    margin: 3rem 0 1rem 0
     padding: 0 3rem
     width: 100%
-    gap: 1.5rem
     .rights-footer
       display: flex
       flex-direction: column
-      font-size: 0.9rem
+      font-size: 0.8rem
       flex: 0 0 auto
       a
         color: $whitey
         text-decoration: none
         &:hover
           opacity: 0.8
-      .cclicense // CREATIVE COMMONS LICENSE ICON
-        justify-content: center
-        align-content: center
-        width: 1.8rem 
     .thanks-footer
       display: flex
       flex-direction: column
-      font-size: 0.9rem
+      font-size: 0.8rem
 
-  .contact-icons-wrap // SOCIAL MEDIA ICONS
-    margin: 0 
-    display: flex
-    flex-direction: row
-    justify-content: center
-    align-content: center
-    .social-icon
-      display: flex
-      align-items: center
-      justify-content: center
-      width: 2rem
-      height: 2rem
-      margin: 2rem 1.5rem
-      svg
-        color: $whitey
-        &:hover
-          opacity: 0.8
+
 
 // FOOTER'S MOBILE DISPLAY  //////////////////////////////////////////
 @media (max-width: 768px) 
@@ -298,7 +271,12 @@ footer
       justify-content: center
       text-align:  center
     .reach-me
+      margin: 0 auto
       width: 90%
+      div:first-child
+        align-content: center
+        justify-content: center
+        text-align:  center
     .social-icon
       display: flex
       align-items: center

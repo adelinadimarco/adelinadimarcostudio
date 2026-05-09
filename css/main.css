@@ -1,46 +1,25 @@
 @font-face {
-  font-family: "Gopher";
-  src: url("../assets/Gopher-Regular.woff2") format("woff2");
-  font-weight: 400;
+  font-family: "Montserrat";
+  src: url("../assets/Montserrat-VariableFont_wght.woff2") format("woff2");
+  font-weight: 400 900;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "Gopher";
-  src: url("../assets/Gopher-Bold.woff2") format("woff2");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Gopher";
-  src: url("../assets/Gopher-Black.woff2") format("woff2");
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Gopher";
-  src: url("../assets/Gopher-Italic.woff2") format("woff2");
-  font-weight: 400;
+  font-family: "Montserrat";
+  src: url("../assets/Montserrat-Italic-VariableFont_wght.woff2") format("woff2");
+  font-weight: 400 900;
   font-style: italic;
   font-display: swap;
 }
-@font-face {
-  font-family: "Gopher";
-  src: url("../assets/Gopher-Hairline.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
 .work-sec-title {
-  font-family: "Gopher", sans-serif;
+  font-family: "Montserrat", sans-serif;
   text-align: left;
   font-size: 3rem;
 }
 
 .work-text {
-  font-family: "Gopher", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 1.3rem;
   line-height: 2;
   text-align: left;
@@ -239,7 +218,7 @@
 }
 .CE-mail p {
   margin: 2rem 0 0 0;
-  font-family: "Gopher", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 2rem;
   text-align: center;
   font-weight: 600;
@@ -375,7 +354,7 @@
   flex-direction: column;
   justify-content: center;
   align-content: center;
-  font-family: "Gopher", sans-serif;
+  font-family: "Montserrat", sans-serif;
   text-align: left;
 }
 .work-disclaimer summary {
@@ -409,7 +388,7 @@
 }
 .change-btn-wrap .change-btn {
   cursor: pointer;
-  font-family: "Gopher", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 0.9rem;
   background: none;
   border: none;
@@ -424,41 +403,21 @@
 
 @media (max-width: 768px) {
   .change-btn-wrap {
+    width: 95%;
     margin: 1.5rem auto;
   }
 }
 @font-face {
-  font-family: "Gopher";
-  src: url("../assets/Gopher-Regular.woff2") format("woff2");
-  font-weight: 400;
+  font-family: "Montserrat";
+  src: url("../assets/Montserrat-VariableFont_wght.woff2") format("woff2");
+  font-weight: 400 900;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "Gopher";
-  src: url("../assets/Gopher-Medium.woff2") format("woff2");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Gopher";
-  src: url("../assets/Gopher-Bold.woff2") format("woff2");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Gopher";
-  src: url("../assets/Gopher-Black.woff2") format("woff2");
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Gopher";
-  src: url("../assets/Gopher-Italic.woff2") format("woff2");
-  font-weight: 400;
+  font-family: "Montserrat";
+  src: url("../assets/Montserrat-Italic-VariableFont_wght.woff2") format("woff2");
+  font-weight: 400 900;
   font-style: italic;
   font-display: swap;
 }
@@ -496,13 +455,13 @@ header {
   align-items: center;
 }
 .ade-logo-box a {
-  font-family: "Gopher", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 3rem;
   letter-spacing: 0.05rem;
   text-decoration: none;
-  color: #fffffb;
   padding: 2rem 0;
   font-weight: 500;
+  color: white;
 }
 
 .left-menu {
@@ -515,12 +474,13 @@ header {
   gap: 1rem;
 }
 .left-menu a {
-  font-family: "Gopher", sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: #fffffb;
-  font-weight: 700;
+  font-weight: 400;
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 1rem;
   padding: 0.5rem;
+  text-transform: uppercase;
 }
 .left-menu a:hover {
   opacity: 0.8;
@@ -540,8 +500,8 @@ header {
   list-style: none;
 }
 .nav-menu .social-menu {
-  width: 1.4rem;
-  height: 1.4rem;
+  width: 1.3rem;
+  height: 1.3rem;
   margin: 1rem;
   color: #fffffb;
   vertical-align: middle;
@@ -566,6 +526,7 @@ header {
     width: 100%;
     position: relative;
     z-index: 1000;
+    padding: 0 0.7rem;
   }
   .ade-logo-box {
     width: auto;
@@ -578,13 +539,7 @@ header {
     margin: 0.5rem;
     letter-spacing: 0.05rem;
   }
-  .left-menu {
-    display: none;
-  }
-  .hidden-menu, .menu-items {
-    display: none;
-  }
-  .nav-menu {
+  .left-menu, .hidden-menu, .menu-items, .nav-menu {
     display: none;
   }
   .toggle-box {
@@ -613,7 +568,7 @@ header {
     flex-direction: column;
     height: 100vh;
     width: 100%;
-    font-family: "Gopher", sans-serif;
+    font-family: "Montserrat", sans-serif;
     color: white;
     text-align: center;
     align-content: center;
@@ -635,14 +590,12 @@ header {
   .mobile-menu.active .mobile-header {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 90%;
+    margin: 2rem auto;
   }
-  .mobile-menu.active .mobile-header a {
-    font-size: 2.2rem;
-    font-weight: 600;
-    letter-spacing: 0.05rem;
-    margin: auto 0.5rem;
+  .mobile-menu.active .mobile-header .logo-mobile {
+    margin: auto 0.9rem;
   }
   .mobile-menu.active .mobile-header .close {
     max-width: 1.5rem;
@@ -681,10 +634,10 @@ footer {
   margin: 0;
   max-width: 100%;
   padding: 1rem;
-  font-family: "Gopher", sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: #fffffb;
   background: #000004;
-  line-height: 1.75rem;
+  line-height: 1.7rem;
 }
 footer .reach-me {
   display: flex;
@@ -701,20 +654,37 @@ footer .reach-me a {
   align-content: center;
   justify-content: center;
 }
+footer .contact-icons-wrap {
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  align-items: centerfdfg;
+}
+footer .contact-icons-wrap .social-icon {
+  width: 2rem;
+  height: 2rem;
+  margin: 1rem;
+}
+footer .contact-icons-wrap .social-icon svg {
+  color: #fffffb;
+}
+footer .contact-icons-wrap .social-icon svg:hover {
+  opacity: 0.8;
+}
 footer .footer-wrap {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  margin: 3rem 0;
+  margin: 3rem 0 1rem 0;
   padding: 0 3rem;
   width: 100%;
-  gap: 1.5rem;
 }
 footer .footer-wrap .rights-footer {
   display: flex;
   flex-direction: column;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   flex: 0 0 auto;
 }
 footer .footer-wrap .rights-footer a {
@@ -724,36 +694,10 @@ footer .footer-wrap .rights-footer a {
 footer .footer-wrap .rights-footer a:hover {
   opacity: 0.8;
 }
-footer .footer-wrap .rights-footer .cclicense {
-  justify-content: center;
-  align-content: center;
-  width: 1.8rem;
-}
 footer .footer-wrap .thanks-footer {
   display: flex;
   flex-direction: column;
-  font-size: 0.9rem;
-}
-footer .contact-icons-wrap {
-  margin: 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-content: center;
-}
-footer .contact-icons-wrap .social-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 2rem;
-  height: 2rem;
-  margin: 2rem 1.5rem;
-}
-footer .contact-icons-wrap .social-icon svg {
-  color: #fffffb;
-}
-footer .contact-icons-wrap .social-icon svg:hover {
-  opacity: 0.8;
+  font-size: 0.8rem;
 }
 
 @media (max-width: 768px) {
@@ -771,7 +715,13 @@ footer .contact-icons-wrap .social-icon svg:hover {
     text-align: center;
   }
   footer .reach-me {
+    margin: 0 auto;
     width: 90%;
+  }
+  footer .reach-me div:first-child {
+    align-content: center;
+    justify-content: center;
+    text-align: center;
   }
   footer .social-icon {
     display: flex;
@@ -804,6 +754,20 @@ footer .contact-icons-wrap .social-icon svg:hover {
     margin: 0.5rem 0;
     text-align: center;
   }
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../assets/Montserrat-VariableFont_wght.woff2") format("woff2");
+  font-weight: 400 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../assets/Montserrat-Italic-VariableFont_wght.woff2") format("woff2");
+  font-weight: 400 900;
+  font-style: italic;
+  font-display: swap;
 }
 @font-face {
   font-family: "Gopher";
@@ -864,7 +828,7 @@ body {
   color: #fffffb;
   overflow-x: hidden;
   max-width: 100%;
-  font-family: "Gopher", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .work-wrap {
@@ -895,8 +859,8 @@ body {
 }
 .work-card .work-box a {
   color: white;
-  font-size: 4rem;
-  font-weight: 700;
+  font-size: 3rem;
+  font-weight: 500;
   text-align: center;
   text-decoration: none;
 }
@@ -937,14 +901,13 @@ body {
 }
 .work-titles .work-name {
   font-size: 3rem;
-  font-weight: 700;
+  font-weight: 600;
   text-align: center;
   text-transform: uppercase;
 }
 .work-titles .work-tag {
-  font-family: "Gopher", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 1.5rem;
-  font-weight: 400;
   text-align: center;
 }
 
@@ -994,7 +957,7 @@ body {
     border-radius: 3rem;
     background: #fffffb;
     opacity: 1;
-    font-family: "Gopher", sans-serif;
+    font-family: "Montserrat", sans-serif;
     border: none;
     cursor: pointer;
     text-align: center;
@@ -1016,8 +979,9 @@ body {
   display: flex;
   margin: 0 auto;
   max-width: 100%;
-  background: #fffffb;
-  color: #000004;
+  background: #000004;
+  color: #fffffb;
+  padding-bottom: 2rem;
 }
 .about-wrapper .about-sec {
   width: 80%;
@@ -1038,6 +1002,7 @@ body {
   display: flex;
   flex-direction: column;
   width: 50%;
+  font-family: "Montserrat", sans-serif;
   line-height: 1.8;
   font-size: 1.1rem;
   text-align: left;
@@ -1048,11 +1013,12 @@ body {
   margin: 0;
 }
 .about-wrapper .about-text .highlighted-font {
-  font-weight: 900;
+  font-weight: 800;
   font-style: italic;
 }
 .about-wrapper .hola {
   font-size: 4rem;
+  font-family: "Montserrat", sans-serif;
   text-align: left;
   justify-content: left;
   align-content: center;
@@ -1061,13 +1027,13 @@ body {
 
 .mail-me {
   margin: 0;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 600;
-  color: #000004;
+  color: #fffffb;
   text-decoration: none;
 }
 .mail-me:hover {
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
 @media (max-width: 768px) {
@@ -1096,8 +1062,8 @@ body {
   }
   .about-wrapper .about-text .hola {
     font-size: 3rem;
-    text-align: left;
-    justify-content: left;
+    text-align: center;
+    justify-content: center;
     margin: 0;
   }
 }
@@ -1122,37 +1088,38 @@ hr.solid {
 .cv-title {
   margin: 0 0 0 4rem;
   padding-top: 2rem;
-  font-family: "Gopher", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 4rem;
-  font-weight: 700;
+  font-weight: 800;
   text-align: left;
 }
 
 .cv-subtitle {
   margin: 1rem 0 0.3rem 0;
-  font-family: "Gopher", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 2.3rem;
   font-optical-sizing: auto;
   text-align: center;
 }
 
 .experience-title {
-  font-family: "Gopher", sans-serif;
-  font-size: 2rem;
-  font-weight: 800;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.7rem;
+  font-weight: 700;
   text-align: left;
 }
 
 .experience-job {
-  font-family: "Gopher", sans-serif;
-  font-size: 1.5rem;
-  font-weight: 800;
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
   text-align: left;
   text-transform: uppercase;
 }
 
 .experience-list {
-  font-family: "Gopher", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 1.1rem;
   line-height: 1.7;
   list-style-position: inside;
@@ -1166,7 +1133,7 @@ hr.solid {
 }
 
 .college {
-  font-family: "Gopher", sans-serif;
+  font-family: "Montserrat", sans-serif;
   margin: 0;
   text-align: left;
 }
@@ -1175,8 +1142,7 @@ hr.solid {
 }
 
 .courses {
-  font-family: "Gopher", sans-serif;
-  max-width: 600px;
+  font-family: "Montserrat", sans-serif;
   justify-self: left;
   align-self: left;
   line-height: 1.8;
@@ -1188,19 +1154,18 @@ hr.solid {
   text-decoration: none;
 }
 .courses a:hover {
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
 .skills {
   justify-self: left;
-  font-family: "Gopher", sans-serif;
+  font-family: "Montserrat", sans-serif;
   line-height: 1.8;
   margin-left: 0.5rem;
   font-size: 1.1rem;
 }
 .skills .highlight-skill {
-  font-weight: 900;
-  font-size: 1.2rem;
+  font-weight: 800;
 }
 
 .resume-download-btn {
@@ -1214,7 +1179,7 @@ hr.solid {
   width: 50%;
 }
 .resume-download-btn a {
-  font-family: "Gopher", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 1.1rem;
   color: #fffffb;
   text-decoration: none;
